@@ -1,13 +1,11 @@
 {
   "block.simple_gems.ruby_ore": "Ruby Ore",
-  "block.simple_gems.ruby_block": "Ruby Block",
   "item.simple_gems.ruby_ore": "Ruby Ore",
   "item.simple_gems.ruby": "Ruby",
-  "item.simple_gems.ruby_block": "Ruby Block",
   "item.simple_gems.ruby_shovel": "Ruby Shovel",
   "item.simple_gems.ruby_pickaxe": "Ruby Pickaxe",
   "item.simple_gems.ruby_axe": "Ruby Axe",
-  "item.simple_gems.ruby_hoe": "Ruby Hoe",
+  "item.simple_gems.ruby_hoe": "Ruby Sword",
   "item.simple_gems.ruby_sword": "Ruby Sword",
   "itemGroup.simple_gems.item_group": "Simple Gems"
 }

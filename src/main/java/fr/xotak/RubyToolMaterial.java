@@ -26,7 +26,7 @@ public class RubyToolMaterial implements ToolMaterial {
 
     @Override
     public int getMiningLevel() {
-        return 4;
+        return 5;
     }
 
     @Override

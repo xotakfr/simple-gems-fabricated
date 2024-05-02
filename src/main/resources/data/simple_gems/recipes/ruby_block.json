@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "RRR",
+    "RRR"
+  ],
+  "key":{
+    "R": {
+      "item": "simple_gems:ruby"
+    }
+  },
+  "result": {
+    "item": "simple_gems:ruby_block",
+    "count": 1
+  }
+}

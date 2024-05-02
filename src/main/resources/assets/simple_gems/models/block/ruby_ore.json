@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "simple_gems:block/ruby_ore"
+  }
+}

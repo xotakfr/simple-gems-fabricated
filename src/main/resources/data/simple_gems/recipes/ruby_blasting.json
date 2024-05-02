@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "simple_gems:ruby_ore"
+  },
+  "result": "simple_gems:ruby",
+  "experience": 6.0
+}

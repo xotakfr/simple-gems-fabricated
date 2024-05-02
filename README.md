@@ -8,6 +8,7 @@ This template is available under the CECILL.
 
 - Ore
 - Drop
+- Block
 - Shovel
 - Pickaxe
 - Axe

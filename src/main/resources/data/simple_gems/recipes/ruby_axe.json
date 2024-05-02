@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " RR",
+    " SR",
+    " S "
+  ],
+  "key":{
+    "R": {
+      "item": "simple_gems:ruby"
+    },
+    "S":{
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "simple_gems:ruby_axe",
+    "count": 1
+  }
+}
