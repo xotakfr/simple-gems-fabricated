@@ -2,16 +2,21 @@ package fr.xotak;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.feature.PlacedFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,6 +44,9 @@ public class SimpleGems implements ModInitializer {
 	public static final ToolItem RUBY_SWORD = Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_sword"),
 			new SwordItem(RubyToolMaterial.INSTANCE, 2, -2.4F, new Item.Settings()));
 
+	// Ore generation
+	public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("simple_gems", "ruby_ore"));
+
 	public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
 			.icon(() -> new ItemStack(RUBY_ITEM))
 			.displayName(Text.translatable("itemGroup.simple_gems.item_group"))
@@ -65,5 +73,8 @@ public class SimpleGems implements ModInitializer {
 		Registry.register(Registries.ITEM_GROUP, new Identifier("simple_gems", "simple_gems"), ITEM_GROUP);
 		Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_ore"), new BlockItem(RUBY_ORE, new Item.Settings()));
 		Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_block"), new BlockItem(RUBY_BLOCK, new Item.Settings()));
+
+		//Ore Gen
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
 	}
 }
