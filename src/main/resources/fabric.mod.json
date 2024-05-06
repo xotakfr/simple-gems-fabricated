@@ -1,17 +1,17 @@
 {
 	"schemaVersion": 1,
 	"id": "simple-gems",
-	"version": "0.0.1",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"version": "0.2.0",
+	"name": "Simple Gems Fabricated",
+	"description": "This mod add few gems, tools and armors",
 	"authors": [
-		"Me!"
+		"XotakFR"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "",
+		"sources": "https://github.com/xotakfr/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "CECILL-2.1",
 	"icon": "assets/simple-gems/icon.png",
 	"environment": "*",
 	"entrypoints": {

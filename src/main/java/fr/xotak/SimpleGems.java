@@ -19,6 +19,7 @@ import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import fr.xotak.RubyToolSet;
 
 public class SimpleGems implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -27,38 +28,26 @@ public class SimpleGems implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("simple-gems");
 
 	// Ruby toolset
-	public static final Block RUBY_ORE = Registry.register(Registries.BLOCK, new Identifier("simple_gems", "ruby_ore"),
-			new ExperienceDroppingBlock(Block.Settings.create().strength(3.0F).requiresTool(), UniformIntProvider.create(4, 8)));
-	public static final RubyItem RUBY_ITEM = Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby"),
-			new RubyItem(new Item.Settings()));
-	public static final Block RUBY_BLOCK = Registry.register(Registries.BLOCK, new Identifier("simple_gems", "ruby_block"),
-			new Block(Block.Settings.create().strength(3.0F).requiresTool()));
-	public static final ToolItem RUBY_SHOVEL = Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_shovel"),
-			new ShovelItem(RubyToolMaterial.INSTANCE, 1, -3.0F, new Item.Settings()));
-	public static final ToolItem RUBY_PICKAXE = Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_pickaxe"),
-			new PickaxeItem(RubyToolMaterial.INSTANCE, 0, -2.8F, new Item.Settings()));
-	public static final ToolItem RUBY_AXE = Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_axe"),
-			new AxeItem(RubyToolMaterial.INSTANCE, 4, -3.0F, new Item.Settings()));
-	public static final ToolItem RUBY_HOE = Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_hoe"),
-			new HoeItem(RubyToolMaterial.INSTANCE, -6, 0, new Item.Settings()));
-	public static final ToolItem RUBY_SWORD = Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_sword"),
-			new SwordItem(RubyToolMaterial.INSTANCE, 2, -2.4F, new Item.Settings()));
 
 	// Ore generation
 	public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("simple_gems", "ruby_ore"));
 
 	public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
-			.icon(() -> new ItemStack(RUBY_ITEM))
+			.icon(() -> new ItemStack(RubyToolSet.RUBY_ITEM))
 			.displayName(Text.translatable("itemGroup.simple_gems.item_group"))
 			.entries((context, entries) -> {
-				entries.add(RUBY_ORE);
-				entries.add(RUBY_ITEM);
-				entries.add(RUBY_BLOCK);
-				entries.add(RUBY_SHOVEL);
-				entries.add(RUBY_PICKAXE);
-				entries.add(RUBY_AXE);
-				entries.add(RUBY_HOE);
-				entries.add(RUBY_SWORD);
+				entries.add(RubyToolSet.RUBY_ORE);
+				entries.add(RubyToolSet.RUBY_ITEM);
+				entries.add(RubyToolSet.RUBY_BLOCK);
+				entries.add(RubyToolSet.RUBY_SHOVEL);
+				entries.add(RubyToolSet.RUBY_PICKAXE);
+				entries.add(RubyToolSet.RUBY_AXE);
+				entries.add(RubyToolSet.RUBY_HOE);
+				entries.add(RubyToolSet.RUBY_SWORD);
+				entries.add(RubyToolSet.RUBY_HELMET);
+				entries.add(RubyToolSet.RUBY_CHESTPLATE);
+				entries.add(RubyToolSet.RUBY_LEGGINGS);
+				entries.add(RubyToolSet.RUBY_BOOTS);
 			})
 			.build();
 
@@ -70,9 +59,9 @@ public class SimpleGems implements ModInitializer {
 
 		LOGGER.info("Hello from Simple Gems");
 
+		RubyToolSet.initialize();
+
 		Registry.register(Registries.ITEM_GROUP, new Identifier("simple_gems", "simple_gems"), ITEM_GROUP);
-		Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_ore"), new BlockItem(RUBY_ORE, new Item.Settings()));
-		Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_block"), new BlockItem(RUBY_BLOCK, new Item.Settings()));
 
 		//Ore Gen
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);

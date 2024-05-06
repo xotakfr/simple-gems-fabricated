@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "R R",
+    "R R"
+  ],
+  "key": {
+    "R": {
+      "item": "simple_gems:ruby"
+    }
+  },
+  "result": {
+    "item": "simple_gems:ruby_boots",
+    "count": 1
+  }
+}
