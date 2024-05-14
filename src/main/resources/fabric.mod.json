@@ -12,7 +12,7 @@
 		"sources": "https://github.com/xotakfr/fabric-example-mod"
 	},
 	"license": "CECILL-2.1",
-	"icon": "assets/simple-gems/icon.png",
+	"icon": "assets/simple_gems/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
