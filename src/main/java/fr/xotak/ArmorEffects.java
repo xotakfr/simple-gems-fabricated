@@ -11,7 +11,7 @@ import java.util.List;
 public class ArmorEffects {
     public static final ImmutableMap<ArmorMaterial, List<StatusEffectInstance>> ARMOR_EFFECTS =
             new ImmutableMap.Builder<ArmorMaterial, List<StatusEffectInstance>>()
-                    .put(RubyArmorMaterial.INSTANCE, List.of(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 1, false, false, true)))
+                    .put(RubyArmorMaterial.INSTANCE, List.of(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false, true)))
                     .build();
 
 

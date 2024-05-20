@@ -34,13 +34,13 @@ public class RubyToolSet {
             new SwordItem(RubyToolMaterial.INSTANCE, 2, -2.4F, new Item.Settings()));
     //armor
     public static final Item RUBY_HELMET = Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_helmet"),
-            new ArmorItem(RubyArmorMaterial.INSTANCE, ArmorItem.Type.HELMET, new Item.Settings()));
+            new RubyArmorItem(RubyArmorMaterial.INSTANCE, ArmorItem.Type.HELMET, new Item.Settings()));
     public static final Item RUBY_CHESTPLATE = Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_chestplate"),
-            new ArmorItem(RubyArmorMaterial.INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+            new RubyArmorItem(RubyArmorMaterial.INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
     public static final Item RUBY_LEGGINGS = Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_leggings"),
-            new ArmorItem(RubyArmorMaterial.INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings()));
+            new RubyArmorItem(RubyArmorMaterial.INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings()));
     public static final Item RUBY_BOOTS = Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby_boots"),
-            new ArmorItem(RubyArmorMaterial.INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings()));
+            new RubyArmorItem(RubyArmorMaterial.INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings()));
 
 
     public static void initialize() {
