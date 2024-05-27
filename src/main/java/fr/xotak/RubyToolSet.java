@@ -11,7 +11,7 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 public class RubyToolSet {
     //blocks and item
     public static final Block RUBY_ORE = Registry.register(Registries.BLOCK, new Identifier("simple_gems", "ruby_ore"),
-            new ExperienceDroppingBlock(Block.Settings.create().strength(3.0F).requiresTool(), UniformIntProvider.create(4, 8)));
+            new ExperienceDroppingBlock(UniformIntProvider.create(4, 8), Block.Settings.create().strength(3.0F).requiresTool()));
     public static final Item RUBY_ITEM = Registry.register(Registries.ITEM, new Identifier("simple_gems", "ruby"),
             new Item(new Item.Settings()));
     public static final Block RUBY_BLOCK = Registry.register(Registries.BLOCK, new Identifier("simple_gems", "ruby_block"),
