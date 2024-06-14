@@ -1,4 +1,4 @@
-package fr.xotak;
+package fr.xotak.util;
 
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;

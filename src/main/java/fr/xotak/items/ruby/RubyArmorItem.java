@@ -1,5 +1,6 @@
-package fr.xotak;
+package fr.xotak.items.ruby;
 
+import fr.xotak.util.ArmorUtils;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;

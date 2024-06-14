@@ -1,12 +1,9 @@
 package fr.xotak;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -14,12 +11,12 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import fr.xotak.RubyToolSet;
+import fr.xotak.items.ruby.RubyToolSet;
+import fr.xotak.items.amethyst.AmethystToolSet;
 
 public class SimpleGems implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -48,6 +45,15 @@ public class SimpleGems implements ModInitializer {
 				entries.add(RubyToolSet.RUBY_CHESTPLATE);
 				entries.add(RubyToolSet.RUBY_LEGGINGS);
 				entries.add(RubyToolSet.RUBY_BOOTS);
+				entries.add(AmethystToolSet.AMETHYST_SHOVEL);
+				entries.add(AmethystToolSet.AMETHYST_PICKAXE);
+				entries.add(AmethystToolSet.AMETHYST_AXE);
+				entries.add(AmethystToolSet.AMETHYST_HOE);
+				entries.add(AmethystToolSet.AMETHYST_SWORD);
+				entries.add(AmethystToolSet.AMETHYST_HELMET);
+				entries.add(AmethystToolSet.AMETHYST_CHESTPLATE);
+				entries.add(AmethystToolSet.AMETHYST_LEGGINGS);
+				entries.add(AmethystToolSet.AMETHYST_BOOTS);
 			})
 			.build();
 
@@ -60,6 +66,7 @@ public class SimpleGems implements ModInitializer {
 		LOGGER.info("Hello from Simple Gems");
 
 		RubyToolSet.initialize();
+		AmethystToolSet.initialize();
 
 		Registry.register(Registries.ITEM_GROUP, new Identifier("simple_gems", "simple_gems"), ITEM_GROUP);
 

@@ -1,4 +1,4 @@
-package fr.xotak;
+package fr.xotak.items.materials.ruby;
 
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
@@ -11,8 +11,8 @@ import net.minecraft.util.Identifier;
 public class RubyArmorMaterial implements ArmorMaterial {
     public static final RubyArmorMaterial INSTANCE = new RubyArmorMaterial();
 
-    private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_VALUES = new int[]{5, 10, 8, 5};
+    private static final int[] BASE_DURABILITY = new int[]{11, 15, 16, 13};
+    private static final int[] PROTECTION_VALUES = new int[]{5, 8, 10, 5};
 
     public int getDurability(ArmorItem.Type type) {
         return BASE_DURABILITY[type.getEquipmentSlot().getEntitySlotId()] * 45;
@@ -48,6 +48,6 @@ public class RubyArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getKnockbackResistance() {
-        return 0;
+        return 0.15F;
     }
 }

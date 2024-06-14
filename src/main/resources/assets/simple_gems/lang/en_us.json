@@ -13,5 +13,14 @@
   "item.simple_gems.ruby_chestplate": "Ruby Chestplate",
   "item.simple_gems.ruby_leggings": "Ruby Leggings",
   "item.simple_gems.ruby_boots": "Ruby Boots",
+  "item.simple_gems.amethyst_shovel": "Amethyst Shovel",
+  "item.simple_gems.amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.simple_gems.amethyst_axe": "Amethyst Axe",
+  "item.simple_gems.amethyst_hoe": "Amethyst Hoe",
+  "item.simple_gems.amethyst_sword": "Amethyst Sword",
+  "item.simple_gems.amethyst_helmet": "Amethyst Helmet",
+  "item.simple_gems.amethyst_chestplate": "Amethyst Chestplate",
+  "item.simple_gems.amethyst_leggings": "Amethyst Leggings",
+  "item.simple_gems.amethyst_boots": "Amethyst Boots",
   "itemGroup.simple_gems.item_group": "Simple Gems"
 }

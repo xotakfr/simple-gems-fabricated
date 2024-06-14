@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "simple_gems:ruby",
+      "required": false
+    }
+  ]
+}

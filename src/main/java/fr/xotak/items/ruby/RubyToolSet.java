@@ -1,5 +1,7 @@
-package fr.xotak;
+package fr.xotak.items.ruby;
 
+import fr.xotak.items.materials.ruby.RubyArmorMaterial;
+import fr.xotak.items.materials.ruby.RubyToolMaterial;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.*;
@@ -42,7 +44,5 @@ public class RubyToolSet {
             new RubyArmorItem(RubyArmorMaterial.INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings()));
 
 
-    public static void initialize() {
-
-    }
+    public static void initialize() {}
 }

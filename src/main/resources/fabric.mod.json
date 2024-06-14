@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "simple-gems",
-	"version": "0.3.1",
+	"version": "0.4.0+1.20.4",
 	"name": "Simple Gems Fabricated",
 	"description": "This mod add few gems, tools and armors",
 	"authors": [

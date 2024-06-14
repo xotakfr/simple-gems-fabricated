@@ -1,4 +1,4 @@
-package fr.xotak;
+package fr.xotak.items.materials.ruby;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
