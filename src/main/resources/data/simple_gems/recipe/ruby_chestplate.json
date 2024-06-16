@@ -1,20 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " R ",
-    " R ",
-    " S "
+    "R R",
+    "RRR",
+    "RRR"
   ],
   "key": {
     "R": {
       "tag": "c:rubies"
-    },
-    "S": {
-      "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "simple_gems:ruby_sword",
+    "id": "simple_gems:ruby_chestplate",
     "count": 1
   }
 }

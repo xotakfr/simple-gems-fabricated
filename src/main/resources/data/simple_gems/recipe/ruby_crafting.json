@@ -4,7 +4,7 @@
     {"item": "simple_gems:ruby_block"}
   ],
   "result": {
-    "item": "simple_gems:ruby",
+    "id": "simple_gems:ruby",
     "count": 9
   }
 }

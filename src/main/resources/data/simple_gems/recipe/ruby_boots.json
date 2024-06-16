@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
+    "   ",
     "R R",
-    "RRR",
-    "RRR"
+    "R R"
   ],
   "key": {
     "R": {
@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "simple_gems:ruby_chestplate",
+    "id": "simple_gems:ruby_boots",
     "count": 1
   }
 }

@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     " RR",
-    " SR",
+    " S ",
     " S "
   ],
-  "key":{
+  "key": {
     "R": {
       "tag": "c:rubies"
     },
-    "S":{
+    "S": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "simple_gems:ruby_axe",
+    "id": "simple_gems:ruby_hoe",
     "count": 1
   }
 }

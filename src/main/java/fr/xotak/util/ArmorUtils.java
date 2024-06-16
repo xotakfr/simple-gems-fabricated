@@ -5,14 +5,15 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.entry.RegistryEntry;
 
 import java.util.List;
 import java.util.Map;
 
 public class ArmorUtils {
     public static void evaluateArmorEffects(PlayerEntity player) {
-        for (Map.Entry<ArmorMaterial, List<StatusEffectInstance>> entry : ArmorEffects.ARMOR_EFFECTS.entrySet()) {
-            ArmorMaterial armorMaterial = entry.getKey();
+        for (Map.Entry<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>> entry : ArmorEffects.ARMOR_EFFECTS.entrySet()) {
+            RegistryEntry<ArmorMaterial> armorMaterial = entry.getKey();
             List<StatusEffectInstance> effects = entry.getValue();
 
             if (hasCorrectArmorOn(armorMaterial, player)) {
@@ -23,14 +24,14 @@ public class ArmorUtils {
         }
     }
 
-    private static void addStatusEffectFromMaterial(PlayerEntity player, ArmorMaterial material, StatusEffectInstance effect) {
+    private static void addStatusEffectFromMaterial(PlayerEntity player, RegistryEntry<ArmorMaterial> material, StatusEffectInstance effect) {
         boolean hasStatusEffect = player.hasStatusEffect(effect.getEffectType());
         if (!hasStatusEffect) {
             player.addStatusEffect(new StatusEffectInstance(effect));
         }
     }
 
-    private static boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
+    private static boolean hasCorrectArmorOn(RegistryEntry<ArmorMaterial> material, PlayerEntity player) {
         for (ItemStack armorStack: player.getInventory().armor) {
             if(!(armorStack.getItem() instanceof ArmorItem)) {
                 return false;

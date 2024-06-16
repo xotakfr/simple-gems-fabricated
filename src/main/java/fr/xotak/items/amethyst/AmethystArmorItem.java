@@ -5,12 +5,14 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.World;
 
 public class AmethystArmorItem extends ArmorItem {
 
-        public AmethystArmorItem(ArmorMaterial material, Type slot, Settings settings) {
+        public AmethystArmorItem(RegistryEntry<ArmorMaterial> material, Type slot, Settings settings) {
             super(material, slot, settings);
         }
 

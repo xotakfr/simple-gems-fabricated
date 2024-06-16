@@ -1,17 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern":[
+  "pattern": [
     "RRR",
-    "R R",
-    "R R"
+    " S ",
+    " S "
   ],
   "key": {
     "R": {
       "tag": "c:rubies"
+    },
+    "S": {
+      "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "simple_gems:ruby_leggings",
+    "id": "simple_gems:ruby_pickaxe",
     "count": 1
   }
 }

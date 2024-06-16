@@ -1,8 +1,10 @@
 {
-  "type": "minecraft:smelting",
+  "type": "minecraft:blasting",
   "ingredient": {
     "item": "simple_gems:ruby_ore"
   },
-  "result": "simple_gems:ruby",
+  "result": {
+    "id": "simple_gems:ruby"
+  },
   "experience": 6.0
 }

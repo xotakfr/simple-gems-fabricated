@@ -27,7 +27,7 @@ public class SimpleGems implements ModInitializer {
 	// Ruby toolset
 
 	// Ore generation
-	public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("simple_gems", "ruby_ore"));
+	public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of("simple_gems", "ruby_ore"));
 
 	public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
 			.icon(() -> new ItemStack(RubyToolSet.RUBY_ITEM))
@@ -68,7 +68,7 @@ public class SimpleGems implements ModInitializer {
 		RubyToolSet.initialize();
 		AmethystToolSet.initialize();
 
-		Registry.register(Registries.ITEM_GROUP, new Identifier("simple_gems", "simple_gems"), ITEM_GROUP);
+		Registry.register(Registries.ITEM_GROUP, Identifier.of("simple_gems", "simple_gems"), ITEM_GROUP);
 
 		//Ore Gen
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
