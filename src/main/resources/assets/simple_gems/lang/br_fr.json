@@ -13,5 +13,15 @@
   "item.simple_gems.ruby_chestplate": "Plastron en rubis",
   "item.simple_gems.ruby_leggings": "Jambières en rubis",
   "item.simple_gems.ruby_boots": "Bottes en rubis",
-  "itemGroup.simple_gems.item_group": "Simple Gems"
+  "item.simple_gems.amethyst_shovel": "Pelle en améthyste",
+  "item.simple_gems.amethyst_pickaxe": "Pioche en améthyste",
+  "item.simple_gems.amethyst_axe": "Hache en améthyste",
+  "item.simple_gems.amethyst_hoe": "Houe en améthyste",
+  "item.simple_gems.amethyst_sword": "Épée en améthyste",
+  "item.simple_gems.amethyst_helmet": "Casque en améthyste",
+  "item.simple_gems.amethyst_chestplate": "Plastron en améthsyte",
+  "item.simple_gems.amethyst_leggings": "Jambière en améthyste",
+  "item.simple_gems.amethyst_boots": "Bottes en améthyste",
+  "itemGroup.simple_gems.item_group": "Simple Gems",
+  "tag.item.c.rubies": "Rubis"
 }

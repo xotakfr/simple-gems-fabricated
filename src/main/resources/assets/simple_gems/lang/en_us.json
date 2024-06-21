@@ -22,5 +22,6 @@
   "item.simple_gems.amethyst_chestplate": "Amethyst Chestplate",
   "item.simple_gems.amethyst_leggings": "Amethyst Leggings",
   "item.simple_gems.amethyst_boots": "Amethyst Boots",
-  "itemGroup.simple_gems.item_group": "Simple Gems"
+  "itemGroup.simple_gems.item_group": "Simple Gems",
+  "tag.item.c.rubies": "Rubies"
 }

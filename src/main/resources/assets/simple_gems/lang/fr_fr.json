@@ -22,5 +22,6 @@
   "item.simple_gems.amethyst_chestplate": "Plastron en améthsyte",
   "item.simple_gems.amethyst_leggings": "Jambière en améthyste",
   "item.simple_gems.amethyst_boots": "Bottes en améthyste",
-  "itemGroup.simple_gems.item_group": "Simple Gems"
+  "itemGroup.simple_gems.item_group": "Simple Gems",
+  "tag.item.c.rubies": "Rubis"
 }
