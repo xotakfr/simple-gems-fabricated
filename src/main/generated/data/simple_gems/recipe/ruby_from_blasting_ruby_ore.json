@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 150,
+  "experience": 6.0,
+  "group": "simple_gems",
+  "ingredient": {
+    "item": "simple_gems:ruby_ore"
+  },
+  "result": {
+    "id": "simple_gems:ruby"
+  }
+}

@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "simple-gems",
+	"id": "simple_gems",
 	"version": "0.5.0+1.21",
 	"name": "Simple Gems Fabricated",
 	"description": "This mod add few gems, tools and armors",
@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"fr.xotak.SimpleGemsClient"
+		],
+		"fabric-datagen": [
+			"fr.xotak.dataGen.SimpleGemsDataGen"
 		]
 	},
 	"mixins": [
