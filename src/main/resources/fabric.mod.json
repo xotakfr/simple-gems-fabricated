@@ -8,8 +8,8 @@
 		"XotakFR"
 	],
 	"contact": {
-		"homepage": "",
-		"sources": "https://github.com/xotakfr/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/simple-gems-fabricated",
+		"sources": "https://github.com/xotakfr/simple-gems-fabricated"
 	},
 	"license": "CECILL-2.1",
 	"icon": "assets/simple_gems/icon.png",
