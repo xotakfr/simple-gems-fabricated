@@ -1,6 +1,8 @@
 {
   "values": [
     "simple_gems:ruby_ore",
-    "simple_gems:ruby_block"
+    "simple_gems:ruby_block",
+    "simple_gems:sapphire_ore",
+    "simple_gems:sapphire_block"
   ]
 }

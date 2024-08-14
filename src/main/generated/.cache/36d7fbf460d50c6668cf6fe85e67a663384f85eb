@@ -1,2 +1,12 @@
-// 1.21	2024-07-26T16:13:07.0910423	Simple Gems Fabricated/Tags for minecraft:item
-5317e8faa825a5668b975a182902d70584e209ac data\c\tags\item\rubies.json
+// 1.21	2024-08-08T15:22:05.130501558	Simple Gems Fabricated/Tags for minecraft:item
+e37fe36fbf9e22819a1a8c9f7e72aab267f3793a data/minecraft/tags/item/foot_armor.json
+ee287b7419b851adf17144f6973f6ce172b2cceb data/minecraft/tags/item/axes.json
+5317e8faa825a5668b975a182902d70584e209ac data/c/tags/item/rubies.json
+d8e904e4aecd832193c29228481ea5e578daace8 data/minecraft/tags/item/hoes.json
+d4ed930729d21a3b14be05ddd4804edb0933c792 data/minecraft/tags/item/pickaxes.json
+479e56cfbbd88945d94b03abcbada866b728a912 data/c/tags/item/sapphire.json
+d4b56dba8f397f8b1d229cb6e76eb3991ef18872 data/minecraft/tags/item/swords.json
+746876580d8eadd7b9a1be52644e0f0a437ac8ff data/minecraft/tags/item/chest_armor.json
+6c41f3f40b21754bc71cd9c1b207d41c9c713dba data/minecraft/tags/item/leg_armor.json
+746876580d8eadd7b9a1be52644e0f0a437ac8ff data/minecraft/tags/item/head_armor.json
+bbf8cbc495b19b6ced700ffcf8a52d7936c709fe data/minecraft/tags/item/shovels.json

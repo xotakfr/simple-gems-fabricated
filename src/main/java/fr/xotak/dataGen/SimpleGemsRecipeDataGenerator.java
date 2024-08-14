@@ -2,6 +2,7 @@ package fr.xotak.dataGen;
 
 import fr.xotak.items.amethyst.AmethystToolSet;
 import fr.xotak.items.ruby.RubyToolSet;
+import fr.xotak.items.sapphire.SapphireToolSet;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
@@ -23,6 +24,8 @@ public class SimpleGemsRecipeDataGenerator extends FabricRecipeProvider {
     }
 
     private static final List<ItemConvertible> SMELTABLE_TO_RUBY = List.of(RubyToolSet.RUBY_ORE);
+    private static final List<ItemConvertible> SMELTABLE_TO_SAPPHIRE = List.of(SapphireToolSet.SAPPHIRE_ORE);
+
 
     @Override
     public void generate(RecipeExporter exporter) {
@@ -188,5 +191,94 @@ public class SimpleGemsRecipeDataGenerator extends FabricRecipeProvider {
                 .input('A', Items.AMETHYST_SHARD)
                 .criterion(FabricRecipeProvider.hasItem(Items.AMETHYST_SHARD), FabricRecipeProvider.conditionsFromItem(Items.AMETHYST_SHARD))
                 .offerTo(exporter);
+
+        /*
+        Sapphire tools
+         */
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_ITEM, 9).input(SapphireToolSet.SAPPHIRE_BLOCK_ITEM, 1)
+                .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_ITEM))
+                .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_BLOCK_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_BLOCK_ITEM))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, SapphireToolSet.SAPPHIRE_BLOCK_ITEM).input(SapphireToolSet.SAPPHIRE_ITEM, 9)
+                .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_ITEM))
+                .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_BLOCK_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_BLOCK_ITEM))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, SapphireToolSet.SAPPHIRE_SHOVEL)
+                .pattern(" G ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('G', SapphireToolSet.SAPPHIRE_SHOVEL)
+                .input('S', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_ITEM))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, SapphireToolSet.SAPPHIRE_PICKAXE)
+                .pattern("GGG")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('G', SapphireToolSet.SAPPHIRE_ITEM)
+                .input('S', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_ITEM))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, SapphireToolSet.SAPPHIRE_AXE)
+                .pattern(" GG")
+                .pattern(" SG")
+                .pattern(" S ")
+                .input('G', SapphireToolSet.SAPPHIRE_ITEM)
+                .input('S', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_ITEM))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, SapphireToolSet.SAPPHIRE_HOE)
+                .pattern(" GG")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('G', SapphireToolSet.SAPPHIRE_ITEM)
+                .input('S', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_ITEM))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, SapphireToolSet.SAPPHIRE_SWORD)
+                .pattern(" G ")
+                .pattern(" G ")
+                .pattern(" S ")
+                .input('G', SapphireToolSet.SAPPHIRE_ITEM)
+                .input('S', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_ITEM))
+                .offerTo(exporter);
+        /*
+        Ruby armor
+         */
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, SapphireToolSet.SAPPHIRE_HELMET)
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("   ")
+                .input('S', SapphireToolSet.SAPPHIRE_ITEM)
+                .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_ITEM))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, SapphireToolSet.SAPPHIRE_CHESTPLATE)
+                .pattern("S S")
+                .pattern("SSS")
+                .pattern("SSS")
+                .input('S', SapphireToolSet.SAPPHIRE_ITEM)
+                .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_ITEM))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, SapphireToolSet.SAPPHIRE_LEGGINGS)
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("S S")
+                .input('S', SapphireToolSet.SAPPHIRE_ITEM)
+                .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_ITEM))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, SapphireToolSet.SAPPHIRE_BOOTS)
+                .pattern("   ")
+                .pattern("S S")
+                .pattern("S S")
+                .input('S', SapphireToolSet.SAPPHIRE_ITEM)
+                .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_ITEM))
+                .offerTo(exporter);
+        /*
+        Ruby smelting
+         */
+        RecipeProvider.offerSmelting(exporter, SMELTABLE_TO_SAPPHIRE, RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_ITEM, 6, 300, "simple_gems");
+        RecipeProvider.offerBlasting(exporter, SMELTABLE_TO_SAPPHIRE, RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_ITEM, 6, 150, "simple_gems");
+
     }
 }

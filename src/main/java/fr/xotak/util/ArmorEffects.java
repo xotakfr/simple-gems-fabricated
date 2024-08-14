@@ -13,8 +13,15 @@ import java.util.List;
 public class ArmorEffects {
     public static final ImmutableMap<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>> ARMOR_EFFECTS =
             new ImmutableMap.Builder<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>>()
-                    .put(GemsArmorMaterial.RUBY, List.of(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false, false), new StatusEffectInstance(StatusEffects.NIGHT_VISION, 400, 0, false, false, false)))
-                    .put(GemsArmorMaterial.AMETHYST, List.of(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 400, 0, false, false, false)))
+                    .put(GemsArmorMaterial.SAPPHIRE,
+                            List.of(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 150, 0, false, false, false),
+                                    new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 150, 0, false, false, false),
+                                    new StatusEffectInstance(StatusEffects.NIGHT_VISION, 150, 0, false, false, false)))
+                    .put(GemsArmorMaterial.RUBY,
+                            List.of(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 150, 0, false, false, false),
+                                    new StatusEffectInstance(StatusEffects.NIGHT_VISION, 150, 0, false, false, false)))
+                    .put(GemsArmorMaterial.AMETHYST,
+                            List.of(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 150, 0, false, false, false)))
                     .build();
 
 

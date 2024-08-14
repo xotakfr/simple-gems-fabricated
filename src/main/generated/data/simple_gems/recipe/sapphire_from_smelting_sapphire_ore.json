@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 6.0,
+  "group": "simple_gems",
+  "ingredient": {
+    "item": "simple_gems:sapphire_ore"
+  },
+  "result": {
+    "id": "simple_gems:sapphire"
+  }
+}

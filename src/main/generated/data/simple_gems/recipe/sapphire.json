@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "simple_gems:sapphire_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "simple_gems:sapphire"
+  }
+}

@@ -1,11 +1,13 @@
 package fr.xotak.dataGen;
 
 import fr.xotak.items.ruby.RubyToolSet;
+import fr.xotak.items.sapphire.SapphireToolSet;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
@@ -16,19 +18,22 @@ public class SimpleGemsBlockTagGenerator extends FabricTagProvider.BlockTagProvi
         super(output, completableFuture);
     }
 
-    public static final TagKey<Block> LEVEL_5_TOOLS_TAG = TagKey.of(RegistryKeys.BLOCK, Identifier.of("fabric:need_tool_level_5"));
-    public static final TagKey<Block> IRON_TOOLS_TAG = TagKey.of(RegistryKeys.BLOCK, Identifier.of("minecraft:incorrect_for_iron_tool"));
-    public static final TagKey<Block> MINECRAFT_MINEABLE_BLOCK_TAGS = TagKey.of(RegistryKeys.BLOCK, Identifier.of("minecraft:mineable/pickaxe"));
+    public static final TagKey<Block> INCORRECT_FOR_LEVEL_5_TAG = TagKey.of(RegistryKeys.BLOCK, Identifier.of("fabric:incorrect_for_level_5_tool"));
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(IRON_TOOLS_TAG)
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(RubyToolSet.RUBY_ORE)
+                .add(RubyToolSet.RUBY_BLOCK)
+                .add(SapphireToolSet.SAPPHIRE_ORE)
+                .add(SapphireToolSet.SAPPHIRE_BLOCK)
+                .setReplace(false);
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
                 .add(RubyToolSet.RUBY_ORE)
                 .add(RubyToolSet.RUBY_BLOCK)
                 .setReplace(false);
-        getOrCreateTagBuilder(MINECRAFT_MINEABLE_BLOCK_TAGS)
-                .add(RubyToolSet.RUBY_ORE)
-                .add(RubyToolSet.RUBY_BLOCK)
-                .setReplace(false);
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
+                .add(SapphireToolSet.SAPPHIRE_ORE)
+                .add(SapphireToolSet.SAPPHIRE_BLOCK);
     }
 }

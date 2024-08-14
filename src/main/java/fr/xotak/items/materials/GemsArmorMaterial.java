@@ -1,5 +1,7 @@
 package fr.xotak.items.materials;
 
+import fr.xotak.items.ruby.RubyToolSet;
+import fr.xotak.items.sapphire.SapphireToolSet;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
@@ -28,7 +30,14 @@ public class GemsArmorMaterial {
         map.put(ArmorItem.Type.CHESTPLATE, 10);
         map.put(ArmorItem.Type.HELMET, 5);
         map.put(ArmorItem.Type.BODY, 5);
-    }), 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.AMETHYST_SHARD));
+    }), 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0f, 0.0f, () -> Ingredient.ofItems(RubyToolSet.RUBY_ITEM));
+    public static final RegistryEntry<ArmorMaterial> SAPPHIRE =  register("sapphire", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+        map.put(ArmorItem.Type.BOOTS, 6);
+        map.put(ArmorItem.Type.LEGGINGS, 7);
+        map.put(ArmorItem.Type.CHESTPLATE, 11);
+        map.put(ArmorItem.Type.HELMET, 6);
+        map.put(ArmorItem.Type.BODY, 5);
+    }), 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0f, 0.0f, () -> Ingredient.ofItems(SapphireToolSet.SAPPHIRE_ITEM));
 
     // Utils
     public static RegistryEntry<ArmorMaterial> getDefault(net.minecraft.registry.Registry<ArmorMaterial> registry) {

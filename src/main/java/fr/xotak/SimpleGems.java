@@ -1,5 +1,6 @@
 package fr.xotak;
 
+import fr.xotak.items.sapphire.SapphireToolSet;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -22,17 +23,28 @@ public class SimpleGems implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-    public static final Logger LOGGER = LoggerFactory.getLogger("simple-gems");
+    public static final Logger LOGGER = LoggerFactory.getLogger("simple_gems");
 
 	// Ruby toolset
 
 	// Ore generation
 	public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of("simple_gems", "ruby_ore"));
+	public static final RegistryKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of("simple_gems", "sapphire_ore"));
+
 
 	public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
 			.icon(() -> new ItemStack(RubyToolSet.RUBY_ITEM))
 			.displayName(Text.translatable("itemGroup.simple_gems.item_group"))
 			.entries((context, entries) -> {
+				entries.add(AmethystToolSet.AMETHYST_SHOVEL);
+				entries.add(AmethystToolSet.AMETHYST_PICKAXE);
+				entries.add(AmethystToolSet.AMETHYST_AXE);
+				entries.add(AmethystToolSet.AMETHYST_HOE);
+				entries.add(AmethystToolSet.AMETHYST_SWORD);
+				entries.add(AmethystToolSet.AMETHYST_HELMET);
+				entries.add(AmethystToolSet.AMETHYST_CHESTPLATE);
+				entries.add(AmethystToolSet.AMETHYST_LEGGINGS);
+				entries.add(AmethystToolSet.AMETHYST_BOOTS);
 				entries.add(RubyToolSet.RUBY_ORE);
 				entries.add(RubyToolSet.RUBY_ITEM);
 				entries.add(RubyToolSet.RUBY_BLOCK);
@@ -45,15 +57,18 @@ public class SimpleGems implements ModInitializer {
 				entries.add(RubyToolSet.RUBY_CHESTPLATE);
 				entries.add(RubyToolSet.RUBY_LEGGINGS);
 				entries.add(RubyToolSet.RUBY_BOOTS);
-				entries.add(AmethystToolSet.AMETHYST_SHOVEL);
-				entries.add(AmethystToolSet.AMETHYST_PICKAXE);
-				entries.add(AmethystToolSet.AMETHYST_AXE);
-				entries.add(AmethystToolSet.AMETHYST_HOE);
-				entries.add(AmethystToolSet.AMETHYST_SWORD);
-				entries.add(AmethystToolSet.AMETHYST_HELMET);
-				entries.add(AmethystToolSet.AMETHYST_CHESTPLATE);
-				entries.add(AmethystToolSet.AMETHYST_LEGGINGS);
-				entries.add(AmethystToolSet.AMETHYST_BOOTS);
+				entries.add(SapphireToolSet.SAPPHIRE_ORE);
+				entries.add(SapphireToolSet.SAPPHIRE_ITEM);
+				entries.add(SapphireToolSet.SAPPHIRE_BLOCK);
+				entries.add(SapphireToolSet.SAPPHIRE_SHOVEL);
+				entries.add(SapphireToolSet.SAPPHIRE_PICKAXE);
+				entries.add(SapphireToolSet.SAPPHIRE_AXE);
+				entries.add(SapphireToolSet.SAPPHIRE_HOE);
+				entries.add(SapphireToolSet.SAPPHIRE_SWORD);
+				entries.add(SapphireToolSet.SAPPHIRE_HELMET);
+				entries.add(SapphireToolSet.SAPPHIRE_CHESTPLATE);
+				entries.add(SapphireToolSet.SAPPHIRE_LEGGINGS);
+				entries.add(SapphireToolSet.SAPPHIRE_BOOTS);
 			})
 			.build();
 
@@ -67,10 +82,12 @@ public class SimpleGems implements ModInitializer {
 
 		RubyToolSet.initialize();
 		AmethystToolSet.initialize();
+		SapphireToolSet.initialize();
 
 		Registry.register(Registries.ITEM_GROUP, Identifier.of("simple_gems", "simple_gems"), ITEM_GROUP);
 
 		//Ore Gen
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, SAPPHIRE_ORE_PLACED_KEY);
 	}
 }
