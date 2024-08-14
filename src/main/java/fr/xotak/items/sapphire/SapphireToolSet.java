@@ -36,13 +36,13 @@ public class SapphireToolSet {
             new SwordItem(GemsToolMaterial.SAPPHIRE, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(GemsToolMaterial.SAPPHIRE, 2, -2.4F))));
     //armor
     public static final Item SAPPHIRE_HELMET = Registry.register(Registries.ITEM, Identifier.of("simple_gems", "sapphire_helmet"),
-            new RubyArmorItem(GemsArmorMaterial.SAPPHIRE, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(45))));
+            new SapphireArmorItem(GemsArmorMaterial.SAPPHIRE, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(55))));
     public static final Item SAPPHIRE_CHESTPLATE = Registry.register(Registries.ITEM, Identifier.of("simple_gems", "sapphire_chestplate"),
-            new RubyArmorItem(GemsArmorMaterial.SAPPHIRE, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(45))));
+            new SapphireArmorItem(GemsArmorMaterial.SAPPHIRE, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(55))));
     public static final Item SAPPHIRE_LEGGINGS = Registry.register(Registries.ITEM, Identifier.of("simple_gems", "sapphire_leggings"),
-            new RubyArmorItem(GemsArmorMaterial.SAPPHIRE, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(45))));
+            new SapphireArmorItem(GemsArmorMaterial.SAPPHIRE, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(55))));
     public static final Item SAPPHIRE_BOOTS = Registry.register(Registries.ITEM, Identifier.of("simple_gems", "sapphire_boots"),
-            new RubyArmorItem(GemsArmorMaterial.SAPPHIRE, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(45))));
+            new SapphireArmorItem(GemsArmorMaterial.SAPPHIRE, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(55))));
 
     public static void initialize() {}
 }

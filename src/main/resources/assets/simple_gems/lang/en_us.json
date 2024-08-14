@@ -23,5 +23,20 @@
   "item.simple_gems.amethyst_leggings": "Amethyst Leggings",
   "item.simple_gems.amethyst_boots": "Amethyst Boots",
   "itemGroup.simple_gems.item_group": "Simple Gems",
-  "tag.item.c.rubies": "Rubies"
+  "tag.item.c.rubies": "Rubies",
+  "tag.item.c.sapphire": "Sapphire",
+  "block.simple_gems.sapphire_ore": "Deepslate Sapphire Ore",
+  "block.simple_gems.sapphire_block": "Sapphire Block",
+  "item.simple_gems.sapphire_ore": "Deepslate Sapphire Ore",
+  "item.simple_gems.sapphire": "Sapphire",
+  "item.simple_gems.sapphire_block": "Sapphire Block",
+  "item.simple_gems.sapphire_shovel": "Sapphire Shovel",
+  "item.simple_gems.sapphire_pickaxe": "Sapphire Pickaxe",
+  "item.simple_gems.sapphire_axe": "Sapphire Axe",
+  "item.simple_gems.sapphire_hoe": "Sapphire Hoe",
+  "item.simple_gems.sapphire_sword": "Sapphire Sword",
+  "item.simple_gems.sapphire_helmet": "Sapphire Helmet",
+  "item.simple_gems.sapphire_chestplate": "Sapphire Chestplate",
+  "item.simple_gems.sapphire_leggings": "Sapphire Leggings",
+  "item.simple_gems.sapphire_boots": "Sapphire Boots"
 }

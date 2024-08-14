@@ -23,5 +23,20 @@
   "item.simple_gems.amethyst_leggings": "Jambière en améthyste",
   "item.simple_gems.amethyst_boots": "Bottes en améthyste",
   "itemGroup.simple_gems.item_group": "Simple Gems",
-  "tag.item.c.rubies": "Rubis"
+  "tag.item.c.rubies": "Rubis",
+  "tag.item.c.sapphire": "Saphir",
+  "block.simple_gems.sapphire_ore": "Minerai de saphir des abîmes",
+  "block.simple_gems.sapphire_block": "Bloc de saphir",
+  "item.simple_gems.sapphire_ore": "Minerai de saphir des abîmes",
+  "item.simple_gems.sapphire": "Saphir",
+  "item.simple_gems.sapphire_block": "Bloc de saphir",
+  "item.simple_gems.sapphire_shovel": "Pelle en saphir",
+  "item.simple_gems.sapphire_pickaxe": "Pioche en saphir",
+  "item.simple_gems.sapphire_axe": "Hache en saphir",
+  "item.simple_gems.sapphire_hoe": "Houe en saphir",
+  "item.simple_gems.sapphire_sword": "Épée en saphir",
+  "item.simple_gems.sapphire_helmet": "Casque en saphir",
+  "item.simple_gems.sapphire_chestplate": "Plastron en saphir",
+  "item.simple_gems.sapphire_leggings": "Jambière en saphir",
+  "item.simple_gems.sapphire_boots": "Bottes en saphir"
 }

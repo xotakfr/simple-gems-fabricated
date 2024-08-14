@@ -2,11 +2,11 @@
   "type": "minecraft:ore",
   "config": {
     "discard_chance_on_air_exposure": 0.5,
-    "size": 2,
+    "size": 3,
     "targets": [
       {
         "state": {
-          "Name": "simple_gems:ruby_ore"
+          "Name": "simple_gems:sapphire_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
@@ -15,7 +15,7 @@
       },
       {
         "state": {
-          "Name": "simple_gems:ruby_ore"
+          "Name": "simple_gems:sapphire_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
