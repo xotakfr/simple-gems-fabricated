@@ -21,13 +21,13 @@ public class AmethystToolSet {
             new SwordItem(GemsToolMaterial.AMETHYST, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(GemsToolMaterial.AMETHYST, 2, -2.4F))));
     //armor
     public static final Item AMETHYST_HELMET = Registry.register(Registries.ITEM, Identifier.of("simple_gems", "amethyst_helmet"),
-            new AmethystArmorItem(GemsArmorMaterial.AMETHYST, ArmorItem.Type.HELMET, new Item.Settings()));
+            new AmethystArmorItem(GemsArmorMaterial.AMETHYST, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(18)));
     public static final Item AMETHYST_CHESTPLATE = Registry.register(Registries.ITEM, Identifier.of("simple_gems", "amethyst_chestplate"),
-            new AmethystArmorItem(GemsArmorMaterial.AMETHYST, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+            new AmethystArmorItem(GemsArmorMaterial.AMETHYST, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(18)));
     public static final Item AMETHYST_LEGGINGS = Registry.register(Registries.ITEM, Identifier.of("simple_gems", "amethyst_leggings"),
-            new AmethystArmorItem(GemsArmorMaterial.AMETHYST, ArmorItem.Type.LEGGINGS, new Item.Settings()));
+            new AmethystArmorItem(GemsArmorMaterial.AMETHYST, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(18)));
     public static final Item AMETHYST_BOOTS = Registry.register(Registries.ITEM, Identifier.of("simple_gems", "amethyst_boots"),
-            new AmethystArmorItem(GemsArmorMaterial.AMETHYST, ArmorItem.Type.BOOTS, new Item.Settings()));
+            new AmethystArmorItem(GemsArmorMaterial.AMETHYST, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(18)));
 
     public static void initialize() {}
 }
