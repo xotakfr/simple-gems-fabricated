@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "simple_gems",
-	"version": "0.7.0+1.21",
+	"version": "0.7.1+1.21.1",
 	"name": "Simple Gems Fabricated",
 	"description": "This mod add few gems, tools and armors",
 	"authors": [
@@ -25,16 +25,9 @@
 			"fr.xotak.dataGen.SimpleGemsDataGen"
 		]
 	},
-	"mixins": [
-		"simple-gems.mixins.json",
-		{
-			"config": "simple-gems.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
-		"minecraft": "=1.21",
+		"minecraft": "=1.21.1",
 		"java": ">=21",
 		"fabric-api": "*"
 	},
