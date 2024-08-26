@@ -11,6 +11,7 @@ import net.minecraft.registry.entry.RegistryEntry;
 import java.util.List;
 
 public class ArmorEffects {
+    //TODO: Try Map.of() bcuz for some reason I didn't think about it
     public static final ImmutableMap<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>> ARMOR_EFFECTS =
             new ImmutableMap.Builder<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>>()
                     .put(GemsArmorMaterial.SAPPHIRE,
