@@ -1,6 +1,7 @@
 package fr.xotak;
 
 import fr.xotak.items.sapphire.SapphireToolSet;
+import fr.xotak.util.UseItemCallbackHandler;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -83,6 +84,8 @@ public class SimpleGems implements ModInitializer {
 		RubyToolSet.initialize();
 		AmethystToolSet.initialize();
 		SapphireToolSet.initialize();
+
+		UseItemCallbackHandler.initialize();
 
 		Registry.register(Registries.ITEM_GROUP, Identifier.of("simple_gems", "simple_gems"), ITEM_GROUP);
 
