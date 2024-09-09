@@ -15,6 +15,7 @@ import java.util.function.Supplier;
 
 public enum GemsToolMaterial implements ToolMaterial {
     AMETHYST(BlockTags.INCORRECT_FOR_IRON_TOOL, 500, 7.0F, 2.5F, 10, () -> Ingredient.ofItems(Items.AMETHYST_SHARD)),
+    EMERALD(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1561, 8.0F, 3.0F, 10, () -> Ingredient.ofItems(Items.EMERALD)),
     RUBY(SimpleGemsBlockTagGenerator.INCORRECT_FOR_LEVEL_5_TAG, 2640, 9.0F, 6.0F, 25, () -> Ingredient.ofItems(RubyToolSet.RUBY_ITEM)),
     SAPPHIRE(SimpleGemsBlockTagGenerator.INCORRECT_FOR_LEVEL_5_TAG, 3300, 10.0F, 7.0F, 30, () -> Ingredient.ofItems(SapphireToolSet.SAPPHIRE_ITEM));
 

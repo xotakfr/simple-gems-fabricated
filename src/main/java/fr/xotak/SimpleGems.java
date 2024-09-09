@@ -1,5 +1,6 @@
 package fr.xotak;
 
+import fr.xotak.items.emerald.EmeraldToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;
 import fr.xotak.util.UseItemCallbackHandler;
 import net.fabricmc.api.ModInitializer;
@@ -21,16 +22,19 @@ import fr.xotak.items.ruby.RubyToolSet;
 import fr.xotak.items.amethyst.AmethystToolSet;
 
 public class SimpleGems implements ModInitializer {
+	// We declare the mod id here for future reference
+	public static final String MOD_ID = "simple_gems";
+
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-    public static final Logger LOGGER = LoggerFactory.getLogger("simple_gems");
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	// Ruby toolset
 
 	// Ore generation
-	public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of("simple_gems", "ruby_ore"));
-	public static final RegistryKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of("simple_gems", "sapphire_ore"));
+	public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "ruby_ore"));
+	public static final RegistryKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "sapphire_ore"));
 
 
 	public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
@@ -84,10 +88,11 @@ public class SimpleGems implements ModInitializer {
 		RubyToolSet.initialize();
 		AmethystToolSet.initialize();
 		SapphireToolSet.initialize();
+		EmeraldToolSet.initialize();
 
 		UseItemCallbackHandler.initialize();
 
-		Registry.register(Registries.ITEM_GROUP, Identifier.of("simple_gems", "simple_gems"), ITEM_GROUP);
+		Registry.register(Registries.ITEM_GROUP, Identifier.of(MOD_ID, "simple_gems"), ITEM_GROUP);
 
 		//Ore Gen
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);

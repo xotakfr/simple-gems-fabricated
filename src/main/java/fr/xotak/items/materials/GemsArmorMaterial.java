@@ -17,21 +17,28 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class GemsArmorMaterial {
-    public static final RegistryEntry<ArmorMaterial> AMETHYST =  register("amethyst", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+    public static final RegistryEntry<ArmorMaterial> AMETHYST = register("amethyst", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 5);
         map.put(ArmorItem.Type.CHESTPLATE, 7);
         map.put(ArmorItem.Type.HELMET, 3);
         map.put(ArmorItem.Type.BODY, 5);
     }), 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.AMETHYST_SHARD));
-    public static final RegistryEntry<ArmorMaterial> RUBY =  register("ruby", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+    public static final RegistryEntry<ArmorMaterial> EMERALD = register("emerald", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+        map.put(ArmorItem.Type.BOOTS, 3);
+        map.put(ArmorItem.Type.LEGGINGS, 6);
+        map.put(ArmorItem.Type.CHESTPLATE, 8);
+        map.put(ArmorItem.Type.HELMET, 3);
+        map.put(ArmorItem.Type.BODY, 11);
+    }), 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.EMERALD));
+    public static final RegistryEntry<ArmorMaterial> RUBY = register("ruby", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
         map.put(ArmorItem.Type.BOOTS, 5);
         map.put(ArmorItem.Type.LEGGINGS, 8);
         map.put(ArmorItem.Type.CHESTPLATE, 10);
         map.put(ArmorItem.Type.HELMET, 5);
         map.put(ArmorItem.Type.BODY, 5);
     }), 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0f, 0.0f, () -> Ingredient.ofItems(RubyToolSet.RUBY_ITEM));
-    public static final RegistryEntry<ArmorMaterial> SAPPHIRE =  register("sapphire", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+    public static final RegistryEntry<ArmorMaterial> SAPPHIRE = register("sapphire", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
         map.put(ArmorItem.Type.BOOTS, 6);
         map.put(ArmorItem.Type.LEGGINGS, 7);
         map.put(ArmorItem.Type.CHESTPLATE, 11);

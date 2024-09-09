@@ -1,6 +1,7 @@
 package fr.xotak.dataGen;
 
 import fr.xotak.items.amethyst.AmethystToolSet;
+import fr.xotak.items.emerald.EmeraldToolSet;
 import fr.xotak.items.ruby.RubyToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -63,5 +64,15 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(SapphireToolSet.SAPPHIRE_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(SapphireToolSet.SAPPHIRE_BOOTS, Models.GENERATED);
 
+        // Emerald
+        itemModelGenerator.register(EmeraldToolSet.EMERALD_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(EmeraldToolSet.EMERALD_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(EmeraldToolSet.EMERALD_AXE, Models.HANDHELD);
+        itemModelGenerator.register(EmeraldToolSet.EMERALD_HOE, Models.HANDHELD);
+        itemModelGenerator.register(EmeraldToolSet.EMERALD_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(EmeraldToolSet.EMERALD_HELMET, Models.GENERATED);
+        itemModelGenerator.register(EmeraldToolSet.EMERALD_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(EmeraldToolSet.EMERALD_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(EmeraldToolSet.EMERALD_BOOTS, Models.GENERATED);
     }
 }

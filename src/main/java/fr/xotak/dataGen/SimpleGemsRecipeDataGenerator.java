@@ -1,6 +1,7 @@
 package fr.xotak.dataGen;
 
 import fr.xotak.items.amethyst.AmethystToolSet;
+import fr.xotak.items.emerald.EmeraldToolSet;
 import fr.xotak.items.ruby.RubyToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -244,7 +245,7 @@ public class SimpleGemsRecipeDataGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_ITEM))
                 .offerTo(exporter);
         /*
-        Ruby armor
+        Sapphire armor
          */
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, SapphireToolSet.SAPPHIRE_HELMET)
                 .pattern("SSS")
@@ -275,10 +276,84 @@ public class SimpleGemsRecipeDataGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(SapphireToolSet.SAPPHIRE_ITEM), FabricRecipeProvider.conditionsFromItem(SapphireToolSet.SAPPHIRE_ITEM))
                 .offerTo(exporter);
         /*
-        Ruby smelting
+        Sapphire smelting
          */
         RecipeProvider.offerSmelting(exporter, SMELTABLE_TO_SAPPHIRE, RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_ITEM, 6, 300, "simple_gems");
         RecipeProvider.offerBlasting(exporter, SMELTABLE_TO_SAPPHIRE, RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_ITEM, 6, 150, "simple_gems");
 
+        /*
+        Emerald tools
+         */
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, EmeraldToolSet.EMERALD_SHOVEL)
+                .pattern(" E ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('E', Items.EMERALD)
+                .input('S', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(Items.EMERALD), FabricRecipeProvider.conditionsFromItem(Items.EMERALD))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, EmeraldToolSet.EMERALD_PICKAXE)
+                .pattern("EEE")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('E', Items.EMERALD)
+                .input('S', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(Items.EMERALD), FabricRecipeProvider.conditionsFromItem(Items.EMERALD))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, EmeraldToolSet.EMERALD_AXE)
+                .pattern(" EE")
+                .pattern(" SE")
+                .pattern(" S ")
+                .input('E', Items.EMERALD)
+                .input('S', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(Items.EMERALD), FabricRecipeProvider.conditionsFromItem(Items.EMERALD))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, EmeraldToolSet.EMERALD_HOE)
+                .pattern(" EE")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('E', Items.EMERALD)
+                .input('S', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(Items.EMERALD), FabricRecipeProvider.conditionsFromItem(Items.EMERALD))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, EmeraldToolSet.EMERALD_SWORD)
+                .pattern(" E ")
+                .pattern(" E ")
+                .pattern(" S ")
+                .input('E', Items.EMERALD)
+                .input('S', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(Items.EMERALD), FabricRecipeProvider.conditionsFromItem(Items.EMERALD))
+                .offerTo(exporter);
+        /*
+        Amethyst armor
+         */
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, EmeraldToolSet.EMERALD_HELMET)
+                .pattern("EEE")
+                .pattern("E E")
+                .pattern("   ")
+                .input('E', Items.EMERALD)
+                .criterion(FabricRecipeProvider.hasItem(Items.EMERALD), FabricRecipeProvider.conditionsFromItem(Items.EMERALD))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, EmeraldToolSet.EMERALD_CHESTPLATE)
+                .pattern("E E")
+                .pattern("EEE")
+                .pattern("EEE")
+                .input('E', Items.EMERALD)
+                .criterion(FabricRecipeProvider.hasItem(Items.EMERALD), FabricRecipeProvider.conditionsFromItem(Items.EMERALD))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, EmeraldToolSet.EMERALD_LEGGINGS)
+                .pattern("EEE")
+                .pattern("E E")
+                .pattern("E E")
+                .input('E', Items.EMERALD)
+                .criterion(FabricRecipeProvider.hasItem(Items.EMERALD), FabricRecipeProvider.conditionsFromItem(Items.EMERALD))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, EmeraldToolSet.EMERALD_BOOTS)
+                .pattern("   ")
+                .pattern("E E")
+                .pattern("E E")
+                .input('E', Items.EMERALD)
+                .criterion(FabricRecipeProvider.hasItem(Items.EMERALD), FabricRecipeProvider.conditionsFromItem(Items.EMERALD))
+                .offerTo(exporter);
     }
 }

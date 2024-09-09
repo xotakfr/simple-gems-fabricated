@@ -1,7 +1,8 @@
 {
   "values": [
-    "simple_gems:amethyst_helmet",
-    "simple_gems:ruby_helmet",
-    "simple_gems:sapphire_helmet"
+    "simple_gems:amethyst_chestplate",
+    "simple_gems:emerald_chestplate",
+    "simple_gems:ruby_chestplate",
+    "simple_gems:sapphire_chestplate"
   ]
 }

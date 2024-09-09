@@ -1,6 +1,8 @@
 package fr.xotak.dataGen;
 
 import fr.xotak.items.amethyst.AmethystToolSet;
+import fr.xotak.items.emerald.EmeraldArmorItem;
+import fr.xotak.items.emerald.EmeraldToolSet;
 import fr.xotak.items.ruby.RubyToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -33,46 +35,55 @@ public class SimpleGemsItemTagGenerator extends FabricTagProvider.ItemTagProvide
                 .setReplace(false);
         getOrCreateTagBuilder(ItemTags.SHOVELS)
                 .add(AmethystToolSet.AMETHYST_SHOVEL)
+                .add(EmeraldToolSet.EMERALD_SHOVEL)
                 .add(RubyToolSet.RUBY_SHOVEL)
                 .add(SapphireToolSet.SAPPHIRE_SHOVEL)
                 .setReplace(false);
         getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(AmethystToolSet.AMETHYST_PICKAXE)
+                .add(EmeraldToolSet.EMERALD_PICKAXE)
                 .add(RubyToolSet.RUBY_PICKAXE)
                 .add(SapphireToolSet.SAPPHIRE_PICKAXE)
                 .setReplace(false);
         getOrCreateTagBuilder(ItemTags.AXES)
                 .add(AmethystToolSet.AMETHYST_AXE)
+                .add(EmeraldToolSet.EMERALD_AXE)
                 .add(RubyToolSet.RUBY_AXE)
                 .add(SapphireToolSet.SAPPHIRE_AXE)
                 .setReplace(false);
         getOrCreateTagBuilder(ItemTags.HOES)
                 .add(AmethystToolSet.AMETHYST_HOE)
+                .add(EmeraldToolSet.EMERALD_HOE)
                 .add(RubyToolSet.RUBY_HOE)
                 .add(SapphireToolSet.SAPPHIRE_HOE)
                 .setReplace(false);
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(AmethystToolSet.AMETHYST_SWORD)
+                .add(EmeraldToolSet.EMERALD_SWORD)
                 .add(RubyToolSet.RUBY_SWORD)
                 .add(SapphireToolSet.SAPPHIRE_SWORD)
                 .setReplace(false);
         getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
                 .add(AmethystToolSet.AMETHYST_HELMET)
+                .add(EmeraldToolSet.EMERALD_HELMET)
                 .add(RubyToolSet.RUBY_HELMET)
                 .add(SapphireToolSet.SAPPHIRE_HELMET)
                 .setReplace(false);
         getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
-                .add(AmethystToolSet.AMETHYST_HELMET)
-                .add(RubyToolSet.RUBY_HELMET)
-                .add(SapphireToolSet.SAPPHIRE_HELMET)
+                .add(AmethystToolSet.AMETHYST_CHESTPLATE)
+                .add(EmeraldToolSet.EMERALD_CHESTPLATE)
+                .add(RubyToolSet.RUBY_CHESTPLATE)
+                .add(SapphireToolSet.SAPPHIRE_CHESTPLATE)
                 .setReplace(false);
         getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
                 .add(AmethystToolSet.AMETHYST_LEGGINGS)
+                .add(EmeraldToolSet.EMERALD_LEGGINGS)
                 .add(RubyToolSet.RUBY_LEGGINGS)
                 .add(SapphireToolSet.SAPPHIRE_LEGGINGS)
                 .setReplace(false);
         getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
                 .add(AmethystToolSet.AMETHYST_BOOTS)
+                .add(EmeraldToolSet.EMERALD_BOOTS)
                 .add(RubyToolSet.RUBY_BOOTS)
                 .add(SapphireToolSet.SAPPHIRE_BOOTS)
                 .setReplace(false);
