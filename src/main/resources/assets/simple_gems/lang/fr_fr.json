@@ -38,5 +38,14 @@
   "item.simple_gems.sapphire_helmet": "Casque en saphir",
   "item.simple_gems.sapphire_chestplate": "Plastron en saphir",
   "item.simple_gems.sapphire_leggings": "Jambière en saphir",
-  "item.simple_gems.sapphire_boots": "Bottes en saphir"
+  "item.simple_gems.sapphire_boots": "Bottes en saphir",
+  "item.simple_gems.emerald_shovel": "Pelle en émeraude",
+  "item.simple_gems.emerald_pickaxe": "Pioche en émeraude",
+  "item.simple_gems.emerald_axe": "Hache en émeraude",
+  "item.simple_gems.emerald_hoe": "Houe en émeraude",
+  "item.simple_gems.emerald_sword": "Épée en émeraude",
+  "item.simple_gems.emerald_helmet": "Casque en émeraude",
+  "item.simple_gems.emerald_chestplate": "Plastron en émeraude",
+  "item.simple_gems.emerald_leggings": "Jambière en émeraude",
+  "item.simple_gems.emerald_boots": "Bottes en émeraude"
 }
