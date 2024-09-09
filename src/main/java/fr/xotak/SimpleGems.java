@@ -74,6 +74,15 @@ public class SimpleGems implements ModInitializer {
 				entries.add(SapphireToolSet.SAPPHIRE_CHESTPLATE);
 				entries.add(SapphireToolSet.SAPPHIRE_LEGGINGS);
 				entries.add(SapphireToolSet.SAPPHIRE_BOOTS);
+				entries.add(EmeraldToolSet.EMERALD_SHOVEL);
+				entries.add(EmeraldToolSet.EMERALD_PICKAXE);
+				entries.add(EmeraldToolSet.EMERALD_AXE);
+				entries.add(EmeraldToolSet.EMERALD_HOE);
+				entries.add(EmeraldToolSet.EMERALD_SWORD);
+				entries.add(EmeraldToolSet.EMERALD_HELMET);
+				entries.add(EmeraldToolSet.EMERALD_CHESTPLATE);
+				entries.add(EmeraldToolSet.EMERALD_LEGGINGS);
+				entries.add(EmeraldToolSet.EMERALD_BOOTS);
 			})
 			.build();
 

@@ -37,6 +37,12 @@ public class UseItemCallbackHandler {
                         entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 400, 0, false, false, false));
                         itemStack.decrementUnlessCreative(1, entity);
                         return TypedActionResult.consume(itemStack);
+                    } else if (itemStack.isOf(Items.EMERALD)) {
+                        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.NEUTRAL, 1.0F, 0.9F);
+                        entity.getItemCooldownManager().set(Items.EMERALD, 200);
+                        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HERO_OF_THE_VILLAGE, 400, 0, false, false, false));
+                        itemStack.decrementUnlessCreative(1, entity);
+                        return TypedActionResult.consume(itemStack);
                     }
                 }
             return TypedActionResult.pass(itemStack);
