@@ -1,4 +1,4 @@
-package fr.xotak.dataGen;
+package fr.xotak.datagen;
 
 import fr.xotak.items.amethyst.AmethystToolSet;
 import fr.xotak.items.emerald.EmeraldToolSet;
@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
 import net.minecraft.registry.RegistryWrapper;
 

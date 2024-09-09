@@ -1,7 +1,7 @@
 package fr.xotak.items.materials;
 
 import com.google.common.base.Suppliers;
-import fr.xotak.dataGen.SimpleGemsBlockTagGenerator;
+import fr.xotak.datagen.SimpleGemsBlockTagGenerator;
 import fr.xotak.items.ruby.RubyToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;
 import net.minecraft.block.Block;

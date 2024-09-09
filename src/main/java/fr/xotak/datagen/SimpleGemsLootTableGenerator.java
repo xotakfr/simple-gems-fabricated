@@ -1,10 +1,9 @@
-package fr.xotak.dataGen;
+package fr.xotak.datagen;
 
 import fr.xotak.items.ruby.RubyToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;

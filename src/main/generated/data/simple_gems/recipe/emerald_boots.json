@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "pattern": [
+    "   ",
+    "E E",
+    "E E"
+  ],
+  "result": {
+    "count": 1,
+    "id": "simple_gems:emerald_boots"
+  }
+}

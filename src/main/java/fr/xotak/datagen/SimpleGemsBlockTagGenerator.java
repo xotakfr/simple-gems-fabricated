@@ -1,4 +1,4 @@
-package fr.xotak.dataGen;
+package fr.xotak.datagen;
 
 import fr.xotak.items.ruby.RubyToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;

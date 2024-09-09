@@ -1,7 +1,6 @@
-package fr.xotak.dataGen;
+package fr.xotak.datagen;
 
-import fr.xotak.items.amethyst.AmethystToolSet;
-import fr.xotak.items.emerald.EmeraldArmorItem;
+import fr.xotak.items.amethyst.AmethystToolSet;import fr.xotak.items.emerald.EmeraldArmorItem;
 import fr.xotak.items.emerald.EmeraldToolSet;
 import fr.xotak.items.ruby.RubyToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;

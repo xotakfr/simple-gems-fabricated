@@ -22,7 +22,7 @@
 			"fr.xotak.SimpleGemsClient"
 		],
 		"fabric-datagen": [
-			"fr.xotak.dataGen.SimpleGemsDataGen"
+			"fr.xotak.datagen.SimpleGemsDataGen"
 		]
 	},
 	"depends": {
