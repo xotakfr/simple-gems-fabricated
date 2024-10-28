@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "R": {
-      "item": "simple_gems:ruby"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
+    "R": "simple_gems:ruby",
+    "S": "minecraft:stick"
   },
   "pattern": [
     " R ",

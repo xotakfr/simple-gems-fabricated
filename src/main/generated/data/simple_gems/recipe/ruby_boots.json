@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "R": {
-      "item": "simple_gems:ruby"
-    }
+    "R": "simple_gems:ruby"
   },
   "pattern": [
     "   ",

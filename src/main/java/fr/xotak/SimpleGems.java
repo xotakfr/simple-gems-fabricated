@@ -1,6 +1,11 @@
 package fr.xotak;
 
+import fr.xotak.items.amethyst.AmethystRegistryKeys;
+import fr.xotak.items.emerald.EmeraldRegistryKeys;
 import fr.xotak.items.emerald.EmeraldToolSet;
+import fr.xotak.items.ruby.RubyRegistryEntry;
+import fr.xotak.items.sapphire.SapphireArmorItem;
+import fr.xotak.items.sapphire.SapphireRegistryKeys;
 import fr.xotak.items.sapphire.SapphireToolSet;
 import fr.xotak.util.UseItemCallbackHandler;
 import net.fabricmc.api.ModInitializer;
@@ -94,6 +99,13 @@ public class SimpleGems implements ModInitializer {
 
 		LOGGER.info("Hello from Simple Gems");
 
+		// Initialize the RegistryKeys
+		RubyRegistryEntry.initialize();
+		AmethystRegistryKeys.initialize();
+		SapphireRegistryKeys.initialize();
+		EmeraldRegistryKeys.initialize();
+
+		// Initialize the items
 		RubyToolSet.initialize();
 		AmethystToolSet.initialize();
 		SapphireToolSet.initialize();

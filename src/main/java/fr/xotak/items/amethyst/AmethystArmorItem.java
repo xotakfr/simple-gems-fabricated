@@ -4,15 +4,16 @@ import fr.xotak.util.ArmorUtils;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.ArmorMaterials;
+import net.minecraft.item.equipment.ArmorMaterial;
+import net.minecraft.item.equipment.ArmorMaterials;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.World;
 
 public class AmethystArmorItem extends ArmorItem {
 
-        public AmethystArmorItem(RegistryEntry<ArmorMaterial> material, Type slot, Settings settings) {
+        public AmethystArmorItem(ArmorMaterial material, EquipmentType slot, Settings settings) {
             super(material, slot, settings);
         }
 

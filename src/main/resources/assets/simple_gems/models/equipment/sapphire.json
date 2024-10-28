@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "simple_gems:sapphire"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "simple_gems:sapphire"
+      }
+    ]
+  }
+}

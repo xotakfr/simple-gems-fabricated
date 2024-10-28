@@ -2,6 +2,7 @@ package fr.xotak.datagen;
 
 import fr.xotak.items.amethyst.AmethystToolSet;
 import fr.xotak.items.emerald.EmeraldToolSet;
+import fr.xotak.items.materials.NewGemsArmorMaterial;
 import fr.xotak.items.ruby.RubyToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -9,7 +10,10 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.equipment.EquipmentModel;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -35,10 +39,10 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(RubyToolSet.RUBY_AXE, Models.HANDHELD);
         itemModelGenerator.register(RubyToolSet.RUBY_HOE, Models.HANDHELD);
         itemModelGenerator.register(RubyToolSet.RUBY_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(RubyToolSet.RUBY_HELMET, Models.GENERATED);
-        itemModelGenerator.register(RubyToolSet.RUBY_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(RubyToolSet.RUBY_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(RubyToolSet.RUBY_BOOTS, Models.GENERATED);
+        itemModelGenerator.registerArmor(RubyToolSet.RUBY_HELMET, NewGemsArmorMaterial.RUBY.modelId(), buildHumanoid(NewGemsArmorMaterial.RUBY.modelId().getPath()), EquipmentSlot.HEAD);
+        itemModelGenerator.registerArmor(RubyToolSet.RUBY_CHESTPLATE, NewGemsArmorMaterial.RUBY.modelId(), buildHumanoid(NewGemsArmorMaterial.RUBY.modelId().getPath()), EquipmentSlot.CHEST);
+        itemModelGenerator.registerArmor(RubyToolSet.RUBY_LEGGINGS, NewGemsArmorMaterial.RUBY.modelId(), buildHumanoid(NewGemsArmorMaterial.RUBY.modelId().getPath()), EquipmentSlot.LEGS);
+        itemModelGenerator.registerArmor(RubyToolSet.RUBY_BOOTS, NewGemsArmorMaterial.RUBY.modelId(), buildHumanoid(NewGemsArmorMaterial.RUBY.modelId().getPath()), EquipmentSlot.FEET);
 
         // Amethyst
         itemModelGenerator.register(AmethystToolSet.AMETHYST_SHOVEL, Models.HANDHELD);
@@ -73,5 +77,10 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(EmeraldToolSet.EMERALD_CHESTPLATE, Models.GENERATED);
         itemModelGenerator.register(EmeraldToolSet.EMERALD_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(EmeraldToolSet.EMERALD_BOOTS, Models.GENERATED);
+
+    }
+
+    public static EquipmentModel buildHumanoid(String name) {
+        return EquipmentModel.builder().addHumanoidLayers(Identifier.ofVanilla(name)).build();
     }
 }

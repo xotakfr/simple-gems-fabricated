@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "simple_gems:emerald"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "simple_gems:emerald"
+      }
+    ]
+  }
+}

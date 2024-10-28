@@ -5,16 +5,6 @@
       "conditions": {
         "items": [
           {
-            "items": "simple_gems:sapphire"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_sapphire_block": {
-      "conditions": {
-        "items": [
-          {
             "items": "simple_gems:sapphire_block"
           }
         ]
@@ -31,8 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_sapphire",
-      "has_sapphire_block"
+      "has_sapphire"
     ]
   ],
   "rewards": {

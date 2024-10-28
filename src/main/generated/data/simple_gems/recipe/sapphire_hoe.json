@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "G": {
-      "item": "simple_gems:sapphire"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
+    "G": "simple_gems:sapphire",
+    "S": "minecraft:stick"
   },
   "pattern": [
     " GG",

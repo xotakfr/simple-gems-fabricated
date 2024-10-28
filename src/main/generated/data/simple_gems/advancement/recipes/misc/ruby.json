@@ -5,16 +5,6 @@
       "conditions": {
         "items": [
           {
-            "items": "simple_gems:ruby"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_ruby_block": {
-      "conditions": {
-        "items": [
-          {
             "items": "simple_gems:ruby_block"
           }
         ]
@@ -31,8 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_ruby",
-      "has_ruby_block"
+      "has_ruby"
     ]
   ],
   "rewards": {

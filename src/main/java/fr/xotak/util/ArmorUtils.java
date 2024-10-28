@@ -3,48 +3,49 @@ package fr.xotak.util;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.Item;
+import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.tag.TagKey;
 
 import java.util.List;
 import java.util.Map;
 
 public class ArmorUtils {
     public static void evaluateArmorEffects(PlayerEntity player) {
-        for (Map.Entry<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>> entry : ArmorEffects.ARMOR_EFFECTS.entrySet()) {
-            RegistryEntry<ArmorMaterial> armorMaterial = entry.getKey();
+        for (Map.Entry<TagKey<Item>, List<StatusEffectInstance>> entry : ArmorEffects.ARMOR_EFFECTS.entrySet()) {
+            TagKey<Item> tagKey = entry.getKey();
             List<StatusEffectInstance> effects = entry.getValue();
 
-            if (hasCorrectArmorOn(armorMaterial, player)) {
+            if (hasCorrectArmorOn(tagKey, player)) {
                 for (StatusEffectInstance e: effects) {
-                    addStatusEffectFromMaterial(player, armorMaterial, e);
+                    addStatusEffectFromTagKey(player, tagKey, e);
                 }
             }
         }
     }
 
-    private static void addStatusEffectFromMaterial(PlayerEntity player, RegistryEntry<ArmorMaterial> material, StatusEffectInstance effect) {
+    private static void addStatusEffectFromTagKey(PlayerEntity player, TagKey<Item> tagKey, StatusEffectInstance effect) {
         boolean hasStatusEffect = player.hasStatusEffect(effect.getEffectType());
         if (!hasStatusEffect) {
             player.addStatusEffect(new StatusEffectInstance(effect));
         }
     }
 
-    private static boolean hasCorrectArmorOn(RegistryEntry<ArmorMaterial> material, PlayerEntity player) {
+    private static boolean hasCorrectArmorOn(TagKey<Item> tagKey, PlayerEntity player) {
         for (ItemStack armorStack: player.getInventory().armor) {
             if(!(armorStack.getItem() instanceof ArmorItem)) {
                 return false;
             }
         }
 
-        ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
-        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmorStack(1).getItem());
-        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());
-        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
+        ItemStack boots = player.getInventory().getArmorStack(0);
+        ItemStack leggings = player.getInventory().getArmorStack(1);
+        ItemStack breastplate = player.getInventory().getArmorStack(2);
+        ItemStack helmet = player.getInventory().getArmorStack(3);
 
-        return helmet.getMaterial() == material && breastplate.getMaterial() == material &&
-                leggings.getMaterial() == material && boots.getMaterial() == material;
+        return helmet.isIn(tagKey) && breastplate.isIn(tagKey) &&
+                leggings.isIn(tagKey) && boots.isIn(tagKey);
     }
 
     public static boolean hasFullSuitOfArmorOn(PlayerEntity player) {
