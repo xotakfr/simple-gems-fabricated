@@ -1,11 +1,9 @@
 package fr.xotak.util;
 
 import fr.xotak.datagen.SimpleGemsItemTagGenerator;
-import fr.xotak.items.materials.NewGemsArmorMaterial;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
-import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.registry.tag.TagKey;
 
 

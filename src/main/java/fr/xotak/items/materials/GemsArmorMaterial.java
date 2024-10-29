@@ -10,7 +10,7 @@ import java.util.EnumMap;
 
 
 
-public interface NewGemsArmorMaterial {
+public interface GemsArmorMaterial {
     public static final ArmorMaterial AMETHYST = new ArmorMaterial(18, Util.make(new EnumMap(EquipmentType.class), map -> {
         map.put(EquipmentType.BOOTS, 3);
         map.put(EquipmentType.LEGGINGS, 5);

@@ -1,4 +1,4 @@
-// 1.21.2	2024-10-28T15:56:56.5912191	Simple Gems Fabricated/Tags for minecraft:item
+// 1.21.2	2024-10-29T12:15:12.2094698	Simple Gems Fabricated/Tags for minecraft:item
 0b14e1ef19d98befa89b7fecfce29e8193d3dbb8 data\minecraft\tags\item\pickaxes.json
 ceb873d17ce9c8ddfaba9df7f47f8e4258c775bb data\c\tags\item\ruby_armor.json
 bde6ca31173d1f22d5f6fe355dc90c9faa35b239 data\c\tags\item\repairs_amethyst_armor.json
@@ -6,9 +6,9 @@ ba4fe20be476af5c1e9a660e9ae01a0504565437 data\minecraft\tags\item\leg_armor.json
 8c4f379d97e2cd8c7f9297bf4fab7e60083ecb0d data\c\tags\item\repairs_emerald_armor.json
 bde6ca31173d1f22d5f6fe355dc90c9faa35b239 data\c\tags\item\amethyst_tool_materials.json
 479e56cfbbd88945d94b03abcbada866b728a912 data\c\tags\item\sapphire_tool_materials.json
-5317e8faa825a5668b975a182902d70584e209ac data\c\tags\item\ruby_tool_materials.json
-5317e8faa825a5668b975a182902d70584e209ac data\c\tags\item\repairs_ruby_armor.json
 5317e8faa825a5668b975a182902d70584e209ac data\c\tags\item\ruby.json
+5317e8faa825a5668b975a182902d70584e209ac data\c\tags\item\repairs_ruby_armor.json
+5317e8faa825a5668b975a182902d70584e209ac data\c\tags\item\ruby_tool_materials.json
 4cc5f14a8ee1d63bfe6e743dd775a1db15a5e8a0 data\minecraft\tags\item\head_armor.json
 3b5d011759f289fbc96f8a777a863a789acd5fa6 data\c\tags\item\sapphire_armor.json
 479e56cfbbd88945d94b03abcbada866b728a912 data\c\tags\item\sapphire.json
@@ -18,7 +18,7 @@ abdefff725abc6ca98e3991a56b0d32f4ef09117 data\minecraft\tags\item\shovels.json
 8c4f379d97e2cd8c7f9297bf4fab7e60083ecb0d data\c\tags\item\emerald_tool_materials.json
 f04029cc81367eea535b7660e2d3253dd4d35ea7 data\minecraft\tags\item\chest_armor.json
 6705f44d08f3be2948701ae8460a495c8b44dd43 data\minecraft\tags\item\axes.json
-3caf670becb6406dde2905b7a6556d7a0b7ae327 data\c\tags\item\amethyst_armor.json
 5117e105565c09674e9cbd753c388f3a1e7c1eb9 data\c\tags\item\emerald_armor.json
+3caf670becb6406dde2905b7a6556d7a0b7ae327 data\c\tags\item\amethyst_armor.json
 b265b45285bafac03be22a19ab8f8f41875cfc11 data\minecraft\tags\item\hoes.json
 d167e8f0390d2caf55fe78300ef59346c3acde77 data\minecraft\tags\item\foot_armor.json
