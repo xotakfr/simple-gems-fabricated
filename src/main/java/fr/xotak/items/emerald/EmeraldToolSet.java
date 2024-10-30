@@ -27,16 +27,16 @@ public class EmeraldToolSet {
                     new SwordItem.Settings().registryKey(EmeraldRegistryKeys.SWORD)));
     //armor
     public static final Item EMERALD_HELMET = Registry.register(Registries.ITEM, EmeraldRegistryKeys.HELMET,
-            new EmeraldArmorItem(GemsArmorMaterial.EMERALD, EquipmentType.HELMET,
+            new ArmorItem(GemsArmorMaterial.EMERALD, EquipmentType.HELMET,
                     new ArmorItem.Settings().registryKey(EmeraldRegistryKeys.HELMET)));
     public static final Item EMERALD_CHESTPLATE = Registry.register(Registries.ITEM, EmeraldRegistryKeys.CHESTPLATE,
-            new EmeraldArmorItem(GemsArmorMaterial.EMERALD, EquipmentType.CHESTPLATE,
+            new ArmorItem(GemsArmorMaterial.EMERALD, EquipmentType.CHESTPLATE,
                     new Item.Settings().registryKey(EmeraldRegistryKeys.CHESTPLATE)));
     public static final Item EMERALD_LEGGINGS = Registry.register(Registries.ITEM, EmeraldRegistryKeys.LEGGINGS,
-            new EmeraldArmorItem(GemsArmorMaterial.EMERALD, EquipmentType.LEGGINGS,
+            new ArmorItem(GemsArmorMaterial.EMERALD, EquipmentType.LEGGINGS,
                     new Item.Settings().registryKey(EmeraldRegistryKeys.LEGGINGS)));
     public static final Item EMERALD_BOOTS = Registry.register(Registries.ITEM, EmeraldRegistryKeys.BOOTS,
-            new EmeraldArmorItem(GemsArmorMaterial.EMERALD, EquipmentType.BOOTS,
+            new ArmorItem(GemsArmorMaterial.EMERALD, EquipmentType.BOOTS,
                     new Item.Settings().registryKey(EmeraldRegistryKeys.BOOTS)));
 
 

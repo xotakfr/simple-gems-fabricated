@@ -57,4 +57,10 @@ public class ArmorUtils {
         return !helmet.isEmpty() && !breastplate.isEmpty()
                 && !leggings.isEmpty() && !boots.isEmpty();
     }
+
+    public static void removeArmorEffects(PlayerEntity player, TagKey<Item> armor) {
+        for (StatusEffectInstance effect: ArmorEffects.ARMOR_EFFECTS.get(armor)) {
+            player.removeStatusEffect(effect.getEffectType());
+        }
+    }
 }

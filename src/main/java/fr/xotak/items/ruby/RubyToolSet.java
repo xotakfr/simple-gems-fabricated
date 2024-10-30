@@ -45,16 +45,16 @@ public class RubyToolSet {
                     new Item.Settings().registryKey(RubyRegistryEntry.SWORD)));
     //armor
     public static final Item RUBY_HELMET = Registry.register(Registries.ITEM, RubyRegistryEntry.HELMET,
-            new RubyArmorItem(GemsArmorMaterial.RUBY, EquipmentType.HELMET,
+            new ArmorItem(GemsArmorMaterial.RUBY, EquipmentType.HELMET,
                     new Item.Settings().registryKey(RubyRegistryEntry.HELMET)));
     public static final Item RUBY_CHESTPLATE = Registry.register(Registries.ITEM, RubyRegistryEntry.CHESTPLATE,
-            new RubyArmorItem(GemsArmorMaterial.RUBY, EquipmentType.CHESTPLATE,
+            new ArmorItem(GemsArmorMaterial.RUBY, EquipmentType.CHESTPLATE,
                     new Item.Settings().registryKey(RubyRegistryEntry.CHESTPLATE)));
     public static final Item RUBY_LEGGINGS = Registry.register(Registries.ITEM, RubyRegistryEntry.LEGGINGS,
-            new RubyArmorItem(GemsArmorMaterial.RUBY, EquipmentType.LEGGINGS,
+            new ArmorItem(GemsArmorMaterial.RUBY, EquipmentType.LEGGINGS,
                     new Item.Settings().registryKey(RubyRegistryEntry.LEGGINGS)));
     public static final Item RUBY_BOOTS = Registry.register(Registries.ITEM, RubyRegistryEntry.BOOTS,
-            new RubyArmorItem(GemsArmorMaterial.RUBY, EquipmentType.BOOTS,
+            new ArmorItem(GemsArmorMaterial.RUBY, EquipmentType.BOOTS,
                     new Item.Settings().registryKey(RubyRegistryEntry.BOOTS)));
 
 

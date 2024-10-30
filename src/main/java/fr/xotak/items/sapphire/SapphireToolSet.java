@@ -43,16 +43,16 @@ public class SapphireToolSet {
                     new Item.Settings().registryKey(SapphireRegistryKeys.SWORD)));
     //armor
     public static final Item SAPPHIRE_HELMET = Registry.register(Registries.ITEM, SapphireRegistryKeys.HELMET,
-            new SapphireArmorItem(GemsArmorMaterial.SAPPHIRE, EquipmentType.HELMET,
+            new ArmorItem(GemsArmorMaterial.SAPPHIRE, EquipmentType.HELMET,
                     new Item.Settings().registryKey(SapphireRegistryKeys.HELMET)));
     public static final Item SAPPHIRE_CHESTPLATE = Registry.register(Registries.ITEM, SapphireRegistryKeys.CHESTPLATE,
-            new SapphireArmorItem(GemsArmorMaterial.SAPPHIRE, EquipmentType.CHESTPLATE,
+            new ArmorItem(GemsArmorMaterial.SAPPHIRE, EquipmentType.CHESTPLATE,
                     new Item.Settings().registryKey(SapphireRegistryKeys.CHESTPLATE)));
     public static final Item SAPPHIRE_LEGGINGS = Registry.register(Registries.ITEM, SapphireRegistryKeys.LEGGINGS,
-            new SapphireArmorItem(GemsArmorMaterial.SAPPHIRE,EquipmentType.LEGGINGS,
+            new ArmorItem(GemsArmorMaterial.SAPPHIRE,EquipmentType.LEGGINGS,
                     new Item.Settings().registryKey(SapphireRegistryKeys.LEGGINGS)));
     public static final Item SAPPHIRE_BOOTS = Registry.register(Registries.ITEM, SapphireRegistryKeys.BOOTS,
-            new SapphireArmorItem(GemsArmorMaterial.SAPPHIRE, EquipmentType.BOOTS,
+            new ArmorItem(GemsArmorMaterial.SAPPHIRE, EquipmentType.BOOTS,
                     new Item.Settings().registryKey(SapphireRegistryKeys.BOOTS)));
 
     public static void initialize() {}

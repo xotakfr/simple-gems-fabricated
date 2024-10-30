@@ -27,16 +27,16 @@ public class AmethystToolSet {
                     new Item.Settings().registryKey(AmethystRegistryKeys.SWORD)));
     //armor
     public static final Item AMETHYST_HELMET = Registry.register(Registries.ITEM, AmethystRegistryKeys.HELMET,
-            new AmethystArmorItem(GemsArmorMaterial.AMETHYST, EquipmentType.HELMET,
+            new ArmorItem(GemsArmorMaterial.AMETHYST, EquipmentType.HELMET,
                     new Item.Settings().registryKey(AmethystRegistryKeys.HELMET)));
     public static final Item AMETHYST_CHESTPLATE = Registry.register(Registries.ITEM, AmethystRegistryKeys.CHESTPLATE,
-            new AmethystArmorItem(GemsArmorMaterial.AMETHYST, EquipmentType.CHESTPLATE,
+            new ArmorItem(GemsArmorMaterial.AMETHYST, EquipmentType.CHESTPLATE,
                     new Item.Settings().registryKey(AmethystRegistryKeys.CHESTPLATE)));
     public static final Item AMETHYST_LEGGINGS = Registry.register(Registries.ITEM, AmethystRegistryKeys.LEGGINGS,
-            new AmethystArmorItem(GemsArmorMaterial.AMETHYST, EquipmentType.LEGGINGS,
+            new ArmorItem(GemsArmorMaterial.AMETHYST, EquipmentType.LEGGINGS,
                     new Item.Settings().registryKey(AmethystRegistryKeys.LEGGINGS)));
     public static final Item AMETHYST_BOOTS = Registry.register(Registries.ITEM, AmethystRegistryKeys.BOOTS,
-            new AmethystArmorItem(GemsArmorMaterial.AMETHYST, EquipmentType.BOOTS,
+            new ArmorItem(GemsArmorMaterial.AMETHYST, EquipmentType.BOOTS,
                     new Item.Settings().registryKey(AmethystRegistryKeys.BOOTS)));
 
     public static void initialize() {}

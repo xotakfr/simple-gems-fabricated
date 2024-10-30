@@ -1,6 +1,6 @@
 package fr.xotak.datagen;
 
-import fr.xotak.items.amethyst.AmethystToolSet;import fr.xotak.items.emerald.EmeraldArmorItem;
+import fr.xotak.items.amethyst.AmethystToolSet;
 import fr.xotak.items.emerald.EmeraldToolSet;
 import fr.xotak.items.ruby.RubyToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;
@@ -35,6 +35,7 @@ public class SimpleGemsItemTagGenerator extends FabricTagProvider.ItemTagProvide
     public static final TagKey<Item> SAPPHIRE_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:sapphire_armor"));
     public static final TagKey<Item> AMETHYST_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:amethyst_armor"));
     public static final TagKey<Item> EMERALD_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:emerald_armor"));
+    public static final TagKey<Item> MOD_ARMORS = TagKey.of(RegistryKeys.ITEM, Identifier.of("simple_gems:armors"));
 
 
     @Override
@@ -139,5 +140,10 @@ public class SimpleGemsItemTagGenerator extends FabricTagProvider.ItemTagProvide
                 .add(EmeraldToolSet.EMERALD_LEGGINGS)
                 .add(EmeraldToolSet.EMERALD_BOOTS)
                 .setReplace(false);
+        getOrCreateTagBuilder(MOD_ARMORS)
+                .addTag(RUBY_ARMOR)
+                .addTag(SAPPHIRE_ARMOR)
+                .addTag(AMETHYST_ARMOR)
+                .addTag(EMERALD_ARMOR);
     }
 }
