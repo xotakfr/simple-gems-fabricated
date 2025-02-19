@@ -1,7 +1,7 @@
 package fr.xotak.items.sapphire;
 
-import fr.xotak.items.materials.GemsArmorMaterial;
-import fr.xotak.items.materials.GemsToolMaterial;
+import fr.xotak.items.equipment.GemsArmorMaterial;
+import fr.xotak.items.equipment.GemsToolMaterial;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;

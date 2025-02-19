@@ -1,7 +1,7 @@
 package fr.xotak.items.amethyst;
 
-import fr.xotak.items.materials.GemsArmorMaterial;
-import fr.xotak.items.materials.GemsToolMaterial;
+import fr.xotak.items.equipment.GemsArmorMaterial;
+import fr.xotak.items.equipment.GemsToolMaterial;
 import net.minecraft.item.*;
 
 import net.minecraft.item.equipment.EquipmentType;

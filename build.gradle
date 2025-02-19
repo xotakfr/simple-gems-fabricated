@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.8-SNAPSHOT'
+	id 'fabric-loom' version '1.9-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -29,6 +29,13 @@ loom {
 	}
 
 }
+
+fabricApi {
+	configureDataGeneration {
+		client = true
+	}
+}
+
 
 dependencies {
 	// To change the versions see the gradle.properties file
@@ -85,7 +92,4 @@ publishing {
 		// retrieving dependencies.
 	}
 
-	fabricApi {
-		configureDataGeneration()
-	}
 }
