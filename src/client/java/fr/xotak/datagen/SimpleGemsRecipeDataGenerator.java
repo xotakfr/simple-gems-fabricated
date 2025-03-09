@@ -38,18 +38,7 @@ public class SimpleGemsRecipeDataGenerator extends FabricRecipeProvider {
                 /*
                 Ruby Tools
                  */
-                /*
-                ShapelessRecipeJsonBuilder.create(registryLookup, RecipeCategory.MISC, RubyToolSet.RUBY_ITEM, 9).input(RubyToolSet.RUBY_BLOCK_ITEM, 1)
-                        .criterion(RecipeGenerator.hasItem(RubyToolSet.RUBY_ITEM), this.conditionsFromItem(RubyToolSet.RUBY_ITEM))
-                        .criterion(RecipeGenerator.hasItem(RubyToolSet.RUBY_BLOCK_ITEM), this.conditionsFromItem(RubyToolSet.RUBY_BLOCK_ITEM))
-                        .offerTo(exporter);
-                ShapelessRecipeJsonBuilder.create(registryLookup, RecipeCategory.BUILDING_BLOCKS, RubyToolSet.RUBY_BLOCK_ITEM).input(RubyToolSet.RUBY_ITEM, 9)
-                        .criterion(RecipeGenerator.hasItem(RubyToolSet.RUBY_ITEM), this.conditionsFromItem(RubyToolSet.RUBY_ITEM))
-                        .criterion(RecipeGenerator.hasItem(RubyToolSet.RUBY_BLOCK_ITEM), this.conditionsFromItem(RubyToolSet.RUBY_BLOCK_ITEM))
-                        .offerTo(exporter);
-
-                 */
-                this.offerCompactingRecipe(RecipeCategory.MISC, RubyToolSet.RUBY_ITEM, RubyToolSet.RUBY_BLOCK_ITEM, RecipeGenerator.hasItem(RubyToolSet.RUBY_ITEM));
+                this.offerReversibleCompactingRecipes(RecipeCategory.MISC, RubyToolSet.RUBY_ITEM, RecipeCategory.MISC, RubyToolSet.RUBY_BLOCK_ITEM);
 
                 ShapedRecipeJsonBuilder.create(registryLookup, RecipeCategory.TOOLS, RubyToolSet.RUBY_SHOVEL)
                         .pattern(" R ")
@@ -206,7 +195,7 @@ public class SimpleGemsRecipeDataGenerator extends FabricRecipeProvider {
                 /*
                 Sapphire tools
                  */
-                this.offerCompactingRecipe(RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_ITEM, SapphireToolSet.SAPPHIRE_BLOCK_ITEM, RecipeGenerator.hasItem(SapphireToolSet.SAPPHIRE_ITEM));
+                this.offerReversibleCompactingRecipes(RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_ITEM, RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_BLOCK_ITEM);
                 ShapedRecipeJsonBuilder.create(registryLookup, RecipeCategory.TOOLS, SapphireToolSet.SAPPHIRE_SHOVEL)
                         .pattern(" G ")
                         .pattern(" S ")
