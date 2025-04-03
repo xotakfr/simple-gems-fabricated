@@ -33,7 +33,7 @@ public interface GemsArmorMaterial {
         map.put(EquipmentType.HELMET, 5);
         map.put(EquipmentType.BODY, 5);
     }), 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0f, 0.0f,SimpleGemsItemTagGenerator.REPAIRS_RUBY_ARMOR, EquipmentAssetKeys.RUBY);
-    ArmorMaterial SAPPHIRE = new ArmorMaterial(30, Util.make(new EnumMap(EquipmentType.class), map -> {
+    ArmorMaterial SAPPHIRE = new ArmorMaterial(50, Util.make(new EnumMap(EquipmentType.class), map -> {
         map.put(EquipmentType.BOOTS, 6);
         map.put(EquipmentType.LEGGINGS, 7);
         map.put(EquipmentType.CHESTPLATE, 11);
