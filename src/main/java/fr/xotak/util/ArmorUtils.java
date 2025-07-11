@@ -1,8 +1,9 @@
 package fr.xotak.util;
 
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ArmorItem;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.item.ItemStack;
@@ -33,28 +34,22 @@ public class ArmorUtils {
     }
 
     private static boolean hasCorrectArmorOn(TagKey<Item> tagKey, PlayerEntity player) {
-        for (ItemStack armorStack: player.getInventory().armor) {
-            if(!(armorStack.getItem() instanceof ArmorItem)) {
-                return false;
-            }
-        }
+        ItemStack boots = player.getEquippedStack(EquipmentSlot.FEET);
+        ItemStack leggings = player.getEquippedStack(EquipmentSlot.LEGS);
+        ItemStack chestplate = player.getEquippedStack(EquipmentSlot.CHEST);
+        ItemStack helmet = player.getEquippedStack(EquipmentSlot.HEAD);
 
-        ItemStack boots = player.getInventory().getArmorStack(0);
-        ItemStack leggings = player.getInventory().getArmorStack(1);
-        ItemStack breastplate = player.getInventory().getArmorStack(2);
-        ItemStack helmet = player.getInventory().getArmorStack(3);
-
-        return helmet.isIn(tagKey) && breastplate.isIn(tagKey) &&
+        return helmet.isIn(tagKey) && chestplate.isIn(tagKey) &&
                 leggings.isIn(tagKey) && boots.isIn(tagKey);
     }
 
     public static boolean hasFullSuitOfArmorOn(PlayerEntity player) {
-        ItemStack boots = player.getInventory().getArmorStack(0);
-        ItemStack leggings = player.getInventory().getArmorStack(1);
-        ItemStack breastplate = player.getInventory().getArmorStack(2);
-        ItemStack helmet = player.getInventory().getArmorStack(3);
+        ItemStack boots = player.getEquippedStack(EquipmentSlot.FEET);
+        ItemStack leggings = player.getEquippedStack(EquipmentSlot.LEGS);
+        ItemStack chestplate = player.getEquippedStack(EquipmentSlot.CHEST);
+        ItemStack helmet = player.getEquippedStack(EquipmentSlot.HEAD);
 
-        return !helmet.isEmpty() && !breastplate.isEmpty()
+        return !helmet.isEmpty() && !chestplate.isEmpty()
                 && !leggings.isEmpty() && !boots.isEmpty();
     }
 
