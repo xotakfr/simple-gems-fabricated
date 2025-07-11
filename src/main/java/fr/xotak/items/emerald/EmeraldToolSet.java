@@ -13,31 +13,19 @@ public class EmeraldToolSet {
     public static final Item EMERALD_SHOVEL = Registry.register(Registries.ITEM, EmeraldRegistryKeys.SHOVEL,
             new ShovelItem(GemsToolMaterial.EMERALD, 1.5F, -3.0F,
                     new ShovelItem.Settings().registryKey(EmeraldRegistryKeys.SHOVEL)));
-    public static final Item EMERALD_PICKAXE = Registry.register(Registries.ITEM, EmeraldRegistryKeys.PICKAXE,
-            new PickaxeItem(GemsToolMaterial.EMERALD, 1.0F, -2.8F,
-                    new PickaxeItem.Settings().registryKey(EmeraldRegistryKeys.PICKAXE)));
+    public static final Item EMERALD_PICKAXE = Items.register(EmeraldRegistryKeys.PICKAXE, Item::new, new Item.Settings().pickaxe(GemsToolMaterial.EMERALD, 1.0F, -2.8F));
     public static final Item EMERALD_AXE = Registry.register(Registries.ITEM, EmeraldRegistryKeys.AXE,
             new AxeItem(GemsToolMaterial.EMERALD, 6.0F, -3.0F,
                     new AxeItem.Settings().registryKey(EmeraldRegistryKeys.AXE)));
     public static final Item EMERALD_HOE = Registry.register(Registries.ITEM, EmeraldRegistryKeys.HOE,
             new HoeItem(GemsToolMaterial.EMERALD, 0.0F, -3.0F,
                     new HoeItem.Settings().registryKey(EmeraldRegistryKeys.HOE)));
-    public static final Item EMERALD_SWORD = Registry.register(Registries.ITEM, EmeraldRegistryKeys.SWORD,
-            new SwordItem(GemsToolMaterial.EMERALD, 3.0F, -2.4F,
-                    new SwordItem.Settings().registryKey(EmeraldRegistryKeys.SWORD)));
+    public static final Item EMERALD_SWORD = Items.register(EmeraldRegistryKeys.SWORD, Item::new, new Item.Settings().sword(GemsToolMaterial.EMERALD, 3.0F, -2.4F));
     //armor
-    public static final Item EMERALD_HELMET = Registry.register(Registries.ITEM, EmeraldRegistryKeys.HELMET,
-            new ArmorItem(GemsArmorMaterial.EMERALD, EquipmentType.HELMET,
-                    new ArmorItem.Settings().registryKey(EmeraldRegistryKeys.HELMET)));
-    public static final Item EMERALD_CHESTPLATE = Registry.register(Registries.ITEM, EmeraldRegistryKeys.CHESTPLATE,
-            new ArmorItem(GemsArmorMaterial.EMERALD, EquipmentType.CHESTPLATE,
-                    new Item.Settings().registryKey(EmeraldRegistryKeys.CHESTPLATE)));
-    public static final Item EMERALD_LEGGINGS = Registry.register(Registries.ITEM, EmeraldRegistryKeys.LEGGINGS,
-            new ArmorItem(GemsArmorMaterial.EMERALD, EquipmentType.LEGGINGS,
-                    new Item.Settings().registryKey(EmeraldRegistryKeys.LEGGINGS)));
-    public static final Item EMERALD_BOOTS = Registry.register(Registries.ITEM, EmeraldRegistryKeys.BOOTS,
-            new ArmorItem(GemsArmorMaterial.EMERALD, EquipmentType.BOOTS,
-                    new Item.Settings().registryKey(EmeraldRegistryKeys.BOOTS)));
+    public static final Item EMERALD_HELMET = Items.register(EmeraldRegistryKeys.HELMET, Item::new, new Item.Settings().armor(GemsArmorMaterial.EMERALD, EquipmentType.HELMET));
+    public static final Item EMERALD_CHESTPLATE = Items.register(EmeraldRegistryKeys.CHESTPLATE, Item::new, new Item.Settings().armor(GemsArmorMaterial.EMERALD, EquipmentType.CHESTPLATE));
+    public static final Item EMERALD_LEGGINGS = Items.register(EmeraldRegistryKeys.LEGGINGS, Item::new, new Item.Settings().armor(GemsArmorMaterial.EMERALD, EquipmentType.LEGGINGS));
+    public static final Item EMERALD_BOOTS = Items.register(EmeraldRegistryKeys.BOOTS, Item::new, new Item.Settings().armor(GemsArmorMaterial.EMERALD, EquipmentType.BOOTS));
 
 
     public static void initialize() {
