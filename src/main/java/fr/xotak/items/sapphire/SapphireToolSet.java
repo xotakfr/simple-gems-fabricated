@@ -9,6 +9,7 @@ import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class SapphireToolSet {
@@ -29,31 +30,19 @@ public class SapphireToolSet {
     public static final Item SAPPHIRE_SHOVEL = Registry.register(Registries.ITEM, SapphireRegistryKeys.SHOVEL,
             new ShovelItem(GemsToolMaterial.SAPPHIRE, 1.5F, -3.0F,
                     new ShovelItem.Settings().registryKey(SapphireRegistryKeys.SHOVEL)));
-    public static final Item SAPPHIRE_PICKAXE = Registry.register(Registries.ITEM, SapphireRegistryKeys.PICKAXE,
-            new PickaxeItem(GemsToolMaterial.SAPPHIRE, 1.0F, -2.8F,
-                    new PickaxeItem.Settings().registryKey(SapphireRegistryKeys.PICKAXE)));
+    public static final Item SAPPHIRE_PICKAXE = Items.register(SapphireRegistryKeys.PICKAXE, Item::new, new Item.Settings().pickaxe(GemsToolMaterial.SAPPHIRE, 1.5F, -3.0F));
     public static final Item SAPPHIRE_AXE = Registry.register(Registries.ITEM, SapphireRegistryKeys.AXE,
             new AxeItem(GemsToolMaterial.SAPPHIRE, 6.0F, -3.0F,
                     new AxeItem.Settings().registryKey(SapphireRegistryKeys.AXE)));
     public static final Item SAPPHIRE_HOE = Registry.register(Registries.ITEM, SapphireRegistryKeys.HOE,
             new HoeItem(GemsToolMaterial.SAPPHIRE, 0.0F, -3.0F,
                     new Item.Settings().registryKey(SapphireRegistryKeys.HOE)));
-    public static final Item SAPPHIRE_SWORD = Registry.register(Registries.ITEM, SapphireRegistryKeys.SWORD,
-            new SwordItem(GemsToolMaterial.SAPPHIRE, 3.0F, -2.4F,
-                    new Item.Settings().registryKey(SapphireRegistryKeys.SWORD)));
+    public static final Item SAPPHIRE_SWORD = Items.register(SapphireRegistryKeys.SWORD, Item::new, new Item.Settings().pickaxe(GemsToolMaterial.SAPPHIRE, 3.0F, -2.4F));
     //armor
-    public static final Item SAPPHIRE_HELMET = Registry.register(Registries.ITEM, SapphireRegistryKeys.HELMET,
-            new ArmorItem(GemsArmorMaterial.SAPPHIRE, EquipmentType.HELMET,
-                    new Item.Settings().registryKey(SapphireRegistryKeys.HELMET)));
-    public static final Item SAPPHIRE_CHESTPLATE = Registry.register(Registries.ITEM, SapphireRegistryKeys.CHESTPLATE,
-            new ArmorItem(GemsArmorMaterial.SAPPHIRE, EquipmentType.CHESTPLATE,
-                    new Item.Settings().registryKey(SapphireRegistryKeys.CHESTPLATE)));
-    public static final Item SAPPHIRE_LEGGINGS = Registry.register(Registries.ITEM, SapphireRegistryKeys.LEGGINGS,
-            new ArmorItem(GemsArmorMaterial.SAPPHIRE,EquipmentType.LEGGINGS,
-                    new Item.Settings().registryKey(SapphireRegistryKeys.LEGGINGS)));
-    public static final Item SAPPHIRE_BOOTS = Registry.register(Registries.ITEM, SapphireRegistryKeys.BOOTS,
-            new ArmorItem(GemsArmorMaterial.SAPPHIRE, EquipmentType.BOOTS,
-                    new Item.Settings().registryKey(SapphireRegistryKeys.BOOTS)));
+    public static final Item SAPPHIRE_HELMET = Items.register(SapphireRegistryKeys.HELMET, Item::new, new Item.Settings().armor(GemsArmorMaterial.SAPPHIRE, EquipmentType.HELMET));
+    public static final Item SAPPHIRE_CHESTPLATE = Items.register(SapphireRegistryKeys.CHESTPLATE, Item::new, new Item.Settings().armor(GemsArmorMaterial.SAPPHIRE, EquipmentType.CHESTPLATE));
+    public static final Item SAPPHIRE_LEGGINGS = Items.register(SapphireRegistryKeys.LEGGINGS, Item::new, new Item.Settings().armor(GemsArmorMaterial.SAPPHIRE, EquipmentType.LEGGINGS));
+    public static final Item SAPPHIRE_BOOTS = Items.register(SapphireRegistryKeys.BOOTS, Item::new, new Item.Settings().armor(GemsArmorMaterial.SAPPHIRE, EquipmentType.BOOTS));
 
     public static void initialize() {}
 }

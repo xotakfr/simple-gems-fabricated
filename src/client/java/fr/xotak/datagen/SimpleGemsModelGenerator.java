@@ -38,10 +38,10 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(RubyToolSet.RUBY_AXE, Models.HANDHELD);
         itemModelGenerator.register(RubyToolSet.RUBY_HOE, Models.HANDHELD);
         itemModelGenerator.register(RubyToolSet.RUBY_SWORD, Models.HANDHELD);
-        itemModelGenerator.registerArmor(RubyToolSet.RUBY_HELMET, GemsArmorMaterial.RUBY.assetId(), "helmet", false);
-        itemModelGenerator.registerArmor(RubyToolSet.RUBY_CHESTPLATE, GemsArmorMaterial.RUBY.assetId(), "chestplate", false);
-        itemModelGenerator.registerArmor(RubyToolSet.RUBY_LEGGINGS, GemsArmorMaterial.RUBY.assetId(), "leggings", false);
-        itemModelGenerator.registerArmor(RubyToolSet.RUBY_BOOTS, GemsArmorMaterial.RUBY.assetId(), "boots", false);
+        itemModelGenerator.registerArmor(RubyToolSet.RUBY_HELMET, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(RubyToolSet.RUBY_CHESTPLATE, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(RubyToolSet.RUBY_LEGGINGS, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(RubyToolSet.RUBY_BOOTS, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 
         // Amethyst
         itemModelGenerator.register(AmethystToolSet.AMETHYST_SHOVEL, Models.HANDHELD);
@@ -49,10 +49,10 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(AmethystToolSet.AMETHYST_AXE, Models.HANDHELD);
         itemModelGenerator.register(AmethystToolSet.AMETHYST_HOE, Models.HANDHELD);
         itemModelGenerator.register(AmethystToolSet.AMETHYST_SWORD, Models.HANDHELD);
-        itemModelGenerator.registerArmor(AmethystToolSet.AMETHYST_HELMET, GemsArmorMaterial.AMETHYST.assetId(), "helmet", false);
-        itemModelGenerator.registerArmor(AmethystToolSet.AMETHYST_CHESTPLATE, GemsArmorMaterial.AMETHYST.assetId(), "chestplate", false);
-        itemModelGenerator.registerArmor(AmethystToolSet.AMETHYST_LEGGINGS, GemsArmorMaterial.AMETHYST.assetId(), "leggings", false);
-        itemModelGenerator.registerArmor(AmethystToolSet.AMETHYST_BOOTS, GemsArmorMaterial.AMETHYST.assetId(), "boots", false);
+        itemModelGenerator.registerArmor(AmethystToolSet.AMETHYST_HELMET, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(AmethystToolSet.AMETHYST_CHESTPLATE, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(AmethystToolSet.AMETHYST_LEGGINGS, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(AmethystToolSet.AMETHYST_BOOTS, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 
         // Sapphire
         itemModelGenerator.register(SapphireToolSet.SAPPHIRE_ITEM, Models.HANDHELD);
@@ -61,10 +61,10 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(SapphireToolSet.SAPPHIRE_AXE, Models.HANDHELD);
         itemModelGenerator.register(SapphireToolSet.SAPPHIRE_HOE, Models.HANDHELD);
         itemModelGenerator.register(SapphireToolSet.SAPPHIRE_SWORD, Models.HANDHELD);
-        itemModelGenerator.registerArmor(SapphireToolSet.SAPPHIRE_HELMET, GemsArmorMaterial.SAPPHIRE.assetId(), "helmet", false);
-        itemModelGenerator.registerArmor(SapphireToolSet.SAPPHIRE_CHESTPLATE, GemsArmorMaterial.SAPPHIRE.assetId(), "chestplate", false);
-        itemModelGenerator.registerArmor(SapphireToolSet.SAPPHIRE_LEGGINGS, GemsArmorMaterial.SAPPHIRE.assetId(), "leggings", false);
-        itemModelGenerator.registerArmor(SapphireToolSet.SAPPHIRE_BOOTS, GemsArmorMaterial.SAPPHIRE.assetId(), "boots", false);
+        itemModelGenerator.registerArmor(SapphireToolSet.SAPPHIRE_HELMET, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(SapphireToolSet.SAPPHIRE_CHESTPLATE, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(SapphireToolSet.SAPPHIRE_LEGGINGS, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(SapphireToolSet.SAPPHIRE_BOOTS, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 
         // Emerald
         itemModelGenerator.register(EmeraldToolSet.EMERALD_SHOVEL, Models.HANDHELD);
@@ -72,10 +72,10 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(EmeraldToolSet.EMERALD_AXE, Models.HANDHELD);
         itemModelGenerator.register(EmeraldToolSet.EMERALD_HOE, Models.HANDHELD);
         itemModelGenerator.register(EmeraldToolSet.EMERALD_SWORD, Models.HANDHELD);
-        itemModelGenerator.registerArmor(EmeraldToolSet.EMERALD_HELMET, GemsArmorMaterial.EMERALD.assetId(), "helmet", false);
-        itemModelGenerator.registerArmor(EmeraldToolSet.EMERALD_CHESTPLATE, GemsArmorMaterial.EMERALD.assetId(), "chestplate", false);
-        itemModelGenerator.registerArmor(EmeraldToolSet.EMERALD_LEGGINGS, GemsArmorMaterial.EMERALD.assetId(), "leggings", false);
-        itemModelGenerator.registerArmor(EmeraldToolSet.EMERALD_BOOTS, GemsArmorMaterial.EMERALD.assetId(), "boots", false);
+        itemModelGenerator.registerArmor(EmeraldToolSet.EMERALD_HELMET, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(EmeraldToolSet.EMERALD_CHESTPLATE, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(EmeraldToolSet.EMERALD_LEGGINGS, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(EmeraldToolSet.EMERALD_BOOTS, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 
     }
 

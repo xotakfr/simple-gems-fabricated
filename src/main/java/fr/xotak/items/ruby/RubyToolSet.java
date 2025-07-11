@@ -31,31 +31,20 @@ public class RubyToolSet {
     public static final Item RUBY_SHOVEL = Registry.register(Registries.ITEM, RubyRegistryEntry.SHOVEL,
             new ShovelItem(GemsToolMaterial.RUBY, 1.5F, -3.0F,
                     new ShovelItem.Settings().registryKey(RubyRegistryEntry.SHOVEL)));
-    public static final Item RUBY_PICKAXE = Registry.register(Registries.ITEM, RubyRegistryEntry.PICKAXE,
-            new PickaxeItem(GemsToolMaterial.RUBY, 1.0F, -2.8F,
-                    new PickaxeItem.Settings().registryKey(RubyRegistryEntry.PICKAXE)));
+    public static final Item RUBY_PICKAXE = Items.register(RubyRegistryEntry.PICKAXE, Item::new, new Item.Settings().pickaxe(GemsToolMaterial.RUBY, 1.0F, -2.8F));
+
     public static final Item RUBY_AXE = Registry.register(Registries.ITEM, RubyRegistryEntry.AXE,
             new AxeItem(GemsToolMaterial.RUBY, 6.0F, -3.0F,
                     new AxeItem.Settings().registryKey(RubyRegistryEntry.AXE)));
     public static final Item RUBY_HOE = Registry.register(Registries.ITEM, RubyRegistryEntry.HOE,
             new HoeItem(GemsToolMaterial.RUBY, 0.0F, -3.0F,
                     new HoeItem.Settings().registryKey(RubyRegistryEntry.HOE)));
-    public static final Item RUBY_SWORD = Registry.register(Registries.ITEM, RubyRegistryEntry.SWORD,
-            new SwordItem(GemsToolMaterial.RUBY, 3.0F, -2.4F,
-                    new Item.Settings().registryKey(RubyRegistryEntry.SWORD)));
+    public static final Item RUBY_SWORD = Items.register(RubyRegistryEntry.SWORD, Item::new, new Item.Settings().sword(GemsToolMaterial.RUBY, 3.0F, -2.4F));
     //armor
-    public static final Item RUBY_HELMET = Registry.register(Registries.ITEM, RubyRegistryEntry.HELMET,
-            new ArmorItem(GemsArmorMaterial.RUBY, EquipmentType.HELMET,
-                    new Item.Settings().registryKey(RubyRegistryEntry.HELMET)));
-    public static final Item RUBY_CHESTPLATE = Registry.register(Registries.ITEM, RubyRegistryEntry.CHESTPLATE,
-            new ArmorItem(GemsArmorMaterial.RUBY, EquipmentType.CHESTPLATE,
-                    new Item.Settings().registryKey(RubyRegistryEntry.CHESTPLATE)));
-    public static final Item RUBY_LEGGINGS = Registry.register(Registries.ITEM, RubyRegistryEntry.LEGGINGS,
-            new ArmorItem(GemsArmorMaterial.RUBY, EquipmentType.LEGGINGS,
-                    new Item.Settings().registryKey(RubyRegistryEntry.LEGGINGS)));
-    public static final Item RUBY_BOOTS = Registry.register(Registries.ITEM, RubyRegistryEntry.BOOTS,
-            new ArmorItem(GemsArmorMaterial.RUBY, EquipmentType.BOOTS,
-                    new Item.Settings().registryKey(RubyRegistryEntry.BOOTS)));
+    public static final Item RUBY_HELMET = Items.register(RubyRegistryEntry.HELMET, Item::new, new Item.Settings().armor(GemsArmorMaterial.RUBY, EquipmentType.HELMET));
+    public static final Item RUBY_CHESTPLATE = Items.register(RubyRegistryEntry.CHESTPLATE, Item::new, new Item.Settings().armor(GemsArmorMaterial.RUBY, EquipmentType.CHESTPLATE));
+    public static final Item RUBY_LEGGINGS = Items.register(RubyRegistryEntry.LEGGINGS, Item::new, new Item.Settings().armor(GemsArmorMaterial.RUBY, EquipmentType.LEGGINGS));
+    public static final Item RUBY_BOOTS = Items.register(RubyRegistryEntry.BOOTS, Item::new, new Item.Settings().armor(GemsArmorMaterial.RUBY, EquipmentType.BOOTS));
 
 
     public static void initialize() {}
