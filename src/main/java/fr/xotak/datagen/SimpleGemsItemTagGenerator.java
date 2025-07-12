@@ -40,107 +40,107 @@ public class SimpleGemsItemTagGenerator extends FabricTagProvider.ItemTagProvide
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(RUBIES)
+        valueLookupBuilder(RUBIES)
                 .add(RubyToolSet.RUBY_ITEM)
                 .setReplace(false);
-        getOrCreateTagBuilder(SAPPHIRE)
+        valueLookupBuilder(SAPPHIRE)
                 .add(SapphireToolSet.SAPPHIRE_ITEM)
                 .setReplace(false);
-        getOrCreateTagBuilder(REPAIRS_AMETHYST_ARMOR)
+        valueLookupBuilder(REPAIRS_AMETHYST_ARMOR)
                 .add(Items.AMETHYST_SHARD);
-        getOrCreateTagBuilder(AMETHYST_TOOL_MATERIALS)
+        valueLookupBuilder(AMETHYST_TOOL_MATERIALS)
                 .add(Items.AMETHYST_SHARD);
-        getOrCreateTagBuilder(REPAIRS_EMERALD_ARMOR)
+        valueLookupBuilder(REPAIRS_EMERALD_ARMOR)
                 .add(Items.EMERALD);
-        getOrCreateTagBuilder(EMERALD_TOOL_MATERIALS)
+        valueLookupBuilder(EMERALD_TOOL_MATERIALS)
                 .add(Items.EMERALD);
-        getOrCreateTagBuilder(REPAIRS_RUBY_ARMOR)
+        valueLookupBuilder(REPAIRS_RUBY_ARMOR)
                 .add(RubyToolSet.RUBY_ITEM);
-        getOrCreateTagBuilder(RUBY_TOOL_MATERIALS)
+        valueLookupBuilder(RUBY_TOOL_MATERIALS)
                 .add(RubyToolSet.RUBY_ITEM);
-        getOrCreateTagBuilder(REPAIRS_SAPPHIRE_ARMOR)
+        valueLookupBuilder(REPAIRS_SAPPHIRE_ARMOR)
                 .add(SapphireToolSet.SAPPHIRE_ITEM);
-        getOrCreateTagBuilder(SAPPHIRE_TOOL_MATERIALS)
+        valueLookupBuilder(SAPPHIRE_TOOL_MATERIALS)
                 .add(SapphireToolSet.SAPPHIRE_ITEM);
-        getOrCreateTagBuilder(ItemTags.SHOVELS)
+        valueLookupBuilder(ItemTags.SHOVELS)
                 .add(AmethystToolSet.AMETHYST_SHOVEL)
                 .add(EmeraldToolSet.EMERALD_SHOVEL)
                 .add(RubyToolSet.RUBY_SHOVEL)
                 .add(SapphireToolSet.SAPPHIRE_SHOVEL)
                 .setReplace(false);
-        getOrCreateTagBuilder(ItemTags.PICKAXES)
+        valueLookupBuilder(ItemTags.PICKAXES)
                 .add(AmethystToolSet.AMETHYST_PICKAXE)
                 .add(EmeraldToolSet.EMERALD_PICKAXE)
                 .add(RubyToolSet.RUBY_PICKAXE)
                 .add(SapphireToolSet.SAPPHIRE_PICKAXE)
                 .setReplace(false);
-        getOrCreateTagBuilder(ItemTags.AXES)
+        valueLookupBuilder(ItemTags.AXES)
                 .add(AmethystToolSet.AMETHYST_AXE)
                 .add(EmeraldToolSet.EMERALD_AXE)
                 .add(RubyToolSet.RUBY_AXE)
                 .add(SapphireToolSet.SAPPHIRE_AXE)
                 .setReplace(false);
-        getOrCreateTagBuilder(ItemTags.HOES)
+        valueLookupBuilder(ItemTags.HOES)
                 .add(AmethystToolSet.AMETHYST_HOE)
                 .add(EmeraldToolSet.EMERALD_HOE)
                 .add(RubyToolSet.RUBY_HOE)
                 .add(SapphireToolSet.SAPPHIRE_HOE)
                 .setReplace(false);
-        getOrCreateTagBuilder(ItemTags.SWORDS)
+        valueLookupBuilder(ItemTags.SWORDS)
                 .add(AmethystToolSet.AMETHYST_SWORD)
                 .add(EmeraldToolSet.EMERALD_SWORD)
                 .add(RubyToolSet.RUBY_SWORD)
                 .add(SapphireToolSet.SAPPHIRE_SWORD)
                 .setReplace(false);
-        getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
+        valueLookupBuilder(ItemTags.HEAD_ARMOR)
                 .add(AmethystToolSet.AMETHYST_HELMET)
                 .add(EmeraldToolSet.EMERALD_HELMET)
                 .add(RubyToolSet.RUBY_HELMET)
                 .add(SapphireToolSet.SAPPHIRE_HELMET)
                 .setReplace(false);
-        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
+        valueLookupBuilder(ItemTags.CHEST_ARMOR)
                 .add(AmethystToolSet.AMETHYST_CHESTPLATE)
                 .add(EmeraldToolSet.EMERALD_CHESTPLATE)
                 .add(RubyToolSet.RUBY_CHESTPLATE)
                 .add(SapphireToolSet.SAPPHIRE_CHESTPLATE)
                 .setReplace(false);
-        getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
+        valueLookupBuilder(ItemTags.LEG_ARMOR)
                 .add(AmethystToolSet.AMETHYST_LEGGINGS)
                 .add(EmeraldToolSet.EMERALD_LEGGINGS)
                 .add(RubyToolSet.RUBY_LEGGINGS)
                 .add(SapphireToolSet.SAPPHIRE_LEGGINGS)
                 .setReplace(false);
-        getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
+        valueLookupBuilder(ItemTags.FOOT_ARMOR)
                 .add(AmethystToolSet.AMETHYST_BOOTS)
                 .add(EmeraldToolSet.EMERALD_BOOTS)
                 .add(RubyToolSet.RUBY_BOOTS)
                 .add(SapphireToolSet.SAPPHIRE_BOOTS)
                 .setReplace(false);
-        getOrCreateTagBuilder(RUBY_ARMOR)
+        valueLookupBuilder(RUBY_ARMOR)
                 .add(RubyToolSet.RUBY_HELMET)
                 .add(RubyToolSet.RUBY_CHESTPLATE)
                 .add(RubyToolSet.RUBY_LEGGINGS)
                 .add(RubyToolSet.RUBY_BOOTS)
                 .setReplace(false);
-        getOrCreateTagBuilder(SAPPHIRE_ARMOR)
+        valueLookupBuilder(SAPPHIRE_ARMOR)
                 .add(SapphireToolSet.SAPPHIRE_HELMET)
                 .add(SapphireToolSet.SAPPHIRE_CHESTPLATE)
                 .add(SapphireToolSet.SAPPHIRE_LEGGINGS)
                 .add(SapphireToolSet.SAPPHIRE_BOOTS)
                 .setReplace(false);
-        getOrCreateTagBuilder(AMETHYST_ARMOR)
+        valueLookupBuilder(AMETHYST_ARMOR)
                 .add(AmethystToolSet.AMETHYST_HELMET)
                 .add(AmethystToolSet.AMETHYST_CHESTPLATE)
                 .add(AmethystToolSet.AMETHYST_LEGGINGS)
                 .add(AmethystToolSet.AMETHYST_BOOTS)
                 .setReplace(false);
-        getOrCreateTagBuilder(EMERALD_ARMOR)
+        valueLookupBuilder(EMERALD_ARMOR)
                 .add(EmeraldToolSet.EMERALD_HELMET)
                 .add(EmeraldToolSet.EMERALD_CHESTPLATE)
                 .add(EmeraldToolSet.EMERALD_LEGGINGS)
                 .add(EmeraldToolSet.EMERALD_BOOTS)
                 .setReplace(false);
-        getOrCreateTagBuilder(MOD_ARMORS)
+        valueLookupBuilder(MOD_ARMORS)
                 .addTag(RUBY_ARMOR)
                 .addTag(SAPPHIRE_ARMOR)
                 .addTag(AMETHYST_ARMOR)

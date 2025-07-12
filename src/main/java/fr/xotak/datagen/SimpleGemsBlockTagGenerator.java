@@ -22,17 +22,17 @@ public class SimpleGemsBlockTagGenerator extends FabricTagProvider.BlockTagProvi
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(RubyToolSet.RUBY_ORE)
                 .add(RubyToolSet.RUBY_BLOCK)
                 .add(SapphireToolSet.SAPPHIRE_ORE)
                 .add(SapphireToolSet.SAPPHIRE_BLOCK)
                 .setReplace(false);
-        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
                 .add(RubyToolSet.RUBY_ORE)
                 .add(RubyToolSet.RUBY_BLOCK)
                 .setReplace(false);
-        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
                 .add(SapphireToolSet.SAPPHIRE_ORE)
                 .add(SapphireToolSet.SAPPHIRE_BLOCK);
     }
