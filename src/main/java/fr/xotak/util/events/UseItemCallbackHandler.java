@@ -19,7 +19,7 @@ public class UseItemCallbackHandler {
     public static void initialize() {
         UseItemCallback.EVENT.register((PlayerEntity entity, World world, Hand hand) -> {
             ItemStack itemStack = entity.getMainHandStack();
-                if (!world.isClient) {
+                if (!world.isClient()) {
                     if (itemStack.isOf(Items.AMETHYST_SHARD)) {
                         world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.NEUTRAL, 1.0F, 0.9F);
                         entity.getItemCooldownManager().set(Identifier.ofVanilla("amethyst_shard"), 200);
