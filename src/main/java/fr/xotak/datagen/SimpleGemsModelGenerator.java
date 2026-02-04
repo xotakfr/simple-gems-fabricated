@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -35,10 +36,10 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(RubyToolSet.RUBY_AXE, Models.HANDHELD);
         itemModelGenerator.register(RubyToolSet.RUBY_HOE, Models.HANDHELD);
         itemModelGenerator.register(RubyToolSet.RUBY_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(RubyToolSet.RUBY_HELMET, Models.GENERATED);
-        itemModelGenerator.register(RubyToolSet.RUBY_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(RubyToolSet.RUBY_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(RubyToolSet.RUBY_BOOTS, Models.GENERATED);
+        itemModelGenerator.registerArmor((ArmorItem) RubyToolSet.RUBY_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) RubyToolSet.RUBY_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) RubyToolSet.RUBY_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) RubyToolSet.RUBY_BOOTS);
 
         // Amethyst
         itemModelGenerator.register(AmethystToolSet.AMETHYST_SHOVEL, Models.HANDHELD);
@@ -46,10 +47,10 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(AmethystToolSet.AMETHYST_AXE, Models.HANDHELD);
         itemModelGenerator.register(AmethystToolSet.AMETHYST_HOE, Models.HANDHELD);
         itemModelGenerator.register(AmethystToolSet.AMETHYST_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(AmethystToolSet.AMETHYST_HELMET, Models.GENERATED);
-        itemModelGenerator.register(AmethystToolSet.AMETHYST_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(AmethystToolSet.AMETHYST_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(AmethystToolSet.AMETHYST_BOOTS, Models.GENERATED);
+        itemModelGenerator.registerArmor((ArmorItem) AmethystToolSet.AMETHYST_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) AmethystToolSet.AMETHYST_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) AmethystToolSet.AMETHYST_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) AmethystToolSet.AMETHYST_BOOTS);
 
         // Sapphire
         itemModelGenerator.register(SapphireToolSet.SAPPHIRE_ITEM, Models.HANDHELD);
@@ -58,10 +59,10 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(SapphireToolSet.SAPPHIRE_AXE, Models.HANDHELD);
         itemModelGenerator.register(SapphireToolSet.SAPPHIRE_HOE, Models.HANDHELD);
         itemModelGenerator.register(SapphireToolSet.SAPPHIRE_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(SapphireToolSet.SAPPHIRE_HELMET, Models.GENERATED);
-        itemModelGenerator.register(SapphireToolSet.SAPPHIRE_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(SapphireToolSet.SAPPHIRE_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(SapphireToolSet.SAPPHIRE_BOOTS, Models.GENERATED);
+        itemModelGenerator.registerArmor((ArmorItem) SapphireToolSet.SAPPHIRE_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) SapphireToolSet.SAPPHIRE_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) SapphireToolSet.SAPPHIRE_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) SapphireToolSet.SAPPHIRE_BOOTS);
 
         // Emerald
         itemModelGenerator.register(EmeraldToolSet.EMERALD_SHOVEL, Models.HANDHELD);
@@ -69,9 +70,9 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(EmeraldToolSet.EMERALD_AXE, Models.HANDHELD);
         itemModelGenerator.register(EmeraldToolSet.EMERALD_HOE, Models.HANDHELD);
         itemModelGenerator.register(EmeraldToolSet.EMERALD_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(EmeraldToolSet.EMERALD_HELMET, Models.GENERATED);
-        itemModelGenerator.register(EmeraldToolSet.EMERALD_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(EmeraldToolSet.EMERALD_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(EmeraldToolSet.EMERALD_BOOTS, Models.GENERATED);
+        itemModelGenerator.registerArmor((ArmorItem) EmeraldToolSet.EMERALD_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) EmeraldToolSet.EMERALD_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) EmeraldToolSet.EMERALD_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) EmeraldToolSet.EMERALD_BOOTS);
     }
 }
