@@ -22,6 +22,11 @@ public class SimpleGemsItemTagGenerator extends FabricTagProvider.ItemTagProvide
 
     private static final TagKey<Item> RUBIES = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:rubies"));
     private static final TagKey<Item> SAPPHIRE = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:sapphire"));
+    public static final TagKey<Item> RUBY_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:ruby_armor"));
+    public static final TagKey<Item> SAPPHIRE_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:sapphire_armor"));
+    public static final TagKey<Item> AMETHYST_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:amethyst_armor"));
+    public static final TagKey<Item> EMERALD_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:emerald_armor"));
+    public static final TagKey<Item> MOD_ARMORS = TagKey.of(RegistryKeys.ITEM, Identifier.of("simple_gems:armors"));
 
 
     @Override
@@ -86,5 +91,34 @@ public class SimpleGemsItemTagGenerator extends FabricTagProvider.ItemTagProvide
                 .add(RubyToolSet.RUBY_BOOTS)
                 .add(SapphireToolSet.SAPPHIRE_BOOTS)
                 .setReplace(false);
+        getOrCreateTagBuilder(RUBY_ARMOR)
+                .add(RubyToolSet.RUBY_HELMET)
+                .add(RubyToolSet.RUBY_CHESTPLATE)
+                .add(RubyToolSet.RUBY_LEGGINGS)
+                .add(RubyToolSet.RUBY_BOOTS)
+                .setReplace(false);
+        getOrCreateTagBuilder(SAPPHIRE_ARMOR)
+                .add(SapphireToolSet.SAPPHIRE_HELMET)
+                .add(SapphireToolSet.SAPPHIRE_CHESTPLATE)
+                .add(SapphireToolSet.SAPPHIRE_LEGGINGS)
+                .add(SapphireToolSet.SAPPHIRE_BOOTS)
+                .setReplace(false);
+        getOrCreateTagBuilder(AMETHYST_ARMOR)
+                .add(AmethystToolSet.AMETHYST_HELMET)
+                .add(AmethystToolSet.AMETHYST_CHESTPLATE)
+                .add(AmethystToolSet.AMETHYST_LEGGINGS)
+                .add(AmethystToolSet.AMETHYST_BOOTS)
+                .setReplace(false);
+        getOrCreateTagBuilder(EMERALD_ARMOR)
+                .add(EmeraldToolSet.EMERALD_HELMET)
+                .add(EmeraldToolSet.EMERALD_CHESTPLATE)
+                .add(EmeraldToolSet.EMERALD_LEGGINGS)
+                .add(EmeraldToolSet.EMERALD_BOOTS)
+                .setReplace(false);
+        getOrCreateTagBuilder(MOD_ARMORS)
+                .addTag(RUBY_ARMOR)
+                .addTag(SAPPHIRE_ARMOR)
+                .addTag(AMETHYST_ARMOR)
+                .addTag(EMERALD_ARMOR);
     }
 }

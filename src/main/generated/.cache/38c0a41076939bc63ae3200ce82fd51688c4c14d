@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-04T19:11:34.797937938	Simple Gems Fabricated/Tags for minecraft:block
+// 1.21.1	2026-02-04T20:15:41.118571508	Simple Gems Fabricated/Tags for minecraft:block
 807d0167829f2879150f37c1215d86277c72cd9c data/minecraft/tags/block/incorrect_for_diamond_tool.json
-7d683c329e028ce3c1245a3ebb6c1ca031d715dd data/minecraft/tags/block/mineable/pickaxe.json
 02cc3cdbbe5c5341fc9d0265f0cb724d96c189c3 data/minecraft/tags/block/incorrect_for_netherite_tool.json
+7d683c329e028ce3c1245a3ebb6c1ca031d715dd data/minecraft/tags/block/mineable/pickaxe.json

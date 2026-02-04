@@ -1,4 +1,4 @@
-package fr.xotak.util;
+package fr.xotak.events;
 
 import fr.xotak.items.ruby.RubyToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;

@@ -1,11 +1,13 @@
 package fr.xotak;
 
+import fr.xotak.events.ServerEntityEventHandler;
 import fr.xotak.items.emerald.EmeraldToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;
-import fr.xotak.util.UseItemCallbackHandler;
+import fr.xotak.events.UseItemCallbackHandler;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -100,6 +102,7 @@ public class SimpleGems implements ModInitializer {
 		EmeraldToolSet.initialize();
 
 		UseItemCallbackHandler.initialize();
+		ServerEntityEventHandler.initialize();
 
 		Registry.register(Registries.ITEM_GROUP, Identifier.of(MOD_ID, "simple_gems"), ITEM_GROUP);
 
