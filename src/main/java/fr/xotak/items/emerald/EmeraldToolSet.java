@@ -23,13 +23,13 @@ public class EmeraldToolSet {
             new SwordItem(GemsToolMaterial.EMERALD, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(GemsToolMaterial.EMERALD, 3, -2.4F))));
     //armor
     public static final Item EMERALD_HELMET = Registry.register(Registries.ITEM, Identifier.of("simple_gems", "emerald_helmet"),
-            new EmeraldArmorItem(GemsArmorMaterial.EMERALD, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(33)));
+            new EmeraldArmorItem(GemsArmorMaterial.EMERALD, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(33))));
     public static final Item EMERALD_CHESTPLATE = Registry.register(Registries.ITEM, Identifier.of("simple_gems", "emerald_chestplate"),
-            new EmeraldArmorItem(GemsArmorMaterial.EMERALD, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(33)));
+            new EmeraldArmorItem(GemsArmorMaterial.EMERALD, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(33))));
     public static final Item EMERALD_LEGGINGS = Registry.register(Registries.ITEM, Identifier.of("simple_gems", "emerald_leggings"),
-            new EmeraldArmorItem(GemsArmorMaterial.EMERALD, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(33)));
+            new EmeraldArmorItem(GemsArmorMaterial.EMERALD, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(33))));
     public static final Item EMERALD_BOOTS = Registry.register(Registries.ITEM, Identifier.of("simple_gems", "emerald_boots"),
-            new EmeraldArmorItem(GemsArmorMaterial.EMERALD, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(33)));
+            new EmeraldArmorItem(GemsArmorMaterial.EMERALD, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(33))));
 
     public static void initialize() {}
 }
