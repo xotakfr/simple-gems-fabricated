@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "simple_gems",
-	"version": "0.10.2+1.21.10",
+	"version": "0.10.2+1.21.11",
 	"name": "Simple Gems Fabricated",
 	"description": "This mod add few gems, tools and armors",
 	"authors": [
@@ -27,7 +27,7 @@
 	},
 	"depends": {
 		"fabricloader": ">=0.18.4",
-		"minecraft": "=1.21.10",
+		"minecraft": "=1.21.11",
 		"java": ">=21",
 		"fabric-api": "*"
 	},
