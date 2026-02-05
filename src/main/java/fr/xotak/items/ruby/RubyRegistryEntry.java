@@ -23,6 +23,7 @@ public class RubyRegistryEntry {
     public static final RegistryKey<Item> CHESTPLATE = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MODID, "ruby_chestplate"));
     public static final RegistryKey<Item> LEGGINGS = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MODID, "ruby_leggings"));
     public static final RegistryKey<Item> BOOTS = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MODID, "ruby_boots"));
+    public static final RegistryKey<Item> SPEAR = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MODID, "ruby_spear"));
 
 
     public static void initialize() {}

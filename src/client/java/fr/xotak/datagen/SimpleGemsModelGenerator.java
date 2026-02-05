@@ -38,6 +38,7 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(RubyToolSet.RUBY_AXE, Models.HANDHELD);
         itemModelGenerator.register(RubyToolSet.RUBY_HOE, Models.HANDHELD);
         itemModelGenerator.register(RubyToolSet.RUBY_SWORD, Models.HANDHELD);
+        itemModelGenerator.registerSpear(RubyToolSet.RUBY_SPEAR);
         itemModelGenerator.registerArmor(RubyToolSet.RUBY_HELMET, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(RubyToolSet.RUBY_CHESTPLATE, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(RubyToolSet.RUBY_LEGGINGS, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);

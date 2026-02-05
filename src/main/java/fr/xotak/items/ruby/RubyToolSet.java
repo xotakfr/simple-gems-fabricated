@@ -40,11 +40,13 @@ public class RubyToolSet {
             new HoeItem(GemsToolMaterial.RUBY, 0.0F, -3.0F,
                     new HoeItem.Settings().registryKey(RubyRegistryEntry.HOE)));
     public static final Item RUBY_SWORD = Items.register(RubyRegistryEntry.SWORD, Item::new, new Item.Settings().sword(GemsToolMaterial.RUBY, 3.0F, -2.4F));
+    public static final Item RUBY_SPEAR = Items.register(RubyRegistryEntry.SPEAR, Item::new, new Item.Settings().spear(GemsToolMaterial.RUBY, 1.21F, 1.4F, 0.3F, 2.0F, 6.5F, 5.0F, 5.1F, 7.5F, 4.6F));
     //armor
     public static final Item RUBY_HELMET = Items.register(RubyRegistryEntry.HELMET, Item::new, new Item.Settings().armor(GemsArmorMaterial.RUBY, EquipmentType.HELMET));
     public static final Item RUBY_CHESTPLATE = Items.register(RubyRegistryEntry.CHESTPLATE, Item::new, new Item.Settings().armor(GemsArmorMaterial.RUBY, EquipmentType.CHESTPLATE));
     public static final Item RUBY_LEGGINGS = Items.register(RubyRegistryEntry.LEGGINGS, Item::new, new Item.Settings().armor(GemsArmorMaterial.RUBY, EquipmentType.LEGGINGS));
     public static final Item RUBY_BOOTS = Items.register(RubyRegistryEntry.BOOTS, Item::new, new Item.Settings().armor(GemsArmorMaterial.RUBY, EquipmentType.BOOTS));
+
 
 
     public static void initialize() {}
