@@ -2,8 +2,8 @@ package fr.xotak.items.equipment;
 
 import fr.xotak.datagen.SimpleGemsBlockTagGenerator;
 import fr.xotak.datagen.SimpleGemsItemTagGenerator;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.ToolMaterial;
 
 public class GemsToolMaterial {
     public static final ToolMaterial AMETHYST = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, 500, 7.0F, 2.5F, 10, SimpleGemsItemTagGenerator.AMETHYST_TOOL_MATERIALS);

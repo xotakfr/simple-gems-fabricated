@@ -6,40 +6,39 @@ import fr.xotak.items.ruby.RubyToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
-
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import java.util.concurrent.CompletableFuture;
 
 public class SimpleGemsItemTagGenerator extends FabricTagProvider.ItemTagProvider {
-    public SimpleGemsItemTagGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+    public SimpleGemsItemTagGenerator(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output, completableFuture);
     }
 
-    public static final TagKey<Item> RUBIES = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:ruby"));
-    public static final TagKey<Item> SAPPHIRE = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:sapphire"));
-    public static final TagKey<Item> REPAIRS_AMETHYST_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:repairs_amethyst_armor"));
-    public static final TagKey<Item> AMETHYST_TOOL_MATERIALS = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:amethyst_tool_materials"));
-    public static final TagKey<Item> REPAIRS_EMERALD_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:repairs_emerald_armor"));
-    public static final TagKey<Item> EMERALD_TOOL_MATERIALS = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:emerald_tool_materials"));
-    public static final TagKey<Item> REPAIRS_RUBY_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:repairs_ruby_armor"));
-    public static final TagKey<Item> RUBY_TOOL_MATERIALS = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:ruby_tool_materials"));
-    public static final TagKey<Item> REPAIRS_SAPPHIRE_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:repairs_sapphire_armor"));
-    public static final TagKey<Item> SAPPHIRE_TOOL_MATERIALS = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:sapphire_tool_materials"));
-    public static final TagKey<Item> RUBY_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:ruby_armor"));
-    public static final TagKey<Item> SAPPHIRE_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:sapphire_armor"));
-    public static final TagKey<Item> AMETHYST_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:amethyst_armor"));
-    public static final TagKey<Item> EMERALD_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:emerald_armor"));
-    public static final TagKey<Item> MOD_ARMORS = TagKey.of(RegistryKeys.ITEM, Identifier.of("simple_gems:armors"));
+    public static final TagKey<Item> RUBIES = TagKey.create(Registries.ITEM, Identifier.parse("c:ruby"));
+    public static final TagKey<Item> SAPPHIRE = TagKey.create(Registries.ITEM, Identifier.parse("c:sapphire"));
+    public static final TagKey<Item> REPAIRS_AMETHYST_ARMOR = TagKey.create(Registries.ITEM, Identifier.parse("c:repairs_amethyst_armor"));
+    public static final TagKey<Item> AMETHYST_TOOL_MATERIALS = TagKey.create(Registries.ITEM, Identifier.parse("c:amethyst_tool_materials"));
+    public static final TagKey<Item> REPAIRS_EMERALD_ARMOR = TagKey.create(Registries.ITEM, Identifier.parse("c:repairs_emerald_armor"));
+    public static final TagKey<Item> EMERALD_TOOL_MATERIALS = TagKey.create(Registries.ITEM, Identifier.parse("c:emerald_tool_materials"));
+    public static final TagKey<Item> REPAIRS_RUBY_ARMOR = TagKey.create(Registries.ITEM, Identifier.parse("c:repairs_ruby_armor"));
+    public static final TagKey<Item> RUBY_TOOL_MATERIALS = TagKey.create(Registries.ITEM, Identifier.parse("c:ruby_tool_materials"));
+    public static final TagKey<Item> REPAIRS_SAPPHIRE_ARMOR = TagKey.create(Registries.ITEM, Identifier.parse("c:repairs_sapphire_armor"));
+    public static final TagKey<Item> SAPPHIRE_TOOL_MATERIALS = TagKey.create(Registries.ITEM, Identifier.parse("c:sapphire_tool_materials"));
+    public static final TagKey<Item> RUBY_ARMOR = TagKey.create(Registries.ITEM, Identifier.parse("c:ruby_armor"));
+    public static final TagKey<Item> SAPPHIRE_ARMOR = TagKey.create(Registries.ITEM, Identifier.parse("c:sapphire_armor"));
+    public static final TagKey<Item> AMETHYST_ARMOR = TagKey.create(Registries.ITEM, Identifier.parse("c:amethyst_armor"));
+    public static final TagKey<Item> EMERALD_ARMOR = TagKey.create(Registries.ITEM, Identifier.parse("c:emerald_armor"));
+    public static final TagKey<Item> MOD_ARMORS = TagKey.create(Registries.ITEM, Identifier.parse("simple_gems:armors"));
 
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup arg) {
+    protected void addTags(HolderLookup.Provider arg) {
         valueLookupBuilder(RUBIES)
                 .add(RubyToolSet.RUBY_ITEM)
                 .setReplace(false);
