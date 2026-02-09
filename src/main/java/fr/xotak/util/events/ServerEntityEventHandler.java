@@ -3,7 +3,7 @@ package fr.xotak.util.events;
 import fr.xotak.util.ArmorEffects;
 import fr.xotak.util.ArmorUtils;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.world.entity.player.Player;
 
 import static fr.xotak.datagen.SimpleGemsItemTagGenerator.*;
 
@@ -11,22 +11,22 @@ public class ServerEntityEventHandler {
     public static void initialize() {
         ServerEntityEvents.EQUIPMENT_CHANGE.register(((livingEntity, equipmentSlot, previousStack, currentStack) ->
         {
-            if (!(livingEntity instanceof PlayerEntity player)) {
+            if (!(livingEntity instanceof Player player)) {
                 return;
             }
-            if (!equipmentSlot.isArmorSlot()) {
+            if (!equipmentSlot.isArmor()) {
                 return;
             }
-            if (previousStack.isIn(AMETHYST_ARMOR)) {
+            if (previousStack.is(AMETHYST_ARMOR)) {
                 ArmorUtils.removeArmorEffects(player, AMETHYST_ARMOR);
-            } else if (previousStack.isIn(EMERALD_ARMOR)) {
+            } else if (previousStack.is(EMERALD_ARMOR)) {
                 ArmorUtils.removeArmorEffects(player, EMERALD_ARMOR);
-            } else if (previousStack.isIn(RUBY_ARMOR)) {
+            } else if (previousStack.is(RUBY_ARMOR)) {
                 ArmorUtils.removeArmorEffects(player, RUBY_ARMOR);
-            } else if (previousStack.isIn(SAPPHIRE_ARMOR)) {
+            } else if (previousStack.is(SAPPHIRE_ARMOR)) {
                 ArmorUtils.removeArmorEffects(player, SAPPHIRE_ARMOR);
             }
-            if (currentStack.isIn(MOD_ARMORS)) {
+            if (currentStack.is(MOD_ARMORS)) {
                 ArmorUtils.evaluateArmorEffects(player);
             }
         }

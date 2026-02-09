@@ -1,19 +1,18 @@
 package fr.xotak.items.equipment;
 
-import net.minecraft.item.equipment.EquipmentAsset;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.equipment.EquipmentAsset;
 
 public interface EquipmentAssetKeys {
 
-    static RegistryKey<EquipmentAsset> register(String name) {
-        return RegistryKey.of(net.minecraft.item.equipment.EquipmentAssetKeys.REGISTRY_KEY, Identifier.of("simple_gems", name));
+    static ResourceKey<EquipmentAsset> register(String name) {
+        return ResourceKey.create(net.minecraft.world.item.equipment.EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath("simple_gems", name));
     }
-    RegistryKey<EquipmentAsset> AMETHYST = register("amethyst");
-    RegistryKey<EquipmentAsset> EMERALD = register("emerald");
-    RegistryKey<EquipmentAsset> RUBY = register("ruby");
-    RegistryKey<EquipmentAsset> SAPPHIRE = register("sapphire");
+    ResourceKey<EquipmentAsset> AMETHYST = register("amethyst");
+    ResourceKey<EquipmentAsset> EMERALD = register("emerald");
+    ResourceKey<EquipmentAsset> RUBY = register("ruby");
+    ResourceKey<EquipmentAsset> SAPPHIRE = register("sapphire");
 
 
 }
