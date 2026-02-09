@@ -28,9 +28,41 @@ public class SimpleGemsBlockTagGenerator extends FabricTagProvider.BlockTagProvi
                 .add(SapphireToolSet.SAPPHIRE_ORE)
                 .add(SapphireToolSet.SAPPHIRE_BLOCK)
                 .setReplace(false);
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
+                .add(RubyToolSet.RUBY_ORE)
+                .add(RubyToolSet.RUBY_BLOCK)
+                .add(SapphireToolSet.SAPPHIRE_ORE)
+                .add(SapphireToolSet.SAPPHIRE_BLOCK)
+                .setReplace(false);
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_STONE_TOOL)
+                .add(RubyToolSet.RUBY_ORE)
+                .add(RubyToolSet.RUBY_BLOCK)
+                .add(SapphireToolSet.SAPPHIRE_ORE)
+                .add(SapphireToolSet.SAPPHIRE_BLOCK)
+                .setReplace(false);
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .add(RubyToolSet.RUBY_ORE)
+                .add(RubyToolSet.RUBY_BLOCK)
+                .add(SapphireToolSet.SAPPHIRE_ORE)
+                .add(SapphireToolSet.SAPPHIRE_BLOCK)
+                .setReplace(false);
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_COPPER_TOOL)
+                .add(RubyToolSet.RUBY_ORE)
+                .add(RubyToolSet.RUBY_BLOCK)
+                .add(SapphireToolSet.SAPPHIRE_ORE)
+                .add(SapphireToolSet.SAPPHIRE_BLOCK)
+                .setReplace(false);
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_GOLD_TOOL)
+                .add(RubyToolSet.RUBY_ORE)
+                .add(RubyToolSet.RUBY_BLOCK)
+                .add(SapphireToolSet.SAPPHIRE_ORE)
+                .add(SapphireToolSet.SAPPHIRE_BLOCK)
+                .setReplace(false);
         valueLookupBuilder(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
                 .add(RubyToolSet.RUBY_ORE)
                 .add(RubyToolSet.RUBY_BLOCK)
+                .add(SapphireToolSet.SAPPHIRE_ORE)
+                .add(SapphireToolSet.SAPPHIRE_BLOCK)
                 .setReplace(false);
         valueLookupBuilder(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
                 .add(SapphireToolSet.SAPPHIRE_ORE)
