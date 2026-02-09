@@ -5,8 +5,6 @@ import fr.xotak.items.equipment.GemsToolMaterial;
 import net.minecraft.item.*;
 
 import net.minecraft.item.equipment.EquipmentType;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 
 public class AmethystToolSet {
     //tools

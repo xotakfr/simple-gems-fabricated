@@ -9,7 +9,6 @@ import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class SapphireToolSet {
