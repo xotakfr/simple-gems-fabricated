@@ -13,6 +13,8 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+
+import java.util.Date;
 import java.util.concurrent.CompletableFuture;
 
 public class SimpleGemsItemTagGenerator extends FabricTagProvider.ItemTagProvider {
@@ -35,6 +37,7 @@ public class SimpleGemsItemTagGenerator extends FabricTagProvider.ItemTagProvide
     public static final TagKey<Item> AMETHYST_ARMOR = TagKey.create(Registries.ITEM, Identifier.parse("c:amethyst_armor"));
     public static final TagKey<Item> EMERALD_ARMOR = TagKey.create(Registries.ITEM, Identifier.parse("c:emerald_armor"));
     public static final TagKey<Item> MOD_ARMORS = TagKey.create(Registries.ITEM, Identifier.parse("simple_gems:armors"));
+    public static final TagKey<Item> WEAVABLE = TagKey.create(Registries.ITEM, Identifier.parse("simple_gems:weavable"));
 
 
     @Override
@@ -144,5 +147,10 @@ public class SimpleGemsItemTagGenerator extends FabricTagProvider.ItemTagProvide
                 .addTag(SAPPHIRE_ARMOR)
                 .addTag(AMETHYST_ARMOR)
                 .addTag(EMERALD_ARMOR);
+        valueLookupBuilder(WEAVABLE)
+                .add(Items.AMETHYST_SHARD)
+                .add(Items.EMERALD)
+                .add(RubyToolSet.RUBY_ITEM)
+                .add(SapphireToolSet.SAPPHIRE_ITEM);
     }
 }
