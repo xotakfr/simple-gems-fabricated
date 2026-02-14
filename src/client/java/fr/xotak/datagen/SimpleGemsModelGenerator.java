@@ -7,80 +7,79 @@ import fr.xotak.items.ruby.RubyToolSet;
 import fr.xotak.items.sapphire.SapphireToolSet;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.Models;
-import net.minecraft.client.render.entity.equipment.EquipmentModel;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.util.Identifier;
-
+import net.minecraft.client.data.models.BlockModelGenerators;
+import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.resources.model.EquipmentClientInfo;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.resources.Identifier;
 import java.util.concurrent.CompletableFuture;
 
 public class SimpleGemsModelGenerator extends FabricModelProvider {
-    public SimpleGemsModelGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+    public SimpleGemsModelGenerator(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output);
     }
 
     @Override
-    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(RubyToolSet.RUBY_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(RubyToolSet.RUBY_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(SapphireToolSet.SAPPHIRE_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(SapphireToolSet.SAPPHIRE_BLOCK);
+    public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
+        blockStateModelGenerator.createTrivialCube(RubyToolSet.RUBY_ORE);
+        blockStateModelGenerator.createTrivialCube(RubyToolSet.RUBY_BLOCK);
+        blockStateModelGenerator.createTrivialCube(SapphireToolSet.SAPPHIRE_ORE);
+        blockStateModelGenerator.createTrivialCube(SapphireToolSet.SAPPHIRE_BLOCK);
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+    public void generateItemModels(ItemModelGenerators itemModelGenerator) {
         // Ruby
-        itemModelGenerator.register(RubyToolSet.RUBY_ITEM, Models.GENERATED);
-        itemModelGenerator.register(RubyToolSet.RUBY_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(RubyToolSet.RUBY_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(RubyToolSet.RUBY_AXE, Models.HANDHELD);
-        itemModelGenerator.register(RubyToolSet.RUBY_HOE, Models.HANDHELD);
-        itemModelGenerator.register(RubyToolSet.RUBY_SWORD, Models.HANDHELD);
-        itemModelGenerator.registerSpear(RubyToolSet.RUBY_SPEAR);
-        itemModelGenerator.registerArmor(RubyToolSet.RUBY_HELMET, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
-        itemModelGenerator.registerArmor(RubyToolSet.RUBY_CHESTPLATE, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
-        itemModelGenerator.registerArmor(RubyToolSet.RUBY_LEGGINGS, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
-        itemModelGenerator.registerArmor(RubyToolSet.RUBY_BOOTS, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.generateFlatItem(RubyToolSet.RUBY_ITEM, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(RubyToolSet.RUBY_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(RubyToolSet.RUBY_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(RubyToolSet.RUBY_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(RubyToolSet.RUBY_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(RubyToolSet.RUBY_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateSpear(RubyToolSet.RUBY_SPEAR);
+        itemModelGenerator.generateTrimmableItem(RubyToolSet.RUBY_HELMET, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModelGenerator.generateTrimmableItem(RubyToolSet.RUBY_CHESTPLATE, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModelGenerator.generateTrimmableItem(RubyToolSet.RUBY_LEGGINGS, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModelGenerator.generateTrimmableItem(RubyToolSet.RUBY_BOOTS, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         // Amethyst
-        itemModelGenerator.register(AmethystToolSet.AMETHYST_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(AmethystToolSet.AMETHYST_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(AmethystToolSet.AMETHYST_AXE, Models.HANDHELD);
-        itemModelGenerator.register(AmethystToolSet.AMETHYST_HOE, Models.HANDHELD);
-        itemModelGenerator.register(AmethystToolSet.AMETHYST_SWORD, Models.HANDHELD);
-        itemModelGenerator.registerArmor(AmethystToolSet.AMETHYST_HELMET, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
-        itemModelGenerator.registerArmor(AmethystToolSet.AMETHYST_CHESTPLATE, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
-        itemModelGenerator.registerArmor(AmethystToolSet.AMETHYST_LEGGINGS, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
-        itemModelGenerator.registerArmor(AmethystToolSet.AMETHYST_BOOTS, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.generateFlatItem(AmethystToolSet.AMETHYST_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(AmethystToolSet.AMETHYST_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(AmethystToolSet.AMETHYST_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(AmethystToolSet.AMETHYST_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(AmethystToolSet.AMETHYST_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateTrimmableItem(AmethystToolSet.AMETHYST_HELMET, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModelGenerator.generateTrimmableItem(AmethystToolSet.AMETHYST_CHESTPLATE, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModelGenerator.generateTrimmableItem(AmethystToolSet.AMETHYST_LEGGINGS, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModelGenerator.generateTrimmableItem(AmethystToolSet.AMETHYST_BOOTS, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         // Sapphire
-        itemModelGenerator.register(SapphireToolSet.SAPPHIRE_ITEM, Models.HANDHELD);
-        itemModelGenerator.register(SapphireToolSet.SAPPHIRE_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(SapphireToolSet.SAPPHIRE_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(SapphireToolSet.SAPPHIRE_AXE, Models.HANDHELD);
-        itemModelGenerator.register(SapphireToolSet.SAPPHIRE_HOE, Models.HANDHELD);
-        itemModelGenerator.register(SapphireToolSet.SAPPHIRE_SWORD, Models.HANDHELD);
-        itemModelGenerator.registerArmor(SapphireToolSet.SAPPHIRE_HELMET, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
-        itemModelGenerator.registerArmor(SapphireToolSet.SAPPHIRE_CHESTPLATE, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
-        itemModelGenerator.registerArmor(SapphireToolSet.SAPPHIRE_LEGGINGS, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
-        itemModelGenerator.registerArmor(SapphireToolSet.SAPPHIRE_BOOTS, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.generateFlatItem(SapphireToolSet.SAPPHIRE_ITEM, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(SapphireToolSet.SAPPHIRE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(SapphireToolSet.SAPPHIRE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(SapphireToolSet.SAPPHIRE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(SapphireToolSet.SAPPHIRE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(SapphireToolSet.SAPPHIRE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateTrimmableItem(SapphireToolSet.SAPPHIRE_HELMET, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModelGenerator.generateTrimmableItem(SapphireToolSet.SAPPHIRE_CHESTPLATE, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModelGenerator.generateTrimmableItem(SapphireToolSet.SAPPHIRE_LEGGINGS, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModelGenerator.generateTrimmableItem(SapphireToolSet.SAPPHIRE_BOOTS, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         // Emerald
-        itemModelGenerator.register(EmeraldToolSet.EMERALD_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(EmeraldToolSet.EMERALD_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(EmeraldToolSet.EMERALD_AXE, Models.HANDHELD);
-        itemModelGenerator.register(EmeraldToolSet.EMERALD_HOE, Models.HANDHELD);
-        itemModelGenerator.register(EmeraldToolSet.EMERALD_SWORD, Models.HANDHELD);
-        itemModelGenerator.registerArmor(EmeraldToolSet.EMERALD_HELMET, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
-        itemModelGenerator.registerArmor(EmeraldToolSet.EMERALD_CHESTPLATE, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
-        itemModelGenerator.registerArmor(EmeraldToolSet.EMERALD_LEGGINGS, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
-        itemModelGenerator.registerArmor(EmeraldToolSet.EMERALD_BOOTS, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.generateFlatItem(EmeraldToolSet.EMERALD_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(EmeraldToolSet.EMERALD_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(EmeraldToolSet.EMERALD_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(EmeraldToolSet.EMERALD_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(EmeraldToolSet.EMERALD_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateTrimmableItem(EmeraldToolSet.EMERALD_HELMET, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModelGenerator.generateTrimmableItem(EmeraldToolSet.EMERALD_CHESTPLATE, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModelGenerator.generateTrimmableItem(EmeraldToolSet.EMERALD_LEGGINGS, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModelGenerator.generateTrimmableItem(EmeraldToolSet.EMERALD_BOOTS, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
     }
 
-    public static EquipmentModel buildHumanoid(String name) {
-        return EquipmentModel.builder().addHumanoidLayers(Identifier.ofVanilla(name)).build();
+    public static EquipmentClientInfo buildHumanoid(String name) {
+        return EquipmentClientInfo.builder().addHumanoidLayers(Identifier.withDefaultNamespace(name)).build();
     }
 }

@@ -12,15 +12,16 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.*;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import fr.xotak.items.ruby.RubyToolSet;
@@ -38,56 +39,56 @@ public class SimpleGems implements ModInitializer {
 	// Ruby toolset
 
 	// Ore generation
-	public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "ruby_ore"));
-	public static final RegistryKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "sapphire_ore"));
+	public static final ResourceKey<PlacedFeature> RUBY_ORE_PLACED_KEY = ResourceKey.create(Registries.PLACED_FEATURE, Identifier.fromNamespaceAndPath(MOD_ID, "ruby_ore"));
+	public static final ResourceKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = ResourceKey.create(Registries.PLACED_FEATURE, Identifier.fromNamespaceAndPath(MOD_ID, "sapphire_ore"));
 
 
-	public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
+	public static final CreativeModeTab ITEM_GROUP = FabricItemGroup.builder()
 			.icon(() -> new ItemStack(RubyToolSet.RUBY_ITEM))
-			.displayName(Text.translatable("itemGroup.simple_gems.item_group"))
-			.entries((context, entries) -> {
-				entries.add(AmethystToolSet.AMETHYST_SHOVEL);
-				entries.add(AmethystToolSet.AMETHYST_PICKAXE);
-				entries.add(AmethystToolSet.AMETHYST_AXE);
-				entries.add(AmethystToolSet.AMETHYST_HOE);
-				entries.add(AmethystToolSet.AMETHYST_SWORD);
-				entries.add(AmethystToolSet.AMETHYST_HELMET);
-				entries.add(AmethystToolSet.AMETHYST_CHESTPLATE);
-				entries.add(AmethystToolSet.AMETHYST_LEGGINGS);
-				entries.add(AmethystToolSet.AMETHYST_BOOTS);
-				entries.add(RubyToolSet.RUBY_ORE);
-				entries.add(RubyToolSet.RUBY_ITEM);
-				entries.add(RubyToolSet.RUBY_BLOCK);
-				entries.add(RubyToolSet.RUBY_SHOVEL);
-				entries.add(RubyToolSet.RUBY_PICKAXE);
-				entries.add(RubyToolSet.RUBY_AXE);
-				entries.add(RubyToolSet.RUBY_HOE);
-				entries.add(RubyToolSet.RUBY_SWORD);
-				entries.add(RubyToolSet.RUBY_HELMET);
-				entries.add(RubyToolSet.RUBY_CHESTPLATE);
-				entries.add(RubyToolSet.RUBY_LEGGINGS);
-				entries.add(RubyToolSet.RUBY_BOOTS);
-				entries.add(SapphireToolSet.SAPPHIRE_ORE);
-				entries.add(SapphireToolSet.SAPPHIRE_ITEM);
-				entries.add(SapphireToolSet.SAPPHIRE_BLOCK);
-				entries.add(SapphireToolSet.SAPPHIRE_SHOVEL);
-				entries.add(SapphireToolSet.SAPPHIRE_PICKAXE);
-				entries.add(SapphireToolSet.SAPPHIRE_AXE);
-				entries.add(SapphireToolSet.SAPPHIRE_HOE);
-				entries.add(SapphireToolSet.SAPPHIRE_SWORD);
-				entries.add(SapphireToolSet.SAPPHIRE_HELMET);
-				entries.add(SapphireToolSet.SAPPHIRE_CHESTPLATE);
-				entries.add(SapphireToolSet.SAPPHIRE_LEGGINGS);
-				entries.add(SapphireToolSet.SAPPHIRE_BOOTS);
-				entries.add(EmeraldToolSet.EMERALD_SHOVEL);
-				entries.add(EmeraldToolSet.EMERALD_PICKAXE);
-				entries.add(EmeraldToolSet.EMERALD_AXE);
-				entries.add(EmeraldToolSet.EMERALD_HOE);
-				entries.add(EmeraldToolSet.EMERALD_SWORD);
-				entries.add(EmeraldToolSet.EMERALD_HELMET);
-				entries.add(EmeraldToolSet.EMERALD_CHESTPLATE);
-				entries.add(EmeraldToolSet.EMERALD_LEGGINGS);
-				entries.add(EmeraldToolSet.EMERALD_BOOTS);
+			.title(Component.translatable("itemGroup.simple_gems.item_group"))
+			.displayItems((context, entries) -> {
+				entries.accept(AmethystToolSet.AMETHYST_SHOVEL);
+				entries.accept(AmethystToolSet.AMETHYST_PICKAXE);
+				entries.accept(AmethystToolSet.AMETHYST_AXE);
+				entries.accept(AmethystToolSet.AMETHYST_HOE);
+				entries.accept(AmethystToolSet.AMETHYST_SWORD);
+				entries.accept(AmethystToolSet.AMETHYST_HELMET);
+				entries.accept(AmethystToolSet.AMETHYST_CHESTPLATE);
+				entries.accept(AmethystToolSet.AMETHYST_LEGGINGS);
+				entries.accept(AmethystToolSet.AMETHYST_BOOTS);
+				entries.accept(RubyToolSet.RUBY_ORE);
+				entries.accept(RubyToolSet.RUBY_ITEM);
+				entries.accept(RubyToolSet.RUBY_BLOCK);
+				entries.accept(RubyToolSet.RUBY_SHOVEL);
+				entries.accept(RubyToolSet.RUBY_PICKAXE);
+				entries.accept(RubyToolSet.RUBY_AXE);
+				entries.accept(RubyToolSet.RUBY_HOE);
+				entries.accept(RubyToolSet.RUBY_SWORD);
+				entries.accept(RubyToolSet.RUBY_HELMET);
+				entries.accept(RubyToolSet.RUBY_CHESTPLATE);
+				entries.accept(RubyToolSet.RUBY_LEGGINGS);
+				entries.accept(RubyToolSet.RUBY_BOOTS);
+				entries.accept(SapphireToolSet.SAPPHIRE_ORE);
+				entries.accept(SapphireToolSet.SAPPHIRE_ITEM);
+				entries.accept(SapphireToolSet.SAPPHIRE_BLOCK);
+				entries.accept(SapphireToolSet.SAPPHIRE_SHOVEL);
+				entries.accept(SapphireToolSet.SAPPHIRE_PICKAXE);
+				entries.accept(SapphireToolSet.SAPPHIRE_AXE);
+				entries.accept(SapphireToolSet.SAPPHIRE_HOE);
+				entries.accept(SapphireToolSet.SAPPHIRE_SWORD);
+				entries.accept(SapphireToolSet.SAPPHIRE_HELMET);
+				entries.accept(SapphireToolSet.SAPPHIRE_CHESTPLATE);
+				entries.accept(SapphireToolSet.SAPPHIRE_LEGGINGS);
+				entries.accept(SapphireToolSet.SAPPHIRE_BOOTS);
+				entries.accept(EmeraldToolSet.EMERALD_SHOVEL);
+				entries.accept(EmeraldToolSet.EMERALD_PICKAXE);
+				entries.accept(EmeraldToolSet.EMERALD_AXE);
+				entries.accept(EmeraldToolSet.EMERALD_HOE);
+				entries.accept(EmeraldToolSet.EMERALD_SWORD);
+				entries.accept(EmeraldToolSet.EMERALD_HELMET);
+				entries.accept(EmeraldToolSet.EMERALD_CHESTPLATE);
+				entries.accept(EmeraldToolSet.EMERALD_LEGGINGS);
+				entries.accept(EmeraldToolSet.EMERALD_BOOTS);
 			})
 			.build();
 
@@ -114,10 +115,10 @@ public class SimpleGems implements ModInitializer {
 		UseItemCallbackHandler.initialize();
 		ServerEntityEventHandler.initialize();
 
-		Registry.register(Registries.ITEM_GROUP, Identifier.of(MOD_ID, "simple_gems"), ITEM_GROUP);
+		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(MOD_ID, "simple_gems"), ITEM_GROUP);
 
 		//Ore Gen
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, SAPPHIRE_ORE_PLACED_KEY);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Decoration.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Decoration.UNDERGROUND_ORES, SAPPHIRE_ORE_PLACED_KEY);
 	}
 }
