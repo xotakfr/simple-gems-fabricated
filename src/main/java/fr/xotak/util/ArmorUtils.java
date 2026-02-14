@@ -26,7 +26,7 @@ public class ArmorUtils {
     private static void addStatusEffectFromTagKey(Player player, TagKey<Item> tagKey, MobEffectInstance effect) {
         boolean hasStatusEffect = player.hasEffect(effect.getEffect());
         if (!hasStatusEffect) {
-            player.addEffect(new MobEffectInstance(effect));
+            player.addEffect(effect);
         }
     }
 
