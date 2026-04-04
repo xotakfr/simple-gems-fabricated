@@ -12,9 +12,9 @@ jobs:
       matrix:
         # Use these Java versions
         java: [
-          21,    # Current Java LTS
+          25,
         ]
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
