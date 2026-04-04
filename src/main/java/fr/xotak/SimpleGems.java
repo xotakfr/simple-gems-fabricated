@@ -1,17 +1,13 @@
 package fr.xotak;
 
-import fr.xotak.items.amethyst.AmethystRegistryKeys;
-import fr.xotak.items.emerald.EmeraldRegistryKeys;
 import fr.xotak.items.emerald.EmeraldToolSet;
-import fr.xotak.items.ruby.RubyRegistryEntry;
-import fr.xotak.items.sapphire.SapphireRegistryKeys;
 import fr.xotak.items.sapphire.SapphireToolSet;
 import fr.xotak.util.events.ServerEntityEventHandler;
 import fr.xotak.util.events.UseItemCallbackHandler;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -43,7 +39,7 @@ public class SimpleGems implements ModInitializer {
 	public static final ResourceKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = ResourceKey.create(Registries.PLACED_FEATURE, Identifier.fromNamespaceAndPath(MOD_ID, "sapphire_ore"));
 
 
-	public static final CreativeModeTab ITEM_GROUP = FabricItemGroup.builder()
+	public static final CreativeModeTab ITEM_GROUP = FabricCreativeModeTab.builder()
 			.icon(() -> new ItemStack(RubyToolSet.RUBY_ITEM))
 			.title(Component.translatable("itemGroup.simple_gems.item_group"))
 			.displayItems((context, entries) -> {
@@ -99,12 +95,6 @@ public class SimpleGems implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello from Simple Gems");
-
-		// Initialize the RegistryKeys
-		RubyRegistryEntry.initialize();
-		AmethystRegistryKeys.initialize();
-		SapphireRegistryKeys.initialize();
-		EmeraldRegistryKeys.initialize();
 
 		// Initialize the items
 		RubyToolSet.initialize();
