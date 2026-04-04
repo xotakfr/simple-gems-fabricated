@@ -1,9 +1,9 @@
 package fr.xotak.datagen;
 
-import fr.xotak.items.amethyst.AmethystToolSet;
-import fr.xotak.items.emerald.EmeraldToolSet;
-import fr.xotak.items.ruby.RubyToolSet;
-import fr.xotak.items.sapphire.SapphireToolSet;
+import fr.xotak.items.AmethystToolSet;
+import fr.xotak.items.EmeraldToolSet;
+import fr.xotak.items.RubyToolSet;
+import fr.xotak.items.SapphireToolSet;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderGetter;

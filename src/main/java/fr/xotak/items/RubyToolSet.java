@@ -1,7 +1,5 @@
-package fr.xotak.items.ruby;
+package fr.xotak.items;
 
-import fr.xotak.items.BlocksUtil;
-import fr.xotak.items.ItemsUtil;
 import fr.xotak.items.equipment.GemsArmorMaterial;
 import fr.xotak.items.equipment.GemsToolMaterial;
 import net.minecraft.util.valueproviders.UniformInt;

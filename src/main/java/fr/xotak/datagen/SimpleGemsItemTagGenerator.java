@@ -1,9 +1,9 @@
 package fr.xotak.datagen;
 
-import fr.xotak.items.amethyst.AmethystToolSet;
-import fr.xotak.items.emerald.EmeraldToolSet;
-import fr.xotak.items.ruby.RubyToolSet;
-import fr.xotak.items.sapphire.SapphireToolSet;
+import fr.xotak.items.AmethystToolSet;
+import fr.xotak.items.EmeraldToolSet;
+import fr.xotak.items.RubyToolSet;
+import fr.xotak.items.SapphireToolSet;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
@@ -14,7 +14,6 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
-import java.util.Date;
 import java.util.concurrent.CompletableFuture;
 
 public class SimpleGemsItemTagGenerator extends FabricTagsProvider.ItemTagsProvider {

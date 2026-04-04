@@ -1,7 +1,5 @@
-package fr.xotak.items.sapphire;
+package fr.xotak.items;
 
-import fr.xotak.items.BlocksUtil;
-import fr.xotak.items.ItemsUtil;
 import fr.xotak.items.equipment.GemsArmorMaterial;
 import fr.xotak.items.equipment.GemsToolMaterial;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -10,8 +8,6 @@ import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-
-import java.util.Locale;
 
 public class SapphireToolSet {
     //blocks and item

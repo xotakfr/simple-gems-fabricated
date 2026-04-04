@@ -1,10 +1,9 @@
 package fr.xotak.util.events;
 
 import fr.xotak.datagen.SimpleGemsItemTagGenerator;
-import fr.xotak.items.ruby.RubyToolSet;
-import fr.xotak.items.sapphire.SapphireToolSet;
+import fr.xotak.items.RubyToolSet;
+import fr.xotak.items.SapphireToolSet;
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
-import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;

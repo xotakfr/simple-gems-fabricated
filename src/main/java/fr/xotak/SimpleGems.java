@@ -1,7 +1,7 @@
 package fr.xotak;
 
-import fr.xotak.items.emerald.EmeraldToolSet;
-import fr.xotak.items.sapphire.SapphireToolSet;
+import fr.xotak.items.EmeraldToolSet;
+import fr.xotak.items.SapphireToolSet;
 import fr.xotak.util.events.ServerEntityEventHandler;
 import fr.xotak.util.events.UseItemCallbackHandler;
 import net.fabricmc.api.ModInitializer;
@@ -20,8 +20,8 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import fr.xotak.items.ruby.RubyToolSet;
-import fr.xotak.items.amethyst.AmethystToolSet;
+import fr.xotak.items.RubyToolSet;
+import fr.xotak.items.AmethystToolSet;
 
 public class SimpleGems implements ModInitializer {
 	// We declare the mod id here for future reference
