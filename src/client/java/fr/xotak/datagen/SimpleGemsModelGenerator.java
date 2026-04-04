@@ -1,12 +1,12 @@
 package fr.xotak.datagen;
 
-import fr.xotak.items.amethyst.AmethystToolSet;
-import fr.xotak.items.emerald.EmeraldToolSet;
+import fr.xotak.items.AmethystToolSet;
+import fr.xotak.items.EmeraldToolSet;
 import fr.xotak.items.equipment.GemsArmorMaterial;
-import fr.xotak.items.ruby.RubyToolSet;
-import fr.xotak.items.sapphire.SapphireToolSet;
+import fr.xotak.items.RubyToolSet;
+import fr.xotak.items.SapphireToolSet;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
@@ -16,7 +16,7 @@ import net.minecraft.resources.Identifier;
 import java.util.concurrent.CompletableFuture;
 
 public class SimpleGemsModelGenerator extends FabricModelProvider {
-    public SimpleGemsModelGenerator(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
+    public SimpleGemsModelGenerator(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output);
     }
 

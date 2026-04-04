@@ -1,10 +1,10 @@
 package fr.xotak.datagen;
 
-import fr.xotak.items.amethyst.AmethystToolSet;
-import fr.xotak.items.emerald.EmeraldToolSet;
-import fr.xotak.items.ruby.RubyToolSet;
-import fr.xotak.items.sapphire.SapphireToolSet;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import fr.xotak.items.AmethystToolSet;
+import fr.xotak.items.EmeraldToolSet;
+import fr.xotak.items.RubyToolSet;
+import fr.xotak.items.SapphireToolSet;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
@@ -15,6 +15,7 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.ItemLike;
 import org.jspecify.annotations.NonNull;
 
@@ -22,7 +23,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class SimpleGemsRecipeDataGenerator extends FabricRecipeProvider {
-    public SimpleGemsRecipeDataGenerator(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
+    public SimpleGemsRecipeDataGenerator(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output, completableFuture);
     }
 
@@ -39,7 +40,7 @@ public class SimpleGemsRecipeDataGenerator extends FabricRecipeProvider {
                 /*
                 Ruby Tools
                  */
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, RubyToolSet.RUBY_ITEM, RecipeCategory.MISC, RubyToolSet.RUBY_BLOCK_ITEM);
+                this.nineBlockStorageRecipes(RecipeCategory.MISC, RubyToolSet.RUBY_ITEM, RecipeCategory.MISC, RubyToolSet.RUBY_BLOCK);
 
                 ShapedRecipeBuilder.shaped(registryLookup, RecipeCategory.TOOLS, RubyToolSet.RUBY_SHOVEL)
                         .pattern(" R ")
@@ -115,8 +116,8 @@ public class SimpleGemsRecipeDataGenerator extends FabricRecipeProvider {
                 /*
                 Ruby smelting
                  */
-                this.oreSmelting(SMELTABLE_TO_RUBY, RecipeCategory.MISC, RubyToolSet.RUBY_ITEM, 6, 300, "simple_gems");
-                this.oreBlasting(SMELTABLE_TO_RUBY, RecipeCategory.MISC, RubyToolSet.RUBY_ITEM, 6, 150, "simple_gems");
+                this.oreSmelting(SMELTABLE_TO_RUBY, RecipeCategory.MISC, CookingBookCategory.BLOCKS, RubyToolSet.RUBY_ITEM, 6, 300, "simple_gems");
+                this.oreBlasting(SMELTABLE_TO_RUBY, RecipeCategory.MISC, CookingBookCategory.BLOCKS, RubyToolSet.RUBY_ITEM, 6, 150, "simple_gems");
 
                 /*
                 Amethyst tools
@@ -196,7 +197,7 @@ public class SimpleGemsRecipeDataGenerator extends FabricRecipeProvider {
                 /*
                 Sapphire tools
                  */
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_ITEM, RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_BLOCK_ITEM);
+                this.nineBlockStorageRecipes(RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_ITEM, RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_BLOCK);
                 ShapedRecipeBuilder.shaped(registryLookup, RecipeCategory.TOOLS, SapphireToolSet.SAPPHIRE_SHOVEL)
                         .pattern(" G ")
                         .pattern(" S ")
@@ -271,8 +272,8 @@ public class SimpleGemsRecipeDataGenerator extends FabricRecipeProvider {
                 /*
                 Sapphire smelting
                  */
-                this.oreSmelting(SMELTABLE_TO_SAPPHIRE, RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_ITEM, 6, 300, "simple_gems");
-                this.oreBlasting(SMELTABLE_TO_SAPPHIRE, RecipeCategory.MISC, SapphireToolSet.SAPPHIRE_ITEM, 6, 150, "simple_gems");
+                this.oreSmelting(SMELTABLE_TO_SAPPHIRE, RecipeCategory.MISC, CookingBookCategory.BLOCKS, SapphireToolSet.SAPPHIRE_ITEM, 6, 300, "simple_gems");
+                this.oreBlasting(SMELTABLE_TO_SAPPHIRE, RecipeCategory.MISC, CookingBookCategory.BLOCKS, SapphireToolSet.SAPPHIRE_ITEM, 6, 150, "simple_gems");
 
                 /*
                 Emerald tools
