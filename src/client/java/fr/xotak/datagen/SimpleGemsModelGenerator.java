@@ -74,6 +74,7 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(EmeraldToolSet.EMERALD_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(EmeraldToolSet.EMERALD_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(EmeraldToolSet.EMERALD_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateSpear(EmeraldToolSet.EMERALD_SPEAR);
         itemModelGenerator.generateTrimmableItem(EmeraldToolSet.EMERALD_HELMET, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerators.TRIM_PREFIX_HELMET, false);
         itemModelGenerator.generateTrimmableItem(EmeraldToolSet.EMERALD_CHESTPLATE, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
         itemModelGenerator.generateTrimmableItem(EmeraldToolSet.EMERALD_LEGGINGS, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
