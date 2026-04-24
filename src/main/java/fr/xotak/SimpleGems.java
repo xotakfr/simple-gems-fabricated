@@ -48,6 +48,7 @@ public class SimpleGems implements ModInitializer {
 				entries.accept(AmethystToolSet.AMETHYST_AXE);
 				entries.accept(AmethystToolSet.AMETHYST_HOE);
 				entries.accept(AmethystToolSet.AMETHYST_SWORD);
+				entries.accept(AmethystToolSet.AMETHYST_SPEAR);
 				entries.accept(AmethystToolSet.AMETHYST_HELMET);
 				entries.accept(AmethystToolSet.AMETHYST_CHESTPLATE);
 				entries.accept(AmethystToolSet.AMETHYST_LEGGINGS);

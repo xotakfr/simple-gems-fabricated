@@ -49,6 +49,7 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(AmethystToolSet.AMETHYST_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(AmethystToolSet.AMETHYST_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(AmethystToolSet.AMETHYST_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateSpear(AmethystToolSet.AMETHYST_SPEAR);
         itemModelGenerator.generateTrimmableItem(AmethystToolSet.AMETHYST_HELMET, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerators.TRIM_PREFIX_HELMET, false);
         itemModelGenerator.generateTrimmableItem(AmethystToolSet.AMETHYST_CHESTPLATE, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
         itemModelGenerator.generateTrimmableItem(AmethystToolSet.AMETHYST_LEGGINGS, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
