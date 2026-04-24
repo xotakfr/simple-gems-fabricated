@@ -48,6 +48,7 @@ public class SimpleGems implements ModInitializer {
 				entries.accept(AmethystToolSet.AMETHYST_AXE);
 				entries.accept(AmethystToolSet.AMETHYST_HOE);
 				entries.accept(AmethystToolSet.AMETHYST_SWORD);
+				entries.accept(AmethystToolSet.AMETHYST_SPEAR);
 				entries.accept(AmethystToolSet.AMETHYST_HELMET);
 				entries.accept(AmethystToolSet.AMETHYST_CHESTPLATE);
 				entries.accept(AmethystToolSet.AMETHYST_LEGGINGS);
@@ -60,6 +61,7 @@ public class SimpleGems implements ModInitializer {
 				entries.accept(RubyToolSet.RUBY_AXE);
 				entries.accept(RubyToolSet.RUBY_HOE);
 				entries.accept(RubyToolSet.RUBY_SWORD);
+				entries.accept(RubyToolSet.RUBY_SPEAR);
 				entries.accept(RubyToolSet.RUBY_HELMET);
 				entries.accept(RubyToolSet.RUBY_CHESTPLATE);
 				entries.accept(RubyToolSet.RUBY_LEGGINGS);
@@ -72,6 +74,7 @@ public class SimpleGems implements ModInitializer {
 				entries.accept(SapphireToolSet.SAPPHIRE_AXE);
 				entries.accept(SapphireToolSet.SAPPHIRE_HOE);
 				entries.accept(SapphireToolSet.SAPPHIRE_SWORD);
+				entries.accept(SapphireToolSet.SAPPHIRE_SPEAR);
 				entries.accept(SapphireToolSet.SAPPHIRE_HELMET);
 				entries.accept(SapphireToolSet.SAPPHIRE_CHESTPLATE);
 				entries.accept(SapphireToolSet.SAPPHIRE_LEGGINGS);
@@ -81,6 +84,7 @@ public class SimpleGems implements ModInitializer {
 				entries.accept(EmeraldToolSet.EMERALD_AXE);
 				entries.accept(EmeraldToolSet.EMERALD_HOE);
 				entries.accept(EmeraldToolSet.EMERALD_SWORD);
+				entries.accept(EmeraldToolSet.EMERALD_SPEAR);
 				entries.accept(EmeraldToolSet.EMERALD_HELMET);
 				entries.accept(EmeraldToolSet.EMERALD_CHESTPLATE);
 				entries.accept(EmeraldToolSet.EMERALD_LEGGINGS);

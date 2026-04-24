@@ -37,6 +37,7 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(RubyToolSet.RUBY_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(RubyToolSet.RUBY_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(RubyToolSet.RUBY_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateSpear(RubyToolSet.RUBY_SPEAR);
         itemModelGenerator.generateTrimmableItem(RubyToolSet.RUBY_HELMET, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerators.TRIM_PREFIX_HELMET, false);
         itemModelGenerator.generateTrimmableItem(RubyToolSet.RUBY_CHESTPLATE, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
         itemModelGenerator.generateTrimmableItem(RubyToolSet.RUBY_LEGGINGS, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
@@ -48,6 +49,7 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(AmethystToolSet.AMETHYST_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(AmethystToolSet.AMETHYST_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(AmethystToolSet.AMETHYST_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateSpear(AmethystToolSet.AMETHYST_SPEAR);
         itemModelGenerator.generateTrimmableItem(AmethystToolSet.AMETHYST_HELMET, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerators.TRIM_PREFIX_HELMET, false);
         itemModelGenerator.generateTrimmableItem(AmethystToolSet.AMETHYST_CHESTPLATE, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
         itemModelGenerator.generateTrimmableItem(AmethystToolSet.AMETHYST_LEGGINGS, GemsArmorMaterial.AMETHYST.assetId(), ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
@@ -60,6 +62,7 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(SapphireToolSet.SAPPHIRE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(SapphireToolSet.SAPPHIRE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(SapphireToolSet.SAPPHIRE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateSpear(SapphireToolSet.SAPPHIRE_SPEAR);
         itemModelGenerator.generateTrimmableItem(SapphireToolSet.SAPPHIRE_HELMET, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerators.TRIM_PREFIX_HELMET, false);
         itemModelGenerator.generateTrimmableItem(SapphireToolSet.SAPPHIRE_CHESTPLATE, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
         itemModelGenerator.generateTrimmableItem(SapphireToolSet.SAPPHIRE_LEGGINGS, GemsArmorMaterial.SAPPHIRE.assetId(), ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
@@ -71,6 +74,7 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(EmeraldToolSet.EMERALD_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(EmeraldToolSet.EMERALD_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(EmeraldToolSet.EMERALD_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateSpear(EmeraldToolSet.EMERALD_SPEAR);
         itemModelGenerator.generateTrimmableItem(EmeraldToolSet.EMERALD_HELMET, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerators.TRIM_PREFIX_HELMET, false);
         itemModelGenerator.generateTrimmableItem(EmeraldToolSet.EMERALD_CHESTPLATE, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
         itemModelGenerator.generateTrimmableItem(EmeraldToolSet.EMERALD_LEGGINGS, GemsArmorMaterial.EMERALD.assetId(), ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);

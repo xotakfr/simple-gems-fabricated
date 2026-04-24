@@ -18,6 +18,8 @@ public class EmeraldToolSet {
             new Item.Properties().hoe(GemsToolMaterial.EMERALD, 0.0F, -3.0F));
     public static final Item EMERALD_SWORD = ItemsUtil.register("emerald_sword", Item::new,
             new Item.Properties().sword(GemsToolMaterial.EMERALD, 3.0F, -2.4F));
+    public static final Item EMERALD_SPEAR = ItemsUtil.register("emerald_spear", Item::new,
+            new Item.Properties().spear(GemsToolMaterial.EMERALD, 1.0F, 1.25F, 0.55F, 2.75F, 10.5F, 6.75F, 5.1F, 10.75F, 4.6F));
     //armor
     public static final Item EMERALD_HELMET = ItemsUtil.register("emerald_helmet", Item::new,
             new Item.Properties().humanoidArmor(GemsArmorMaterial.EMERALD, ArmorType.HELMET));

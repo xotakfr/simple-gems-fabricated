@@ -18,6 +18,8 @@ public class AmethystToolSet {
             new Item.Properties().hoe(GemsToolMaterial.AMETHYST, 0.0F, -3.0F));
     public static final Item AMETHYST_SWORD = ItemsUtil.register("amethyst_sword", Item::new,
             new Item.Properties().sword(GemsToolMaterial.AMETHYST, 3.0F, -2.4F));
+    public static final Item AMETHYST_SPEAR = ItemsUtil.register("amethyst_spear", Item::new,
+            new Item.Properties().spear(GemsToolMaterial.AMETHYST, 0.95F, 0.8F, 0.6F, 3F, 12.0F, 7.25F, 5.1F, 12.25F, 4.6F));
     //armor
     public static final Item AMETHYST_HELMET = ItemsUtil.register("amethyst_helmet", Item::new,
             new Item.Properties().humanoidArmor(GemsArmorMaterial.AMETHYST, ArmorType.HELMET));

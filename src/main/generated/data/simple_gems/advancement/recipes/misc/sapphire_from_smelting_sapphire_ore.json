@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:sapphire_from_smelting_sapphire_ore"
+        "recipe": "simple_gems:sapphire_from_smelting_sapphire_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:sapphire_from_smelting_sapphire_ore"
+      "simple_gems:sapphire_from_smelting_sapphire_ore"
     ]
   }
 }
