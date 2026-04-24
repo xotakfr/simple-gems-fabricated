@@ -37,6 +37,8 @@ public class SapphireToolSet {
             new Item.Properties().hoe(GemsToolMaterial.SAPPHIRE, 0.0F, -3.0F));
     public static final Item SAPPHIRE_SWORD = ItemsUtil.register("sapphire_sword", Item::new,
             new Item.Properties().pickaxe(GemsToolMaterial.SAPPHIRE, 3.0F, -2.4F));
+    public static final Item SAPPHIRE_SPEAR = ItemsUtil.register("sapphire_spear", Item::new,
+            new Item.Properties().spear(GemsToolMaterial.SAPPHIRE, 1.21F, 1.6F, 0.4F, 2.0F, 6.5F, 5.0F, 5.1F, 7.5F, 4.6F));
     //armor
     public static final Item SAPPHIRE_HELMET = ItemsUtil.register("sapphire_helmet", Item::new,
             new Item.Properties().humanoidArmor(GemsArmorMaterial.SAPPHIRE, ArmorType.HELMET));

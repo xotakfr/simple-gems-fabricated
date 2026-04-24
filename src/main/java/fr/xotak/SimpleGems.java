@@ -73,6 +73,7 @@ public class SimpleGems implements ModInitializer {
 				entries.accept(SapphireToolSet.SAPPHIRE_AXE);
 				entries.accept(SapphireToolSet.SAPPHIRE_HOE);
 				entries.accept(SapphireToolSet.SAPPHIRE_SWORD);
+				entries.accept(SapphireToolSet.SAPPHIRE_SPEAR);
 				entries.accept(SapphireToolSet.SAPPHIRE_HELMET);
 				entries.accept(SapphireToolSet.SAPPHIRE_CHESTPLATE);
 				entries.accept(SapphireToolSet.SAPPHIRE_LEGGINGS);
