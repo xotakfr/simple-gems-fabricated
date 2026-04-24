@@ -38,6 +38,7 @@ public class RubyToolSet {
             new Item.Properties().hoe(GemsToolMaterial.RUBY, 0.0F, -3.0F));
     public static final Item RUBY_SWORD = ItemsUtil.register("ruby_sword", Item::new,
             new Item.Properties().sword(GemsToolMaterial.RUBY, 3.0F, -2.4F));
+    public static final Item RUBY_SPEAR = ItemsUtil.register("ruby_spear", Item::new, new Item.Properties().spear(GemsToolMaterial.RUBY, 1.21F, 1.4F, 0.4F, 2.0F, 6.5F, 5.0F, 5.1F, 7.5F, 4.6F));
     //armor
     public static final Item RUBY_HELMET = ItemsUtil.register("ruby_helmet", Item::new,
             new Item.Properties().humanoidArmor(GemsArmorMaterial.RUBY, ArmorType.HELMET));

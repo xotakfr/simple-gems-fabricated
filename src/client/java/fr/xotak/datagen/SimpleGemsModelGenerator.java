@@ -37,6 +37,7 @@ public class SimpleGemsModelGenerator extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(RubyToolSet.RUBY_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(RubyToolSet.RUBY_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(RubyToolSet.RUBY_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateSpear(RubyToolSet.RUBY_SPEAR);
         itemModelGenerator.generateTrimmableItem(RubyToolSet.RUBY_HELMET, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerators.TRIM_PREFIX_HELMET, false);
         itemModelGenerator.generateTrimmableItem(RubyToolSet.RUBY_CHESTPLATE, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
         itemModelGenerator.generateTrimmableItem(RubyToolSet.RUBY_LEGGINGS, GemsArmorMaterial.RUBY.assetId(), ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);

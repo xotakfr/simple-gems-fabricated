@@ -60,6 +60,7 @@ public class SimpleGems implements ModInitializer {
 				entries.accept(RubyToolSet.RUBY_AXE);
 				entries.accept(RubyToolSet.RUBY_HOE);
 				entries.accept(RubyToolSet.RUBY_SWORD);
+				entries.accept(RubyToolSet.RUBY_SPEAR);
 				entries.accept(RubyToolSet.RUBY_HELMET);
 				entries.accept(RubyToolSet.RUBY_CHESTPLATE);
 				entries.accept(RubyToolSet.RUBY_LEGGINGS);
