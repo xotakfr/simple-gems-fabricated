@@ -15,9 +15,9 @@ public class ItemsUtil {
         return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(SimpleGems.MOD_ID, name));
     }
 
-    public static <T extends Item> T register(ResourceKey<Item> itemKey, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
+    public static Item register(ResourceKey<Item> itemKey, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
 
-        T item = itemFactory.apply(settings.setId(itemKey));
+        Item item = itemFactory.apply(settings.setId(itemKey));
 
         Registry.register(BuiltInRegistries.ITEM, itemKey, item);
 
