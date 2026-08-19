@@ -2,6 +2,7 @@ package fr.xotak.items;
 
 import fr.xotak.items.equipment.GemsArmorMaterial;
 import fr.xotak.items.equipment.GemsToolMaterial;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.equipment.ArmorType;
@@ -18,7 +19,8 @@ public class RubyToolSet {
             BlockBehaviour.Properties.of().strength(3.0F).requiresCorrectToolForDrops(),
             true
     );
-    public static final Item RUBY_ITEM = ItemsUtil.register("ruby", Item::new,
+    public static final ResourceKey<Item> RUBY_ITEM_RK = ItemsUtil.create("ruby");
+    public static final Item RUBY_ITEM = ItemsUtil.register(RUBY_ITEM_RK, Item::new,
             new Item.Properties());
     public static final Block RUBY_BLOCK = BlocksUtil.register(
             "ruby_block",
@@ -28,25 +30,35 @@ public class RubyToolSet {
     );
 
     //tools
-    public static final Item RUBY_SHOVEL = ItemsUtil.register("ruby_shovel", Item::new,
+    public static final ResourceKey<Item> RUBY_SHOVEL_RK = ItemsUtil.create("ruby_shovel");
+    public static final Item RUBY_SHOVEL = ItemsUtil.register(RUBY_SHOVEL_RK, Item::new,
             new Item.Properties().shovel(GemsToolMaterial.RUBY, 1.5F, -3.0F));
-    public static final Item RUBY_PICKAXE = ItemsUtil.register("ruby_pickaxe", Item::new,
+    public static final ResourceKey<Item> RUBY_PICKAXE_RK = ItemsUtil.create("ruby_pickaxe");
+    public static final Item RUBY_PICKAXE = ItemsUtil.register(RUBY_PICKAXE_RK, Item::new,
             new Item.Properties().pickaxe(GemsToolMaterial.RUBY, 1.0F, -2.8F));
-    public static final Item RUBY_AXE = ItemsUtil.register("ruby_axe", Item::new,
+    public static final ResourceKey<Item> RUBY_AXE_RK = ItemsUtil.create("ruby_axe");
+    public static final Item RUBY_AXE = ItemsUtil.register(RUBY_AXE_RK, Item::new,
             new Item.Properties().axe(GemsToolMaterial.RUBY, 6.0F, -3.0F));
-    public static final Item RUBY_HOE = ItemsUtil.register("ruby_hoe", Item::new,
+    public static final ResourceKey<Item> RUBY_HOE_RK = ItemsUtil.create("ruby_hoe");
+    public static final Item RUBY_HOE = ItemsUtil.register(RUBY_HOE_RK, Item::new,
             new Item.Properties().hoe(GemsToolMaterial.RUBY, 0.0F, -3.0F));
-    public static final Item RUBY_SWORD = ItemsUtil.register("ruby_sword", Item::new,
+    public static final ResourceKey<Item> RUBY_SWORD_RK = ItemsUtil.create("ruby_sword");
+    public static final Item RUBY_SWORD = ItemsUtil.register(RUBY_SWORD_RK, Item::new,
             new Item.Properties().sword(GemsToolMaterial.RUBY, 3.0F, -2.4F));
-    public static final Item RUBY_SPEAR = ItemsUtil.register("ruby_spear", Item::new, new Item.Properties().spear(GemsToolMaterial.RUBY, 1.21F, 1.4F, 0.4F, 2.0F, 6.5F, 5.0F, 5.1F, 7.5F, 4.6F));
+    public static final ResourceKey<Item> RUBY_SPEAR_RK = ItemsUtil.create("ruby");
+    public static final Item RUBY_SPEAR = ItemsUtil.register(RUBY_SPEAR_RK, Item::new, new Item.Properties().spear(GemsToolMaterial.RUBY, 1.21F, 1.4F, 0.4F, 2.0F, 6.5F, 5.0F, 5.1F, 7.5F, 4.6F));
     //armor
-    public static final Item RUBY_HELMET = ItemsUtil.register("ruby_helmet", Item::new,
+    public static final ResourceKey<Item> RUBY_HELMET_RK = ItemsUtil.create("ruby_helmet");
+    public static final Item RUBY_HELMET = ItemsUtil.register(RUBY_HELMET_RK, Item::new,
             new Item.Properties().humanoidArmor(GemsArmorMaterial.RUBY, ArmorType.HELMET));
-    public static final Item RUBY_CHESTPLATE = ItemsUtil.register("ruby_chestplate", Item::new,
+    public static final ResourceKey<Item> RUBY_CHESTPLATE_RK = ItemsUtil.create("ruby_chestplate");
+    public static final Item RUBY_CHESTPLATE = ItemsUtil.register(RUBY_CHESTPLATE_RK, Item::new,
             new Item.Properties().humanoidArmor(GemsArmorMaterial.RUBY, ArmorType.CHESTPLATE));
-    public static final Item RUBY_LEGGINGS = ItemsUtil.register("ruby_leggings", Item::new,
+    public static final ResourceKey<Item> RUBY_LEGGINGS_RK = ItemsUtil.create("ruby_leggings");
+    public static final Item RUBY_LEGGINGS = ItemsUtil.register(RUBY_LEGGINGS_RK, Item::new,
             new Item.Properties().humanoidArmor(GemsArmorMaterial.RUBY, ArmorType.LEGGINGS));
-    public static final Item RUBY_BOOTS = ItemsUtil.register("ruby_boots", Item::new,
+    public static final ResourceKey<Item> RUBY_BOOTS_RK = ItemsUtil.create("ruby_boots");
+    public static final Item RUBY_BOOTS = ItemsUtil.register(RUBY_BOOTS_RK, Item::new,
             new Item.Properties().humanoidArmor(GemsArmorMaterial.RUBY, ArmorType.BOOTS));
 
 
