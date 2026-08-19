@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.references.ItemIds;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -41,115 +42,115 @@ public class SimpleGemsItemTagGenerator extends FabricTagsProvider.ItemTagsProvi
 
     @Override
     protected void addTags(HolderLookup.Provider arg) {
-        valueLookupBuilder(RUBIES)
-                .add(RubyToolSet.RUBY_ITEM)
+        builder(RUBIES)
+                .add(RubyToolSet.RUBY_ITEM_RK)
                 .setReplace(false);
-        valueLookupBuilder(SAPPHIRE)
-                .add(SapphireToolSet.SAPPHIRE_ITEM)
+        builder(SAPPHIRE)
+                .add(SapphireToolSet.SAPPHIRE_ITEM_RK)
                 .setReplace(false);
-        valueLookupBuilder(REPAIRS_AMETHYST_ARMOR)
-                .add(Items.AMETHYST_SHARD);
-        valueLookupBuilder(AMETHYST_TOOL_MATERIALS)
-                .add(Items.AMETHYST_SHARD);
-        valueLookupBuilder(REPAIRS_EMERALD_ARMOR)
-                .add(Items.EMERALD);
-        valueLookupBuilder(EMERALD_TOOL_MATERIALS)
-                .add(Items.EMERALD);
-        valueLookupBuilder(REPAIRS_RUBY_ARMOR)
-                .add(RubyToolSet.RUBY_ITEM);
-        valueLookupBuilder(RUBY_TOOL_MATERIALS)
-                .add(RubyToolSet.RUBY_ITEM);
-        valueLookupBuilder(REPAIRS_SAPPHIRE_ARMOR)
-                .add(SapphireToolSet.SAPPHIRE_ITEM);
-        valueLookupBuilder(SAPPHIRE_TOOL_MATERIALS)
-                .add(SapphireToolSet.SAPPHIRE_ITEM);
-        valueLookupBuilder(ItemTags.SHOVELS)
-                .add(AmethystToolSet.AMETHYST_SHOVEL)
-                .add(EmeraldToolSet.EMERALD_SHOVEL)
-                .add(RubyToolSet.RUBY_SHOVEL)
-                .add(SapphireToolSet.SAPPHIRE_SHOVEL)
+        builder(REPAIRS_AMETHYST_ARMOR)
+                .add(ItemIds.AMETHYST_SHARD);
+        builder(AMETHYST_TOOL_MATERIALS)
+                .add(ItemIds.AMETHYST_SHARD);
+        builder(REPAIRS_EMERALD_ARMOR)
+                .add(ItemIds.EMERALD);
+        builder(EMERALD_TOOL_MATERIALS)
+                .add(ItemIds.EMERALD);
+        builder(REPAIRS_RUBY_ARMOR)
+                .add(RubyToolSet.RUBY_ITEM_RK);
+        builder(RUBY_TOOL_MATERIALS)
+                .add(RubyToolSet.RUBY_ITEM_RK);
+        builder(REPAIRS_SAPPHIRE_ARMOR)
+                .add(SapphireToolSet.SAPPHIRE_ITEM_RK);
+        builder(SAPPHIRE_TOOL_MATERIALS)
+                .add(SapphireToolSet.SAPPHIRE_ITEM_RK);
+        builder(ItemTags.SHOVELS)
+                .add(AmethystToolSet.AMETHYST_SHOVEL_RK)
+                .add(EmeraldToolSet.EMERALD_SHOVEL_RK)
+                .add(RubyToolSet.RUBY_SHOVEL_RK)
+                .add(SapphireToolSet.SAPPHIRE_SHOVEL_RK)
                 .setReplace(false);
-        valueLookupBuilder(ItemTags.PICKAXES)
-                .add(AmethystToolSet.AMETHYST_PICKAXE)
-                .add(EmeraldToolSet.EMERALD_PICKAXE)
-                .add(RubyToolSet.RUBY_PICKAXE)
-                .add(SapphireToolSet.SAPPHIRE_PICKAXE)
+        builder(ItemTags.PICKAXES)
+                .add(AmethystToolSet.AMETHYST_PICKAXE_RK)
+                .add(EmeraldToolSet.EMERALD_PICKAXE_RK)
+                .add(RubyToolSet.RUBY_PICKAXE_RK)
+                .add(SapphireToolSet.SAPPHIRE_PICKAXE_RK)
                 .setReplace(false);
-        valueLookupBuilder(ItemTags.AXES)
-                .add(AmethystToolSet.AMETHYST_AXE)
-                .add(EmeraldToolSet.EMERALD_AXE)
-                .add(RubyToolSet.RUBY_AXE)
-                .add(SapphireToolSet.SAPPHIRE_AXE)
+        builder(ItemTags.AXES)
+                .add(AmethystToolSet.AMETHYST_AXE_RK)
+                .add(EmeraldToolSet.EMERALD_AXE_RK)
+                .add(RubyToolSet.RUBY_AXE_RK)
+                .add(SapphireToolSet.SAPPHIRE_AXE_RK)
                 .setReplace(false);
-        valueLookupBuilder(ItemTags.HOES)
-                .add(AmethystToolSet.AMETHYST_HOE)
-                .add(EmeraldToolSet.EMERALD_HOE)
-                .add(RubyToolSet.RUBY_HOE)
-                .add(SapphireToolSet.SAPPHIRE_HOE)
+        builder(ItemTags.HOES)
+                .add(AmethystToolSet.AMETHYST_HOE_RK)
+                .add(EmeraldToolSet.EMERALD_HOE_RK)
+                .add(RubyToolSet.RUBY_HOE_RK)
+                .add(SapphireToolSet.SAPPHIRE_HOE_RK)
                 .setReplace(false);
-        valueLookupBuilder(ItemTags.SWORDS)
-                .add(AmethystToolSet.AMETHYST_SWORD)
-                .add(EmeraldToolSet.EMERALD_SWORD)
-                .add(RubyToolSet.RUBY_SWORD)
-                .add(SapphireToolSet.SAPPHIRE_SWORD)
+        builder(ItemTags.SWORDS)
+                .add(AmethystToolSet.AMETHYST_SWORD_RK)
+                .add(EmeraldToolSet.EMERALD_SWORD_RK)
+                .add(RubyToolSet.RUBY_SWORD_RK)
+                .add(SapphireToolSet.SAPPHIRE_SWORD_RK)
                 .setReplace(false);
-        valueLookupBuilder(ItemTags.HEAD_ARMOR)
-                .add(AmethystToolSet.AMETHYST_HELMET)
-                .add(EmeraldToolSet.EMERALD_HELMET)
-                .add(RubyToolSet.RUBY_HELMET)
-                .add(SapphireToolSet.SAPPHIRE_HELMET)
+        builder(ItemTags.HEAD_ARMOR)
+                .add(AmethystToolSet.AMETHYST_HELMET_RK)
+                .add(EmeraldToolSet.EMERALD_HELMET_RK)
+                .add(RubyToolSet.RUBY_HELMET_RK)
+                .add(SapphireToolSet.SAPPHIRE_HELMET_RK)
                 .setReplace(false);
-        valueLookupBuilder(ItemTags.CHEST_ARMOR)
-                .add(AmethystToolSet.AMETHYST_CHESTPLATE)
-                .add(EmeraldToolSet.EMERALD_CHESTPLATE)
-                .add(RubyToolSet.RUBY_CHESTPLATE)
-                .add(SapphireToolSet.SAPPHIRE_CHESTPLATE)
+        builder(ItemTags.CHEST_ARMOR)
+                .add(AmethystToolSet.AMETHYST_CHESTPLATE_RK)
+                .add(EmeraldToolSet.EMERALD_CHESTPLATE_RK)
+                .add(RubyToolSet.RUBY_CHESTPLATE_RK)
+                .add(SapphireToolSet.SAPPHIRE_CHESTPLATE_RK)
                 .setReplace(false);
-        valueLookupBuilder(ItemTags.LEG_ARMOR)
-                .add(AmethystToolSet.AMETHYST_LEGGINGS)
-                .add(EmeraldToolSet.EMERALD_LEGGINGS)
-                .add(RubyToolSet.RUBY_LEGGINGS)
-                .add(SapphireToolSet.SAPPHIRE_LEGGINGS)
+        builder(ItemTags.LEG_ARMOR)
+                .add(AmethystToolSet.AMETHYST_LEGGINGS_RK)
+                .add(EmeraldToolSet.EMERALD_LEGGINGS_RK)
+                .add(RubyToolSet.RUBY_LEGGINGS_RK)
+                .add(SapphireToolSet.SAPPHIRE_LEGGINGS_RK)
                 .setReplace(false);
-        valueLookupBuilder(ItemTags.FOOT_ARMOR)
-                .add(AmethystToolSet.AMETHYST_BOOTS)
-                .add(EmeraldToolSet.EMERALD_BOOTS)
-                .add(RubyToolSet.RUBY_BOOTS)
-                .add(SapphireToolSet.SAPPHIRE_BOOTS)
+        builder(ItemTags.FOOT_ARMOR)
+                .add(AmethystToolSet.AMETHYST_BOOTS_RK)
+                .add(EmeraldToolSet.EMERALD_BOOTS_RK)
+                .add(RubyToolSet.RUBY_BOOTS_RK)
+                .add(SapphireToolSet.SAPPHIRE_BOOTS_RK)
                 .setReplace(false);
-        valueLookupBuilder(RUBY_ARMOR)
-                .add(RubyToolSet.RUBY_HELMET)
-                .add(RubyToolSet.RUBY_CHESTPLATE)
-                .add(RubyToolSet.RUBY_LEGGINGS)
-                .add(RubyToolSet.RUBY_BOOTS)
+        builder(RUBY_ARMOR)
+                .add(RubyToolSet.RUBY_HELMET_RK)
+                .add(RubyToolSet.RUBY_CHESTPLATE_RK)
+                .add(RubyToolSet.RUBY_LEGGINGS_RK)
+                .add(RubyToolSet.RUBY_BOOTS_RK)
                 .setReplace(false);
-        valueLookupBuilder(SAPPHIRE_ARMOR)
-                .add(SapphireToolSet.SAPPHIRE_HELMET)
-                .add(SapphireToolSet.SAPPHIRE_CHESTPLATE)
-                .add(SapphireToolSet.SAPPHIRE_LEGGINGS)
-                .add(SapphireToolSet.SAPPHIRE_BOOTS)
+        builder(SAPPHIRE_ARMOR)
+                .add(SapphireToolSet.SAPPHIRE_HELMET_RK)
+                .add(SapphireToolSet.SAPPHIRE_CHESTPLATE_RK)
+                .add(SapphireToolSet.SAPPHIRE_LEGGINGS_RK)
+                .add(SapphireToolSet.SAPPHIRE_BOOTS_RK)
                 .setReplace(false);
-        valueLookupBuilder(AMETHYST_ARMOR)
-                .add(AmethystToolSet.AMETHYST_HELMET)
-                .add(AmethystToolSet.AMETHYST_CHESTPLATE)
-                .add(AmethystToolSet.AMETHYST_LEGGINGS)
-                .add(AmethystToolSet.AMETHYST_BOOTS)
+        builder(AMETHYST_ARMOR)
+                .add(AmethystToolSet.AMETHYST_HELMET_RK)
+                .add(AmethystToolSet.AMETHYST_CHESTPLATE_RK)
+                .add(AmethystToolSet.AMETHYST_LEGGINGS_RK)
+                .add(AmethystToolSet.AMETHYST_BOOTS_RK)
                 .setReplace(false);
-        valueLookupBuilder(EMERALD_ARMOR)
-                .add(EmeraldToolSet.EMERALD_HELMET)
-                .add(EmeraldToolSet.EMERALD_CHESTPLATE)
-                .add(EmeraldToolSet.EMERALD_LEGGINGS)
-                .add(EmeraldToolSet.EMERALD_BOOTS)
+        builder(EMERALD_ARMOR)
+                .add(EmeraldToolSet.EMERALD_HELMET_RK)
+                .add(EmeraldToolSet.EMERALD_CHESTPLATE_RK)
+                .add(EmeraldToolSet.EMERALD_LEGGINGS_RK)
+                .add(EmeraldToolSet.EMERALD_BOOTS_RK)
                 .setReplace(false);
-        valueLookupBuilder(MOD_ARMORS)
+        builder(MOD_ARMORS)
                 .addTag(RUBY_ARMOR)
                 .addTag(SAPPHIRE_ARMOR)
                 .addTag(AMETHYST_ARMOR)
                 .addTag(EMERALD_ARMOR);
-        valueLookupBuilder(WEAVABLE)
-                .add(Items.AMETHYST_SHARD)
-                .add(Items.EMERALD)
-                .add(RubyToolSet.RUBY_ITEM)
-                .add(SapphireToolSet.SAPPHIRE_ITEM);
+        builder(WEAVABLE)
+                .add(ItemIds.AMETHYST_SHARD)
+                .add(ItemIds.EMERALD)
+                .add(RubyToolSet.RUBY_ITEM_RK)
+                .add(SapphireToolSet.SAPPHIRE_ITEM_RK);
     }
 }
