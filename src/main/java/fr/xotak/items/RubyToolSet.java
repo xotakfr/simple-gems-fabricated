@@ -46,7 +46,7 @@ public class RubyToolSet {
     public static final ResourceKey<Item> RUBY_SWORD_RK = ItemsUtil.create("ruby_sword");
     public static final Item RUBY_SWORD = ItemsUtil.register(RUBY_SWORD_RK, Item::new,
             new Item.Properties().sword(GemsToolMaterial.RUBY, 3.0F, -2.4F));
-    public static final ResourceKey<Item> RUBY_SPEAR_RK = ItemsUtil.create("ruby");
+    public static final ResourceKey<Item> RUBY_SPEAR_RK = ItemsUtil.create("ruby_spear");
     public static final Item RUBY_SPEAR = ItemsUtil.register(RUBY_SPEAR_RK, Item::new, new Item.Properties().spear(GemsToolMaterial.RUBY, 1.21F, 1.4F, 0.4F, 2.0F, 6.5F, 5.0F, 5.1F, 7.5F, 4.6F));
     //armor
     public static final ResourceKey<Item> RUBY_HELMET_RK = ItemsUtil.create("ruby_helmet");

@@ -28,7 +28,7 @@ public class EmeraldToolSet {
     public static final Item EMERALD_SPEAR = ItemsUtil.register(EMERALD_SPEAR_RK, Item::new,
             new Item.Properties().spear(GemsToolMaterial.EMERALD, 1.0F, 1.25F, 0.55F, 2.75F, 10.5F, 6.75F, 5.1F, 10.75F, 4.6F));
     //armor
-    public static final ResourceKey<Item> EMERALD_HELMET_RK = ItemsUtil.create("emerald_HELMET");
+    public static final ResourceKey<Item> EMERALD_HELMET_RK = ItemsUtil.create("emerald_helmet");
     public static final Item EMERALD_HELMET = ItemsUtil.register(EMERALD_HELMET_RK, Item::new,
             new Item.Properties().humanoidArmor(GemsArmorMaterial.EMERALD, ArmorType.HELMET));
     public static final ResourceKey<Item> EMERALD_CHESTPLATE_RK = ItemsUtil.create("emerald_chestplate");
