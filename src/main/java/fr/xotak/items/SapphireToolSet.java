@@ -2,6 +2,7 @@ package fr.xotak.items;
 
 import fr.xotak.items.equipment.GemsArmorMaterial;
 import fr.xotak.items.equipment.GemsToolMaterial;
+import net.minecraft.references.BlockItemId;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.Item;
@@ -12,22 +13,21 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 
 public class SapphireToolSet {
     //blocks and item
+    public static final BlockItemId SAPPHIRE_ORE_RK = BlocksUtil.createBlockItemId("sapphire_ore");
     public static final Block SAPPHIRE_ORE = BlocksUtil.register(
-            "sapphire_ore",
+            SAPPHIRE_ORE_RK,
             p->new DropExperienceBlock(UniformInt.of(6, 10), p),
-            BlockBehaviour.Properties.of().strength(4.0F).requiresCorrectToolForDrops(),
-            true
+            BlockBehaviour.Properties.of().strength(4.0F).requiresCorrectToolForDrops()
     );
 
     public static final ResourceKey<Item> SAPPHIRE_ITEM_RK = ItemsUtil.create("sapphire");
     public static final Item SAPPHIRE_ITEM = ItemsUtil.register(SAPPHIRE_ITEM_RK, Item::new,
             new Item.Properties());
-
+    public static final BlockItemId SAPPHIRE_BLOCK_RK = BlocksUtil.createBlockItemId("sapphire_block");
     public static final Block SAPPHIRE_BLOCK = BlocksUtil.register(
-        "sapphire_block",
+        SAPPHIRE_BLOCK_RK,
         Block::new,
-        BlockBehaviour.Properties.of().strength(4.0F).requiresCorrectToolForDrops(),
-        true
+        BlockBehaviour.Properties.of().strength(4.0F).requiresCorrectToolForDrops()
 )   ;
     //tools
     public static final ResourceKey<Item> SAPPHIRE_SHOVEL_RK = ItemsUtil.create("sapphire_shovel");

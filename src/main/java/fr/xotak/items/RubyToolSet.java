@@ -2,6 +2,7 @@ package fr.xotak.items;
 
 import fr.xotak.items.equipment.GemsArmorMaterial;
 import fr.xotak.items.equipment.GemsToolMaterial;
+import net.minecraft.references.BlockItemId;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.Item;
@@ -13,20 +14,20 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 public class RubyToolSet {
     //blocks and item
 
+    public static final BlockItemId RUBY_ORE_RK = BlocksUtil.createBlockItemId("ruby_ore");
     public static final Block RUBY_ORE = BlocksUtil.register(
-            "ruby_ore",
+            RUBY_ORE_RK,
             p->new DropExperienceBlock(UniformInt.of(4, 8), p),
-            BlockBehaviour.Properties.of().strength(3.0F).requiresCorrectToolForDrops(),
-            true
+            BlockBehaviour.Properties.of().strength(3.0F).requiresCorrectToolForDrops()
     );
     public static final ResourceKey<Item> RUBY_ITEM_RK = ItemsUtil.create("ruby");
     public static final Item RUBY_ITEM = ItemsUtil.register(RUBY_ITEM_RK, Item::new,
             new Item.Properties());
+    public static final BlockItemId RUBY_BLOCK_RK = BlocksUtil.createBlockItemId("ruby_block");
     public static final Block RUBY_BLOCK = BlocksUtil.register(
-            "ruby_block",
+            RUBY_BLOCK_RK,
             Block::new,
-            BlockBehaviour.Properties.of().strength(3.0F).requiresCorrectToolForDrops(),
-            true
+            BlockBehaviour.Properties.of().strength(3.0F).requiresCorrectToolForDrops()
     );
 
     //tools
