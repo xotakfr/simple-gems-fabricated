@@ -4,6 +4,7 @@ import fr.xotak.SimpleGems;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.references.BlockItemId;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
@@ -14,26 +15,28 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import java.util.function.Function;
 
 public class BlocksUtil {
-    public static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings, boolean shouldRegisterItem) {
-        ResourceKey<Block> blockKey = keyOfBlock(name);
+    public static Block register(BlockItemId id, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings) {
+        Block block = register(id.block(), blockFactory, settings);
 
-        Block block = blockFactory.apply(settings.setId(blockKey));
+        BlockItem blockItem = new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix().setId(id.item()));
+        Registry.register(BuiltInRegistries.ITEM, id.item(), blockItem);
 
-        if (shouldRegisterItem) {
-            ResourceKey<Item> itemKey = keyOfItem(name);
-
-            BlockItem blockItem = new BlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix());
-
-            Registry.register(BuiltInRegistries.ITEM, itemKey, blockItem);
-        }
-        return Registry.register(BuiltInRegistries.BLOCK, blockKey, block);
+        return block;
     }
 
-    private static ResourceKey<Block> keyOfBlock(String name) {
-        return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(SimpleGems.MOD_ID, name));
+    public static Block register(ResourceKey<Block> id, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings) {
+        Block block = blockFactory.apply(settings.setId(id));
+
+        return Registry.register(BuiltInRegistries.BLOCK, id, block);
     }
 
-    private static ResourceKey<Item> keyOfItem(String name) {
-        return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(SimpleGems.MOD_ID, name));
+    public static BlockItemId createBlockItemId(String name) {
+        Identifier id = Identifier.fromNamespaceAndPath(SimpleGems.MOD_ID, name);
+        return BlockItemId.create(id, id);
+    }
+
+    public static ResourceKey<Block> createBlockId(String name) {
+        Identifier id = Identifier.fromNamespaceAndPath(SimpleGems.MOD_ID, name);
+        return ResourceKey.create(Registries.BLOCK, id);
     }
 }

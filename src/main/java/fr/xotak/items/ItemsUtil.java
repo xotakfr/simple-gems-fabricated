@@ -11,10 +11,13 @@ import net.minecraft.world.item.Item;
 import java.util.function.Function;
 
 public class ItemsUtil {
-    public static <T extends Item> T register(String name, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
-        ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(SimpleGems.MOD_ID, name));
+    public static ResourceKey<Item> create(String name) {
+        return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(SimpleGems.MOD_ID, name));
+    }
 
-        T item = itemFactory.apply(settings.setId(itemKey));
+    public static Item register(ResourceKey<Item> itemKey, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
+
+        Item item = itemFactory.apply(settings.setId(itemKey));
 
         Registry.register(BuiltInRegistries.ITEM, itemKey, item);
 
